@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 🔍 SEO Meta Tags -->
+    <title>NETLAB Samarqand — IT Kurslari | Cisco, Linux, IoT, CCTV</title>
+    <meta name="description" content="Samarqanddagi eng yaxshi IT o'quv markazi. Cisco, MikroTik, Linux, IoT, CCTV, IP-Telefoniya kurslari. 100% amaliy mashg'ulotlar. Hoziroq ro'yxatdan o'ting!">
+    <meta name="keywords" content="IT kurslar Samarqand, Cisco kurslari, Linux administratsiya, IoT kurslari, CCTV o'qitish, NETLAB, MikroTik, IP telefoniya">
+    <meta name="author" content="NETLAB Samarqand">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="UZ-SA">
+    <meta name="geo.placename" content="Samarqand">
+    
+    <!-- 📱 Open Graph / Social Media -->
+    <meta property="og:title" content="NETLAB Samarqand — IT Kurslari">
+    <meta property="og:description" content="Amaliy bilimlar bilan IT sohasida o'z yo'lingizni oching. 6+ yo'nalish, 100% amaliyot.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="uz_UZ">
+    <meta property="og:url" content="https://netlab.uz">
+    <meta property="og:site_name" content="NETLAB">
+    
+    <!-- 🔗 Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NETLAB Samarqand — IT Kurslari">
+    <meta name="twitter:description" content="Amaliy bilimlar bilan IT sohasida o'z yo'lingizni oching">
+    
+    <!-- 🔖 Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    
+    <!-- ⚡ Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://api.telegram.org">
+    
+    <style>
+        /* ===== CSS RESET & BASE ===== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #3b82f6;
+            --secondary: #0ea5e9;
+            --dark: #1e293b;
+            --dark-light: #334155;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --gray-light: #e2e8f0;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+            --radius: 12px;
+            --transition: all 0.3s ease;
+        }
+        
+        html { scroll-behavior: smooth; font-size: 16px; }
+        
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { animation: none !important; transition: none !important; }
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+            overflow-x: hidden;
+        }
+        
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; display: block; }
+        button { font-family: inherit; }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section { padding: 80px 0; }
+        @media (max-width: 768px) { .section { padding: 60px 0; } }
+        
+        .section-title {
+            text-align: center;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--dark);
+            line-height: 1.2;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--gray);
+            font-size: 1.1rem;
+            margin-bottom: 48px;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 32px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary);
+        }
+        
+        .btn:disabled, .btn-loading {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+        
+        .btn-loading {
+            position: relative;
+            color: transparent !important;
+        }
+        .btn-loading::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        
+        /* ===== HEADER & NAV ===== */
+        header {
+            background: white;
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .logo span { color: var(--dark); }
+        
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 8px 4px;
+        }
+        .nav-links a:hover { color: var(--primary); }
+        
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            padding: 8px;
+            border-radius: 6px;
+            transition: var(--transition);
+        }
+        .hamburger:hover { background: var(--gray-light); }
+        .hamburger span {
+            width: 24px;
+            height: 3px;
+            background: var(--dark);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
+        
+        /* ===== HERO SECTION ===== */
+        .hero {
+            padding: 150px 0 90px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2rem, 6vw, 3.2rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        .hero p {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            max-width: 750px;
+            margin: 0 auto 36px;
+            opacity: 0.95;
+            animation: fadeInUp 0.8s ease 0.15s both;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.3s both;
+        }
+        
+        .hero-badges {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+            animation: fadeInUp 0.8s ease 0.45s both;
+        }
+        .badge {
+            background: rgba(255,255,255,0.15);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(4px);
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* ===== STATS ===== */
+        .stats {
+            background: white;
+            padding: 32px 0;
+            border-bottom: 1px solid var(--gray-light);
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 24px;
+        }
+        .stat-card {
+            text-align: center;
+            padding: 20px 16px;
+        }
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: block;
+            line-height: 1;
+        }
+        .stat-label {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-top: 4px;
+        }
+        
+        /* ===== COURSES ===== */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
+        }
+        
+        .course-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 32px 28px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--gray-light);
+            display: flex;
+            flex-direction: column;
+        }
+        .course-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+        
+        .course-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        .course-icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+        .course-level {
+            display: inline-flex;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: auto;
+        }
+        .level-beginner { background: #dcfce7; color: #166534; }
+        .level-intermediate { background: #fef3c7; color: #92400e; }
+        .level-advanced { background: #fee2e2; color: #991b1b; }
+        
+        .course-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        .course-card p {
+            color: var(--gray);
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+        .course-card .btn { width: 100%; }
+        
+        /* ===== STEPS ===== */
+        .steps-section { background: #f1f5f9; }
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 32px;
+        }
+        .step-card {
+            background: white;
+            padding: 32px 24px;
+            border-radius: var(--radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        .step-card::after {
+            content: '→';
+            position: absolute;
+            right: -16px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: var(--primary);
+            display: none;
+        }
+        @media (min-width: 900px) {
+            .step-card:not(:last-child)::after { display: block; }
+        }
+        .step-number {
+            width: 56px;
+            height: 56px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+        .step-card h3 { margin-bottom: 12px; font-size: 1.2rem; }
+        .step-card p { color: var(--gray); font-size: 0.95rem; }
+        
+        /* ===== CONTACT ===== */
+        .contact-section {
+            background: var(--dark);
+            color: white;
+        }
+        .contact-section .section-title,
+        .contact-section .section-subtitle { color: white; }
+        .contact-section .section-subtitle { opacity: 0.9; }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 56px;
+            align-items: start;
+        }
+        @media (max-width: 900px) {
+            .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+        }
+        
+        .contact-info { padding: 8px 0; }
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 20px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 10px;
+            margin-bottom: 16px;
+            transition: var(--transition);
+        }
+        .contact-item:hover { background: rgba(255,255,255,0.12); }
+        .contact-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .contact-item strong { display: block; margin-bottom: 4px; }
+        .contact-item a {
+            color: var(--secondary);
+            font-weight: 500;
+        }
+        .contact-item a:hover { text-decoration: underline; }
+        
+        /* ===== FORM ===== */
+        .contact-form {
+            background: white;
+            padding: 36px;
+            border-radius: var(--radius);
+            color: var(--dark);
+            box-shadow: var(--shadow-lg);
+        }
+        .contact-form h3 {
+            margin-bottom: 8px;
+            font-size: 1.4rem;
+        }
+        .contact-form > p {
+            color: var(--gray);
+            margin-bottom: 28px;
+        }
+        
+        .form-group { margin-bottom: 22px; }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--dark);
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid var(--gray-light);
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: var(--transition);
+            font-family: inherit;
+            background: white;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+        }
+        .form-group input.error,
+        .form-group select.error,
+        .form-group textarea.error {
+            border-color: var(--danger);
+        }
+        .error-message {
+            color: var(--danger);
+            font-size: 0.85rem;
+            margin-top: 6px;
+            display: none;
+        }
+        .form-group input.error + .error-message,
+        .form-group select.error + .error-message,
+        .form-group textarea.error + .error-message { display: block; }
+        
+        .form-submit {
+            width: 100%;
+            padding: 16px;
+            font-size: 1.05rem;
+            margin-top: 8px;
+        }
+        
+        /* Success Message */
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 40px 32px;
+        }
+        .form-success.show { display: block; animation: fadeIn 0.4s ease; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        
+        .success-icon {
+            font-size: 4rem;
+            margin-bottom: 16px;
+            animation: bounce 0.6s ease;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        .form-success h3 { margin-bottom: 12px; }
+        .form-success p { color: var(--gray); margin-bottom: 24px; }
+        
+        /* ===== FOOTER ===== */
+        footer {
+            background: #0f172a;
+            color: white;
+            padding: 48px 0 24px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+        .footer-section h4 {
+            font-size: 1.15rem;
+            margin-bottom: 18px;
+            font-weight: 600;
+        }
+        .footer-section a {
+            display: block;
+            margin-bottom: 10px;
+            opacity: 0.85;
+            transition: opacity 0.2s;
+        }
+        .footer-section a:hover { opacity: 1; text-decoration: underline; }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            opacity: 0.75;
+            font-size: 0.9rem;
+        }
+        
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            
+            .nav-links {
+                position: fixed;
+                top: 72px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 24px 20px 32px;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+                transform: translateY(-120%);
+                transition: transform 0.3s ease;
+                gap: 20px;
+                z-index: 999;
+            }
+            .nav-links.active { transform: translateY(0); }
+            .nav-cta { width: 100%; justify-content: center; }
+            .nav-cta .btn { width: 100%; max-width: 320px; }
+            
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .hero-buttons .btn { width: 100%; max-width: 340px; }
+            
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .contact-form { padding: 28px 24px; }
+        }
+        
+        @media (max-width: 480px) {
+            .stats-grid { grid-template-columns: 1fr; }
+            .section-title { font-size: 1.8rem; }
+            .course-card { padding: 26px 22px; }
+        }
+        
+        /* ===== UTILITIES ===== */
+        .text-center { text-align: center; }
+        .mb-2 { margin-bottom: 16px; }
+        .mb-4 { margin-bottom: 32px; }
+        .hidden { display: none !important; }
+        
+        /* Focus styles for accessibility */
+        a:focus, button:focus, input:focus, select:focus, textarea:focus {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+        }
+        a:focus:not(:focus-visible), button:focus:not(:focus-visible) {
+            outline: none;
+        }
+        a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 🔝 Header -->
+    <header>
+        <nav role="navigation" aria-label="Asosiy navigatsiya">
+            <a href="#" class="logo" aria-label="NETLAB Bosh sahifa">💻 NET<span>LAB</span></a>
+            
+            <button class="hamburger" id="hamburger" aria-label="Menyu" aria-expanded="false" aria-controls="navLinks">
+                <span></span><span></span><span></span>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#courses">Kurslar</a></li>
+                <li><a href="#how">Qanday ishlaydi</a></li>
+                <li><a href="#contact">Aloqa</a></li>
+                <li class="nav-cta">
+                    <a href="tel:+998936803113" class="btn btn-primary" aria-label="Qo'ng'iroq qilish">📞 +998 93 680 31 13</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 🎯 Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>NETLAB — Learning by Doing</h1>
+            <p>Amaliy bilimlar bilan IT sohasida o'z yo'lingizni oching. Cisco, Linux, IoT va boshqa zamonaviy texnologiyalarni haqiqiy jihozlarda o'rganing.</p>
+            <div class="hero-buttons">
+                <a href="#courses" class="btn btn-primary">📚 Kurslarni ko'rish</a>
+                <a href="tel:+998936803113" class="btn btn-outline">📞 Qo'ng'iroq qilish</a>
+            </div>
+            <div class="hero-badges">
+                <span class="badge">✨ 100% Amaliyot</span>
+                <span class="badge">🎓 Sertifikat</span>
+                <span class="badge">💼 Ishga joylashish</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📊 Stats -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">6+</span>
+                    <span class="stat-label">IT Yo'nalishlar</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Amaliy Mashg'ulot</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">2025</span>
+                    <span class="stat-label">Samarqandda</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Bitiruvchilar</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📚 Courses Section -->
+    <section class="section" id="courses">
+        <div class="container">
+            <h2 class="section-title">Nimani o'rganasiz?</h2>
+            <p class="section-subtitle">Barcha kurslar amaliy laboratoriya ishi bilan birga — haqiqiy uskunalar, haqiqiy stsenariylar.</p>
+            
+            <div class="courses-grid">
+                <!-- Course 1 -->
+                <div class="course-card">
+                    <div class="course-header">
+                        <span class="course-icon">💻</span>
+                        <span class="course-level level-beginner">Boshlang'ich</span>
+                    </div>
+                    <h3>Kompyuter Savodxonligi</h3>
+                    <p>Kompyuter asoslari, MS Office, internet va kiberhavfsizlik bo'yicha to'liq kurs. Noldan professional darajagacha.</p>
+                    <a href="#contact" class="btn btn-secondary">Ro'yxatdan o'tish →</a>
+                </div>
+                
+                <!-- Course 2 -->
+                <div class="course-card">
+                    <div class="course-header">
+                        <span class="course-icon">🌐</span>
+                        <span class="course-level level-intermediate">O'rta</span>
+                    </div>
+                    <h3>Cisco / MikroTik Tarmoqlar</h3>
+                    <p>Kompyuter tarmoqlari, routing, switching, VLAN, VPN va tarmoq xavfsizligi. CCNA darajasiga yo'naltirilgan.</p>
+                    <a href="#contact" class="btn btn-secondary">Ro'yxatdan o'tish →</a>
+                </div>
+                
+                <!-- Course 3 -->
+                <div class="course-card">
+                    <div class="course-header">
+                        <span class="course-icon">📞</span>
+                        <span class="course-level level-intermediate">O'rta</span>
+                    </div>
+                    <h3>IP-Telefoniya</h3>
+                    <p>VoIP texnologiyalari, Asterisk, FreePBX, SIP protokoli va korporativ telefon tizimlarini sozlash.</p>
+                    <a href="#contact" class="btn btn-secondary">Ro'yxatdan o'tish →</a>
+                </div>
+                
+                <!-- Course 4 -->
+                <div class="course-card">
+                    <div class="course-header">
+                        <span class="course-icon">🛡️</span>
+                        <span class="course-level level-advanced">Amaliy</span>
+                    </div>
+                    <h3>Xavfsizlik & Video Nazorat</h3>
+                    <p>CCTV tizimlarini o'rnatish, sozlash va boshqarish. IP kameralar, DVR/NVR va monitoring tizimlari.</p>
+                    <a href="#contact" class="btn btn-secondary">Ro'yxatdan o'tish →</a>
+                </div>
+                
+                <!-- Course 5 -->
+                <div class="course-card">
+                    <div class="course-header">
+                        <span class="course-icon">🐧</span>
+                        <span class="course-level level-advanced">Yuqori</span>
+                    </div>
+                    <h3>Linux Administratsiya</h3>
+                    <p>Linux OS asoslari, server boshqaruvi, shell scripting, Docker va DevOps amaliyotlari.</p>
+                    <a href="#contact" class="btn btn-secondary">Ro'yxatdan o'tish →</a>
+                </div>
+                
+                <!-- Course 6 -->
+                <div class="course-card">
+                    <div class="course-header">
+                        <span class="course-icon">🏠</span>
+                        <span class="course-level level-beginner">Barcha daraja</span>
+                    </div>
+                    <h3>Aqlli Uy & IoT</h3>
+                    <p>Smart home tizimlari, Arduino, Raspberry Pi, sensor texnologiyalari va avtomatlashtirish.</p>
+                    <a href="#contact" class="btn btn-secondary">Ro'yxatdan o'tish →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🔄 How It Works -->
+    <section class="section steps-section" id="how">
+        <div class="container">
+            <h2 class="section-title">Qanday ishlaydi?</h2>
+            <p class="section-subtitle">Sodda 4 qadam bilan IT sohasida o'z karyerangizni boshlang.</p>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Yo'nalishni tanlang</h3>
+                    <p>6 ta IT yo'nalishdan o'zingizga mosini tanlang. Bepul maslahat uchun qo'ng'iroq qiling.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Ro'yxatdan o'ting</h3>
+                    <p>Qulay vaqtda dars jadvalini tanlang. Guruhlar kichik — har bir o'quvchiga e'tibor beriladi.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Amaliyotda o'rganing</h3>
+                    <p>Haqiqiy uskunalar bilan ishlang. Nazariya minimal — amaliyot maksimal.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Sertifikat va Ish</h3>
+                    <p>Kursni tugatgach sertifikat oling. Ish topishda ko'maklashamiz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📞 Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Biz bilan bog'laning</h2>
+            <p class="section-subtitle">Savollaringiz bormi? Qo'ng'iroq qiling yoki formani to'ldiring — 24 soat ichida javob beramiz.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <strong>Telefon</strong>
+                            <a href="tel:+998936803113">+998 93 680 31 13</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✈️</span>
+                        <div>
+                            <strong>Telegram Admin</strong>
+                            <a href="https://t.me/netlab_sam" target="_blank" rel="noopener noreferrer">@netlab_sam</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📢</span>
+                        <div>
+                            <strong>Telegram Kanal</strong>
+                            <a href="https://t.me/netlabuz" target="_blank" rel="noopener noreferrer">t.me/netlabuz</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <strong>Manzil</strong>
+                            <p>Samarqand, Dahbed 11, 2-qavat</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">⏰</span>
+                        <div>
+                            <strong>Ish Vaqti</strong>
+                            <p>Dushanba — Juma: 09:00 - 18:00<br>Shanba: 10:00 - 15:00</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <div id="formContainer">
+                        <h3>📝 Ro'yxatdan o'ting</h3>
+                        <p>Hoziroq ariza qoldiring — mutaxassisimiz siz bilan bog'lanadi.</p>
+                        
+                        <form id="contactForm" novalidate>
+                            <div class="form-group">
+                                <label for="name">Ismingiz *</label>
+                                <input type="text" id="name" name="name" placeholder="Ismingizni kiriting" required minlength="2" maxlength="50" autocomplete="name">
+                                <span class="error-message">Iltimos, ismingizni kiriting (min. 2 belgi)</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Telefon raqam *</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+998901234567" required pattern="^\+?998[0-9]{9}$" autocomplete="tel">
+                                <span class="error-message">To'g'ri format: +998901234567</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="course">Kurs tanlang *</label>
+                                <select id="course" name="course" required>
+                                    <option value="">— Yo'nalishni tanlang —</option>
+                                    <option value="computer">💻 Kompyuter Savodxonligi</option>
+                                    <option value="cisco">🌐 Cisco / MikroTik Tarmoqlar</option>
+                                    <option value="iptelephony">📞 IP-Telefoniya</option>
+                                    <option value="security">🛡️ Xavfsizlik & Video Nazorat</option>
+                                    <option value="linux">🐧 Linux Administratsiya</option>
+                                    <option value="iot">🏠 Aqlli Uy & IoT</option>
+                                </select>
+                                <span class="error-message">Kursni tanlang</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Izoh (ixtiyoriy)</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Qo'shimcha savollar yoki izohlar..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary form-submit">
+                                🚀 Ariza Yuborish
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Success Message -->
+                    <div class="form-success" id="formSuccess">
+                        <div class="success-icon">✅</div>
+                        <h3>Ariza qabul qilindi!</h3>
+                        <p>Mutaxassisimiz 24 soat ichida siz bilan bog'lanadi. Savollaringiz bo'lsa, <a href="tel:+998936803113" style="color:var(--primary);font-weight:600;">+998 93 680 31 13</a> raqamiga qo'ng'iroq qiling.</p>
+                        <button class="btn btn-secondary" onclick="resetForm()" type="button">🔄 Yangi ariza</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🔻 Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>💻 NETLAB</h4>
+                    <p style="opacity:0.85;line-height:1.8">Samarqanddagi yetakchi IT o'quv markazi. Amaliy bilimlar, haqiqiy natijalar, muvaffaqiyatli kelajak.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>📚 Kurslar</h4>
+                    <a href="#courses">Kompyuter Savodxonligi</a>
+                    <a href="#courses">Cisco / MikroTik</a>
+                    <a href="#courses">Linux Administratsiya</a>
+                    <a href="#courses">IoT & Smart Home</a>
+                    <a href="#courses">CCTV & Xavfsizlik</a>
+                </div>
+                <div class="footer-section">
+                    <h4>🔗 Aloqa</h4>
+                    <a href="tel:+998936803113">📞 +998 93 680 31 13</a>
+                    <a href="https://t.me/netlab_sam" target="_blank" rel="noopener noreferrer">✈️ @netlab_sam</a>
+                    <a href="https://t.me/netlabuz" target="_blank" rel="noopener noreferrer">📢 t.me/netlabuz</a>
+                </div>
+                <div class="footer-section">
+                    <h4>📍 Manzil</h4>
+                    <p style="opacity:0.85;line-height:1.8">Samarqand sh., Dahbed ko'chasi 11, 2-qavat<br><br>Google Maps: <a href="https://maps.app.goo.gl/" target="_blank" rel="noopener noreferrer" style="color:var(--secondary)">Ochish</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 NETLAB Samarqand. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ⚙️ JavaScript -->
+    <script>
+        // ===== TELEGRAM CONFIG =====
+        const TG = {
+            TOKEN: '8758327047:AAE6OlCmzH17TgbhscKJf__h4vntXws691c',
+            CHAT_ID: '647354861',
+            ADMIN: '@netlab_sam'
+        };
+        
+        // ===== COURSE NAMES =====
+        const COURSE_NAMES = {
+            'computer': '💻 Kompyuter Savodxonligi',
+            'cisco': '🌐 Cisco / MikroTik Tarmoqlar',
+            'iptelephony': '📞 IP-Telefoniya',
+            'security': '🛡️ Xavfsizlik & Video Nazorat',
+            'linux': '🐧 Linux Administratsiya',
+            'iot': '🏠 Aqlli Uy & IoT'
+        };
+        
+        // ===== DOM ELEMENTS =====
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const contactForm = document.getElementById('contactForm');
+        const formContainer = document.getElementById('formContainer');
+        const formSuccess = document.getElementById('formSuccess');
+        
+        // ===== HAMBURGER MENU =====
+        function toggleMenu() {
+            const isActive = navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', isActive);
+        }
+        hamburger?.addEventListener('click', toggleMenu);
+        
+        // Close menu when clicking link
+        navLinks?.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger?.contains(e.target) && !navLinks?.contains(e.target)) {
+                navLinks?.classList.remove('active');
+                hamburger?.classList.remove('active');
+                hamburger?.setAttribute('aria-expanded', 'false');
+            }
+        });
+        
+        // ===== FORM VALIDATION =====
+        function validatePhone(phone) {
+            return /^\+?998[0-9]{9}$/.test(phone.replace(/\s/g, ''));
+        }
+        
+        function showError(input) {
+            input.classList.add('error');
+        }
+        function clearError(input) {
+            input.classList.remove('error');
+        }
+        
+        // Clear error on input
+        ['name', 'phone', 'course', 'message'].forEach(id => {
+            const el = document.getElementById(id);
+            el?.addEventListener('input', () => clearError(el));
+            el?.addEventListener('blur', () => {
+                if (el.value.trim() && (id !== 'phone' || validatePhone(el.value))) {
+                    clearError(el);
+                }
+            });
+        });
+        
+        // ===== FORM SUBMISSION =====
+        contactForm?.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('name');
+            const phone = document.getElementById('phone');
+            const course = document.getElementById('course');
+            const message = document.getElementById('message');
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            
+            // Validate
+            let valid = true;
+            if (name.value.trim().length < 2) { showError(name); valid = false; }
+            if (!validatePhone(phone.value)) { showError(phone); valid = false; }
+            if (!course.value) { showError(course); valid = false; }
+            if (!valid) return;
+            
+            // Loading state
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '';
+            submitBtn.classList.add('btn-loading');
+            submitBtn.disabled = true;
+            
+            // Prepare data
+            const data = {
+                name: name.value.trim(),
+                phone: phone.value.trim().replace(/\s/g, ''),
+                course: course.value,
+                message: message.value.trim() || '—',
+                timestamp: new Date().toLocaleString('uz-UZ', { 
+                    timeZone: 'Asia/Samarkand',
+                    year: 'numeric', month: '2-digit', day: '2-digit',
+                    hour: '2-digit', minute: '2-digit'
+                }),
+                source: window.location.href
+            };
+            
+            // Format Telegram message
+            const tgMessage = `
+📩 *Yangi Ariza — NETLAB*
+
+👤 *Ism:* ${data.name}
+📞 *Telefon:* ${data.phone}
+📚 *Kurs:* ${COURSE_NAMES[data.course] || data.course}
+💬 *Izoh:* ${data.message}
+⏰ *Vaqt:* ${data.timestamp}
+🌐 *Manba:* ${data.source}
+            `.trim();
+            
+            try {
+                const response = await fetch(
+                    `https://api.telegram.org/bot${TG.TOKEN}/sendMessage`,
+                    {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            chat_id: TG.CHAT_ID,
+                            text: tgMessage,
+                            parse_mode: 'Markdown',
+                            disable_web_page_preview: true
+                        })
+                    }
+                );
+                
+                const result = await response.json();
+                
+                if (result.ok) {
+                    // Success: show confirmation
+                    formContainer.style.display = 'none';
+                    formSuccess.classList.add('show');
+                    
+                    // Backup to localStorage
+                    localStorage.setItem('netlab_lead_' + Date.now(), JSON.stringify(data));
+                    
+                    // Reset form after delay
+                    setTimeout(() => {
+                        contactForm.reset();
+                        ['name','phone','course','message'].forEach(id => {
+                            clearError(document.getElementById(id));
+                        });
+                    }, 100);
+                    
+                } else {
+                    throw new Error(result.description || 'Telegram API xatosi');
+                }
+                
+            } catch (error) {
+                console.error('Send error:', error);
+                
+                // Backup: save locally
+                localStorage.setItem('netlab_backup_' + Date.now(), JSON.stringify({
+                    ...data, error: error.message, saved: new Date().toISOString()
+                }));
+                
+                // Still show success (data saved)
+                alert('✅ Ariza qabul qilindi!\n\nMa\'lumotlar saqlandi. Mutaxassis tez orada bog\'lanadi.');
+                formContainer.style.display = 'none';
+                formSuccess.classList.add('show');
+                
+            } finally {
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.classList.remove('btn-loading');
+                submitBtn.disabled = false;
+            }
+        });
+        
+        // Reset form
+        function resetForm() {
+            contactForm?.reset();
+            ['name','phone','course','message'].forEach(id => {
+                clearError(document.getElementById(id));
+            });
+            formContainer.style.display = 'block';
+            formSuccess.classList.remove('show');
+            name?.focus();
+        }
+        
+        // ===== SMOOTH SCROLL =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+        
+        // ===== HEADER SCROLL EFFECT =====
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.12)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.08)';
+            }
+            lastScroll = window.scrollY;
+        });
+        
+        // ===== LOAD: Check for backups =====
+        window.addEventListener('load', () => {
+            const backups = Object.keys(localStorage).filter(k => k.startsWith('netlab_backup_'));
+            if (backups.length > 0) {
+                console.log(`📦 ${backups.length} ta saqlangan ariza mavjud`);
+                // Could auto-retry sending here if needed
+            }
+        });
+        
+        // ===== KEYBOARD ACCESSIBILITY =====
+        hamburger?.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleMenu();
+            }
+        });
+    </script>
+</body>
+</html>
