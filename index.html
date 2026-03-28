@@ -20,6 +20,7 @@
     <meta property="og:locale" content="uz_UZ">
     <meta property="og:url" content="https://netlab.uz">
     <meta property="og:site_name" content="NETLAB">
+    <meta property="og:image" content="logo.png">
     
     <!-- 🔗 Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
@@ -27,8 +28,8 @@
     <meta name="twitter:description" content="Amaliy bilimlar bilan IT sohasida o'z yo'lingizni oching">
     
     <!-- 🔖 Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
-    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     
     <!-- ⚡ Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -188,20 +189,22 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 14px 20px;
+            padding: 12px 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
         
         .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--primary);
             display: flex;
             align-items: center;
-            gap: 4px;
+            gap: 8px;
         }
-        .logo span { color: var(--dark); }
+        
+        .logo-img {
+            height: 45px;
+            width: auto;
+            object-fit: contain;
+        }
         
         .nav-links {
             display: flex;
@@ -625,12 +628,15 @@
             
             .stats-grid { grid-template-columns: repeat(2, 1fr); }
             .contact-form { padding: 28px 24px; }
+            
+            .logo-img { height: 38px; }
         }
         
         @media (max-width: 480px) {
             .stats-grid { grid-template-columns: 1fr; }
             .section-title { font-size: 1.8rem; }
             .course-card { padding: 26px 22px; }
+            .logo-img { height: 32px; }
         }
         
         /* ===== UTILITIES ===== */
@@ -657,7 +663,10 @@
     <!-- 🔝 Header -->
     <header>
         <nav role="navigation" aria-label="Asosiy navigatsiya">
-            <a href="#" class="logo" aria-label="NETLAB Bosh sahifa">💻 NET<span>LAB</span></a>
+            <a href="#" class="logo" aria-label="NETLAB Bosh sahifa">
+                <img src="logo.png" alt="NETLAB" class="logo-img" onerror="this.style.display='none'">
+                <span class="logo-text" style="font-size:1.4rem;font-weight:800;color:var(--primary);">NET<span style="color:var(--dark);">LAB</span></span>
+            </a>
             
             <button class="hamburger" id="hamburger" aria-label="Menyu" aria-expanded="false" aria-controls="navLinks">
                 <span></span><span></span><span></span>
@@ -947,7 +956,7 @@
                 </div>
                 <div class="footer-section">
                     <h4>📍 Manzil</h4>
-                    <p style="opacity:0.85;line-height:1.8">Samarqand sh., Dahbed ko'chasi 11, 2-qavat<br><br>Google Maps: <a href="https://maps.app.goo.gl/" target="_blank" rel="noopener noreferrer" style="color:var(--secondary)">Ochish</a></p>
+                    <p style="opacity:0.85;line-height:1.8">Samarqand sh., Dahbed ko'chasi 11, 2-qavat</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -1145,7 +1154,7 @@
             });
             formContainer.style.display = 'block';
             formSuccess.classList.remove('show');
-            name?.focus();
+            document.getElementById('name')?.focus();
         }
         
         // ===== SMOOTH SCROLL =====
@@ -1162,7 +1171,6 @@
         });
         
         // ===== HEADER SCROLL EFFECT =====
-        let lastScroll = 0;
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             if (window.scrollY > 50) {
@@ -1170,7 +1178,6 @@
             } else {
                 header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.08)';
             }
-            lastScroll = window.scrollY;
         });
         
         // ===== LOAD: Check for backups =====
@@ -1178,7 +1185,6 @@
             const backups = Object.keys(localStorage).filter(k => k.startsWith('netlab_backup_'));
             if (backups.length > 0) {
                 console.log(`📦 ${backups.length} ta saqlangan ariza mavjud`);
-                // Could auto-retry sending here if needed
             }
         });
         
