@@ -30,10 +30,7 @@ Foydalanuvchi forma → /api/send (Vercel server) → Telegram API
 Vercel Dashboard → Your Project → Settings → Environment Variables:
 
 | Name | Value |
-|------|-------|
-| `TELEGRAM_BOT_TOKEN` | `8758327047:AAE6OlCmzH17TgbhscKJf__h4vntXws691c` |
-| `TELEGRAM_CHAT_ID` | `647354861` |
-| `ALLOWED_ORIGIN` | `https://netlab.uz` (yoki `*`) |
+
 
 ### 2. GitHub ga push qiling
 
