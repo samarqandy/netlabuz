@@ -1,0 +1,143 @@
+{
+  "Meta": {
+    "title": "NETLAB — Samarqand IT O'quv Markazi",
+    "description": "Cisco, Linux, IoT, CCTV va tarmoq administratsiyasi bo'yicha 100% amaliy IT kurslar. Samarqanddagi yetakchi IT o'quv markazi."
+  },
+  "Nav": {
+    "courses": "Kurslar",
+    "how": "Qanday ishlaydi",
+    "why": "Nega biz",
+    "contact": "Aloqa",
+    "cta": "Ro'yxatdan o'tish"
+  },
+  "Hero": {
+    "badge": "Samarqandda #1 IT ta'lim platformasi",
+    "titleLine1": "IT sohasida",
+    "titleAccent": "karyera",
+    "titleLine2": "boshlang",
+    "subtitle": "Cisco, Linux, IoT va boshqa zamonaviy texnologiyalar",
+    "ctaPrimary": "Kurslarni ko'rish",
+    "ctaSecondary": "Qo'ng'iroq qilish",
+    "stats": {
+      "graduates": "Bitiruvchi",
+      "practice": "Amaliyot",
+      "directions": "Yo'nalish"
+    }
+  },
+  "Courses": {
+    "eyebrow": "Kurslar",
+    "title": "Nimani o'rganasiz?",
+    "subtitle": "Barcha kurslar haqiqiy uskunalarda amaliy laboratoriya ishi bilan — haqiqiy stsenariylar.",
+    "filterAll": "Barchasi",
+    "beginner": "Boshlang'ich",
+    "intermediate": "O'rta",
+    "advanced": "Yuqori",
+    "duration": "{months} oy",
+    "detailsCta": "Batafsil",
+    "items": {
+      "computer": {
+        "name": "Kompyuter savodxonligi",
+        "description": "Kompyuter asoslari, MS Office, internet va kiberxavfsizlik — noldan professional darajagacha."
+      },
+      "cisco": {
+        "name": "Cisco / MikroTik tarmoqlar",
+        "description": "Routing, switching, VLAN, VPN va tarmoq xavfsizligi. CCNA darajasiga yo'naltirilgan."
+      },
+      "iptelephony": {
+        "name": "IP-telefoniya",
+        "description": "VoIP, Asterisk, FreePBX, SIP protokoli va korporativ telefon tizimlarini sozlash."
+      },
+      "security": {
+        "name": "Xavfsizlik & video nazorat",
+        "description": "CCTV o'rnatish va sozlash. IP kameralar, DVR/NVR va monitoring tizimlari."
+      },
+      "linux": {
+        "name": "Linux administratsiya",
+        "description": "Server boshqaruvi, shell scripting, Docker va DevOps amaliyotlari."
+      },
+      "iot": {
+        "name": "Aqlli uy & IoT",
+        "description": "Smart home, Arduino, Raspberry Pi, sensorlar va avtomatlashtirish."
+      }
+    }
+  },
+  "Stats": {
+    "eyebrow": "Nega NETLAB",
+    "title": "Raqamlarda NETLAB",
+    "subtitle": "Yillar davomidagi natijalarimiz va ishonchimiz.",
+    "graduates": "Bitiruvchilar",
+    "experience": "Yillik tajriba",
+    "practice": "Amaliy mashg'ulot",
+    "directions": "O'quv yo'nalishi"
+  },
+  "Process": {
+    "eyebrow": "Jarayon",
+    "title": "Qanday ishlaymiz?",
+    "subtitle": "Arizadan tortib sertifikatgacha — to'rt oddiy qadam.",
+    "steps": {
+      "apply": {
+        "title": "Ariza qoldiring",
+        "description": "Formani to'ldiring yoki bizga qo'ng'iroq qiling."
+      },
+      "consult": {
+        "title": "Bepul konsultatsiya",
+        "description": "Mutaxassis siz uchun mos yo'nalishni tanlashga yordam beradi."
+      },
+      "learn": {
+        "title": "Amaliy o'qish",
+        "description": "Haqiqiy uskunalarda tajribali ustozlar bilan o'rganasiz."
+      },
+      "certificate": {
+        "title": "Sertifikat va ish",
+        "description": "Kursni tugatib sertifikat hamda karyera yordamini olasiz."
+      }
+    }
+  },
+  "Contact": {
+    "eyebrow": "Aloqa",
+    "title": "Ariza qoldiring",
+    "subtitle": "Formani to'ldiring — tez orada siz bilan bog'lanamiz.",
+    "name": "Ism",
+    "namePlaceholder": "Ismingiz",
+    "phone": "Telefon",
+    "email": "Email",
+    "course": "Kurs",
+    "coursePlaceholder": "Kursni tanlang",
+    "message": "Xabar",
+    "messagePlaceholder": "Savolingiz yoki izohingiz",
+    "optional": "ixtiyoriy",
+    "submit": "Yuborish",
+    "sending": "Yuborilmoqda...",
+    "successTitle": "Ariza qabul qilindi!",
+    "successText": "Rahmat! Tez orada operatorimiz siz bilan bog'lanadi.",
+    "again": "Yana yuborish",
+    "errorText": "Xatolik yuz berdi. Iltimos, qaytadan urinib ko'ring yoki qo'ng'iroq qiling.",
+    "nameError": "Ismni kiriting (kamida 2 harf).",
+    "phoneError": "To'g'ri telefon kiriting: +998XXXXXXXXX",
+    "courseError": "Kursni tanlang.",
+    "infoPhone": "Telefon",
+    "infoAddress": "Manzil",
+    "address": "Dahbed ko'chasi 11, Samarqand"
+  },
+  "Footer": {
+    "about": "Samarqanddagi yetakchi IT o'quv markazi. Cisco, Linux, IoT va video nazorat bo'yicha 100% amaliy kurslar.",
+    "navTitle": "Sahifalar",
+    "coursesTitle": "Kurslar",
+    "contactTitle": "Aloqa",
+    "address": "Dahbed ko'chasi 11, Samarqand",
+    "rights": "Barcha huquqlar himoyalangan.",
+    "tagline": "Samarqandda IT ta'lim"
+  },
+  "Theme": {
+    "toggle": "Mavzuni almashtirish",
+    "light": "Yorug'",
+    "dark": "Qorong'i",
+    "system": "Tizim"
+  },
+  "Language": {
+    "label": "Til",
+    "uz": "O'zbekcha",
+    "ru": "Ruscha",
+    "en": "Inglizcha"
+  }
+}

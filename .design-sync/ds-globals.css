@@ -1,0 +1,62 @@
+/* Design-system preview stylesheet manbasi.
+ * Tailwind shu yerdan kompilyatsiya qilinadi (cfg.cssEntry compiled chiqishiga ishora qiladi).
+ * Brend dark bo'lgani uchun dark tokenlar :root'ga joylashtirilgan — previewlar
+ * standart holatda dark va brendga mos ko'rinadi. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4%; /* #0A0A0A */
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 98%;
+
+    --primary: 210 100% 48%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 208 100% 50%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 64%;
+
+    --accent: 152 100% 50%; /* cyber green #00FF88 */
+    --accent-foreground: 0 0% 4%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 16%;
+    --input: 0 0% 16%;
+    --ring: 152 100% 50%;
+
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+  html,
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    -webkit-font-smoothing: antialiased;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 24px hsl(var(--accent) / 0.5);
+  }
+  .text-gradient-tech {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+  .glow-border {
+    @apply border border-border transition-shadow duration-300;
+  }
+}
