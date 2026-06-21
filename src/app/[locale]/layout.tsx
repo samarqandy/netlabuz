@@ -12,6 +12,8 @@ import { routing, type Locale } from '@/i18n/routing';
 import { ThemeProvider } from '@/components/theme-provider';
 import { MotionProvider } from '@/components/motion-provider';
 import { Navbar } from '@/components/navbar';
+import { Footer } from '@/components/footer';
+import { Scene } from '@/components/scene/scene';
 import '../globals.css';
 
 const inter = Inter({
@@ -113,10 +115,12 @@ export default async function LocaleLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Scene />
           <NextIntlClientProvider messages={messages}>
             <MotionProvider>
               <Navbar />
               <main>{children}</main>
+              <Footer />
             </MotionProvider>
           </NextIntlClientProvider>
         </ThemeProvider>

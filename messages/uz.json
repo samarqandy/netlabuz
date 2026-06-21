@@ -7,8 +7,6 @@
     "courses": "Kurslar",
     "how": "Qanday ishlaydi",
     "why": "Nega biz",
-    "testimonials": "Fikrlar",
-    "gallery": "Galereya",
     "contact": "Aloqa",
     "cta": "Ro'yxatdan o'tish"
   },
@@ -62,6 +60,73 @@
         "description": "Smart home, Arduino, Raspberry Pi, sensorlar va avtomatlashtirish."
       }
     }
+  },
+  "Stats": {
+    "eyebrow": "Nega NETLAB",
+    "title": "Raqamlarda NETLAB",
+    "subtitle": "Yillar davomidagi natijalarimiz va ishonchimiz.",
+    "graduates": "Bitiruvchilar",
+    "experience": "Yillik tajriba",
+    "practice": "Amaliy mashg'ulot",
+    "directions": "O'quv yo'nalishi"
+  },
+  "Process": {
+    "eyebrow": "Jarayon",
+    "title": "Qanday ishlaymiz?",
+    "subtitle": "Arizadan tortib sertifikatgacha — to'rt oddiy qadam.",
+    "steps": {
+      "apply": {
+        "title": "Ariza qoldiring",
+        "description": "Formani to'ldiring yoki bizga qo'ng'iroq qiling."
+      },
+      "consult": {
+        "title": "Bepul konsultatsiya",
+        "description": "Mutaxassis siz uchun mos yo'nalishni tanlashga yordam beradi."
+      },
+      "learn": {
+        "title": "Amaliy o'qish",
+        "description": "Haqiqiy uskunalarda tajribali ustozlar bilan o'rganasiz."
+      },
+      "certificate": {
+        "title": "Sertifikat va ish",
+        "description": "Kursni tugatib sertifikat hamda karyera yordamini olasiz."
+      }
+    }
+  },
+  "Contact": {
+    "eyebrow": "Aloqa",
+    "title": "Ariza qoldiring",
+    "subtitle": "Formani to'ldiring — tez orada siz bilan bog'lanamiz.",
+    "name": "Ism",
+    "namePlaceholder": "Ismingiz",
+    "phone": "Telefon",
+    "email": "Email",
+    "course": "Kurs",
+    "coursePlaceholder": "Kursni tanlang",
+    "message": "Xabar",
+    "messagePlaceholder": "Savolingiz yoki izohingiz",
+    "optional": "ixtiyoriy",
+    "submit": "Yuborish",
+    "sending": "Yuborilmoqda...",
+    "successTitle": "Ariza qabul qilindi!",
+    "successText": "Rahmat! Tez orada operatorimiz siz bilan bog'lanadi.",
+    "again": "Yana yuborish",
+    "errorText": "Xatolik yuz berdi. Iltimos, qaytadan urinib ko'ring yoki qo'ng'iroq qiling.",
+    "nameError": "Ismni kiriting (kamida 2 harf).",
+    "phoneError": "To'g'ri telefon kiriting: +998XXXXXXXXX",
+    "courseError": "Kursni tanlang.",
+    "infoPhone": "Telefon",
+    "infoAddress": "Manzil",
+    "address": "Dahbed ko'chasi 11, Samarqand"
+  },
+  "Footer": {
+    "about": "Samarqanddagi yetakchi IT o'quv markazi. Cisco, Linux, IoT va video nazorat bo'yicha 100% amaliy kurslar.",
+    "navTitle": "Sahifalar",
+    "coursesTitle": "Kurslar",
+    "contactTitle": "Aloqa",
+    "address": "Dahbed ko'chasi 11, Samarqand",
+    "rights": "Barcha huquqlar himoyalangan.",
+    "tagline": "Samarqandda IT ta'lim"
   },
   "Theme": {
     "toggle": "Mavzuni almashtirish",

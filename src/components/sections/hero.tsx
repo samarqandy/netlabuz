@@ -11,7 +11,7 @@ import { staggerContainer, staggerItem } from '@/lib/animations';
 const PHONE = '+998936803113';
 
 const STATS = [
-  { value: 906, suffix: '+', key: 'graduates' },
+  { value: 50, suffix: '+', key: 'graduates' },
   { value: 100, suffix: '%', key: 'practice' },
   { value: 6, suffix: '+', key: 'directions' },
 ] as const;

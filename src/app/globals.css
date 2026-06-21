@@ -68,8 +68,13 @@
   * {
     @apply border-border;
   }
+  /* Asosiy fon html'da — body shaffof bo'lib, orqadagi WebGL sahna ko'rinadi */
+  html {
+    @apply bg-background;
+  }
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply text-foreground antialiased;
+    background-color: transparent;
     font-feature-settings: 'rlig' 1, 'calt' 1;
   }
 

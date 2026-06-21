@@ -7,8 +7,6 @@
     "courses": "Courses",
     "how": "How it works",
     "why": "Why us",
-    "testimonials": "Reviews",
-    "gallery": "Gallery",
     "contact": "Contact",
     "cta": "Enroll now"
   },
@@ -62,6 +60,73 @@
         "description": "Smart home, Arduino, Raspberry Pi, sensors and automation."
       }
     }
+  },
+  "Stats": {
+    "eyebrow": "Why NETLAB",
+    "title": "NETLAB in numbers",
+    "subtitle": "Our results and trust built over the years.",
+    "graduates": "Graduates",
+    "experience": "Years of experience",
+    "practice": "Hands-on practice",
+    "directions": "Learning tracks"
+  },
+  "Process": {
+    "eyebrow": "Process",
+    "title": "How it works",
+    "subtitle": "From application to certificate — four simple steps.",
+    "steps": {
+      "apply": {
+        "title": "Send a request",
+        "description": "Fill in the form or give us a call."
+      },
+      "consult": {
+        "title": "Free consultation",
+        "description": "A specialist helps you pick the right track."
+      },
+      "learn": {
+        "title": "Hands-on learning",
+        "description": "Learn on real equipment with experienced instructors."
+      },
+      "certificate": {
+        "title": "Certificate & career",
+        "description": "Finish the course and get a certificate plus career support."
+      }
+    }
+  },
+  "Contact": {
+    "eyebrow": "Contact",
+    "title": "Send a request",
+    "subtitle": "Fill in the form — we'll get back to you shortly.",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "phone": "Phone",
+    "email": "Email",
+    "course": "Course",
+    "coursePlaceholder": "Choose a course",
+    "message": "Message",
+    "messagePlaceholder": "Your question or comment",
+    "optional": "optional",
+    "submit": "Send",
+    "sending": "Sending...",
+    "successTitle": "Request received!",
+    "successText": "Thank you! Our operator will contact you soon.",
+    "again": "Send another",
+    "errorText": "Something went wrong. Please try again or call us.",
+    "nameError": "Enter your name (at least 2 characters).",
+    "phoneError": "Enter a valid phone: +998XXXXXXXXX",
+    "courseError": "Please choose a course.",
+    "infoPhone": "Phone",
+    "infoAddress": "Address",
+    "address": "11 Dahbed St, Samarkand"
+  },
+  "Footer": {
+    "about": "The leading IT training center in Samarkand. 100% hands-on courses in Cisco, Linux, IoT and CCTV.",
+    "navTitle": "Pages",
+    "coursesTitle": "Courses",
+    "contactTitle": "Contact",
+    "address": "11 Dahbed St, Samarkand",
+    "rights": "All rights reserved.",
+    "tagline": "IT education in Samarkand"
   },
   "Theme": {
     "toggle": "Toggle theme",
