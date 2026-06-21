@@ -1,0 +1,78 @@
+{
+  "Meta": {
+    "title": "NETLAB — Samarqand IT O'quv Markazi",
+    "description": "Cisco, Linux, IoT, CCTV va tarmoq administratsiyasi bo'yicha 100% amaliy IT kurslar. Samarqanddagi yetakchi IT o'quv markazi."
+  },
+  "Nav": {
+    "courses": "Kurslar",
+    "how": "Qanday ishlaydi",
+    "why": "Nega biz",
+    "testimonials": "Fikrlar",
+    "gallery": "Galereya",
+    "contact": "Aloqa",
+    "cta": "Ro'yxatdan o'tish"
+  },
+  "Hero": {
+    "badge": "Samarqandda #1 IT ta'lim platformasi",
+    "titleLine1": "IT sohasida",
+    "titleAccent": "karyera",
+    "titleLine2": "boshlang",
+    "subtitle": "Cisco, Linux, IoT va boshqa zamonaviy texnologiyalar",
+    "ctaPrimary": "Kurslarni ko'rish",
+    "ctaSecondary": "Qo'ng'iroq qilish",
+    "stats": {
+      "graduates": "Bitiruvchi",
+      "practice": "Amaliyot",
+      "directions": "Yo'nalish"
+    }
+  },
+  "Courses": {
+    "eyebrow": "Kurslar",
+    "title": "Nimani o'rganasiz?",
+    "subtitle": "Barcha kurslar haqiqiy uskunalarda amaliy laboratoriya ishi bilan — haqiqiy stsenariylar.",
+    "filterAll": "Barchasi",
+    "beginner": "Boshlang'ich",
+    "intermediate": "O'rta",
+    "advanced": "Yuqori",
+    "duration": "{months} oy",
+    "detailsCta": "Batafsil",
+    "items": {
+      "computer": {
+        "name": "Kompyuter savodxonligi",
+        "description": "Kompyuter asoslari, MS Office, internet va kiberxavfsizlik — noldan professional darajagacha."
+      },
+      "cisco": {
+        "name": "Cisco / MikroTik tarmoqlar",
+        "description": "Routing, switching, VLAN, VPN va tarmoq xavfsizligi. CCNA darajasiga yo'naltirilgan."
+      },
+      "iptelephony": {
+        "name": "IP-telefoniya",
+        "description": "VoIP, Asterisk, FreePBX, SIP protokoli va korporativ telefon tizimlarini sozlash."
+      },
+      "security": {
+        "name": "Xavfsizlik & video nazorat",
+        "description": "CCTV o'rnatish va sozlash. IP kameralar, DVR/NVR va monitoring tizimlari."
+      },
+      "linux": {
+        "name": "Linux administratsiya",
+        "description": "Server boshqaruvi, shell scripting, Docker va DevOps amaliyotlari."
+      },
+      "iot": {
+        "name": "Aqlli uy & IoT",
+        "description": "Smart home, Arduino, Raspberry Pi, sensorlar va avtomatlashtirish."
+      }
+    }
+  },
+  "Theme": {
+    "toggle": "Mavzuni almashtirish",
+    "light": "Yorug'",
+    "dark": "Qorong'i",
+    "system": "Tizim"
+  },
+  "Language": {
+    "label": "Til",
+    "uz": "O'zbekcha",
+    "ru": "Ruscha",
+    "en": "Inglizcha"
+  }
+}

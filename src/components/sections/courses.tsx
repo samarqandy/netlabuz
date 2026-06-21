@@ -1,0 +1,122 @@
+'use client';
+
+import * as React from 'react';
+import { useTranslations } from 'next-intl';
+import { ArrowRight, Clock } from 'lucide-react';
+
+import {
+  COURSES,
+  COURSE_LEVELS,
+  GLOW_TEXT,
+  type CourseLevel,
+} from '@/lib/courses';
+import { cn } from '@/lib/utils';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { GlowCard } from '@/components/ui/glow-card';
+import { Reveal, StaggerGroup, StaggerItem } from '@/components/ui/reveal';
+import { SectionHeading } from '@/components/section-heading';
+
+type Filter = 'all' | CourseLevel;
+
+export function Courses() {
+  const t = useTranslations('Courses');
+  const [filter, setFilter] = React.useState<Filter>('all');
+
+  const filters: Filter[] = ['all', ...COURSE_LEVELS];
+  const visible =
+    filter === 'all' ? COURSES : COURSES.filter((c) => c.level === filter);
+
+  return (
+    <section id="courses" className="scroll-mt-20 py-20 sm:py-28">
+      <div className="container">
+        <Reveal>
+          <SectionHeading
+            eyebrow={t('eyebrow')}
+            title={t('title')}
+            subtitle={t('subtitle')}
+          />
+        </Reveal>
+
+        {/* Filtr tugmalari */}
+        <Reveal
+          variant="fadeIn"
+          className="mt-10 flex flex-wrap items-center justify-center gap-2"
+        >
+          {filters.map((f) => {
+            const active = filter === f;
+            const label = f === 'all' ? t('filterAll') : t(f);
+            return (
+              <Button
+                key={f}
+                size="sm"
+                variant={active ? 'default' : 'outline'}
+                aria-pressed={active}
+                onClick={() => setFilter(f)}
+                className={cn(
+                  'rounded-full',
+                  active && 'shadow-glow-blue'
+                )}
+              >
+                {label}
+              </Button>
+            );
+          })}
+        </Reveal>
+
+        {/* Kartalar — filter o'zgarganda qayta stagger bo'ladi (key) */}
+        <StaggerGroup
+          key={filter}
+          once={false}
+          className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+        >
+          {visible.map((course) => {
+            const Icon = course.icon;
+            return (
+              <StaggerItem key={course.id} className="h-full">
+                <GlowCard glow={course.glow} className="flex h-full flex-col">
+                  <div className="flex items-start justify-between gap-4">
+                    <div
+                      className={cn(
+                        'grid size-14 place-items-center rounded-xl border border-border bg-secondary/40',
+                        GLOW_TEXT[course.glow]
+                      )}
+                    >
+                      <Icon className="size-7" strokeWidth={1.75} />
+                    </div>
+                    <Badge variant={course.level}>{t(course.level)}</Badge>
+                  </div>
+
+                  <h3 className="mt-5 text-xl font-bold tracking-tight">
+                    {t(`items.${course.id}.name`)}
+                  </h3>
+                  <p className="mt-2 flex-1 text-sm text-muted-foreground">
+                    {t(`items.${course.id}.description`)}
+                  </p>
+
+                  <div className="mt-6 flex items-center justify-between">
+                    <span className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
+                      <Clock className="size-4" />
+                      {t('duration', { months: course.months })}
+                    </span>
+                    <Button
+                      asChild
+                      variant="ghost"
+                      size="sm"
+                      className="group/btn -mr-2 text-primary hover:text-primary"
+                    >
+                      <a href="#contact">
+                        {t('detailsCta')}
+                        <ArrowRight className="size-4 transition-transform duration-200 group-hover/btn:translate-x-1" />
+                      </a>
+                    </Button>
+                  </div>
+                </GlowCard>
+              </StaggerItem>
+            );
+          })}
+        </StaggerGroup>
+      </div>
+    </section>
+  );
+}

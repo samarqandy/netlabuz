@@ -1,0 +1,78 @@
+{
+  "Meta": {
+    "title": "NETLAB — IT учебный центр в Самарканде",
+    "description": "100% практические IT-курсы по Cisco, Linux, IoT, CCTV и сетевому администрированию. Ведущий IT учебный центр в Самарканде."
+  },
+  "Nav": {
+    "courses": "Курсы",
+    "how": "Как это работает",
+    "why": "Почему мы",
+    "testimonials": "Отзывы",
+    "gallery": "Галерея",
+    "contact": "Контакты",
+    "cta": "Записаться"
+  },
+  "Hero": {
+    "badge": "Платформа IT-образования #1 в Самарканде",
+    "titleLine1": "Начните карьеру",
+    "titleAccent": "в IT",
+    "titleLine2": "",
+    "subtitle": "Cisco, Linux, IoT и другие современные технологии",
+    "ctaPrimary": "Смотреть курсы",
+    "ctaSecondary": "Позвонить",
+    "stats": {
+      "graduates": "Выпускников",
+      "practice": "Практики",
+      "directions": "Направлений"
+    }
+  },
+  "Courses": {
+    "eyebrow": "Курсы",
+    "title": "Чему вы научитесь?",
+    "subtitle": "Все курсы — это практическая работа в лаборатории на реальном оборудовании.",
+    "filterAll": "Все",
+    "beginner": "Начальный",
+    "intermediate": "Средний",
+    "advanced": "Продвинутый",
+    "duration": "{months} мес.",
+    "detailsCta": "Подробнее",
+    "items": {
+      "computer": {
+        "name": "Компьютерная грамотность",
+        "description": "Основы ПК, MS Office, интернет и кибербезопасность — с нуля до профессионального уровня."
+      },
+      "cisco": {
+        "name": "Cisco / MikroTik сети",
+        "description": "Routing, switching, VLAN, VPN и сетевая безопасность. Подготовка к уровню CCNA."
+      },
+      "iptelephony": {
+        "name": "IP-телефония",
+        "description": "VoIP, Asterisk, FreePBX, протокол SIP и настройка корпоративных АТС."
+      },
+      "security": {
+        "name": "Безопасность и видеонаблюдение",
+        "description": "Установка и настройка CCTV. IP-камеры, DVR/NVR и системы мониторинга."
+      },
+      "linux": {
+        "name": "Администрирование Linux",
+        "description": "Управление серверами, shell-скрипты, Docker и практики DevOps."
+      },
+      "iot": {
+        "name": "Умный дом и IoT",
+        "description": "Smart home, Arduino, Raspberry Pi, датчики и автоматизация."
+      }
+    }
+  },
+  "Theme": {
+    "toggle": "Сменить тему",
+    "light": "Светлая",
+    "dark": "Тёмная",
+    "system": "Системная"
+  },
+  "Language": {
+    "label": "Язык",
+    "uz": "Узбекский",
+    "ru": "Русский",
+    "en": "Английский"
+  }
+}

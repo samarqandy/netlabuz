@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* ===== LIGHT MODE (qo'shimcha) ===== */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 6%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 6%;
+
+    --primary: 210 100% 40%; /* tech blue #0066CC */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 208 100% 45%; /* #0088FF (light) */
+
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 152 100% 38%; /* cyber green (light uchun to'qroq) */
+    --accent-foreground: 0 0% 4%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 210 100% 40%;
+
+    --radius: 0.75rem;
+  }
+
+  /* ===== DARK MODE (asosiy) ===== */
+  .dark {
+    --background: 0 0% 4%; /* #0A0A0A */
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 98%;
+
+    --primary: 210 100% 48%; /* tech blue, dark uchun yorqinroq */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 208 100% 50%; /* #0088FF */
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 64%;
+
+    --accent: 152 100% 50%; /* cyber green #00FF88 */
+    --accent-foreground: 0 0% 4%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 16%;
+    --input: 0 0% 16%;
+    --ring: 152 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+
+  /* Reduced motion: barcha animatsiya/transitionni o'chiramiz */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  /* Texno-s“glow” matn effekti */
+  .text-glow {
+    text-shadow: 0 0 24px hsl(var(--accent) / 0.5);
+  }
+
+  /* Gradient matn (tech blue → cyber green) */
+  .text-gradient-tech {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+
+  /* Texno-grid fon (animatsiya tailwind: animate-grid-move) */
+  .bg-grid {
+    @apply bg-grid-tech [background-size:44px_44px];
+  }
+
+  /* Glow ramka — hover'da yorqinlashadigan kartalar uchun */
+  .glow-border {
+    @apply border border-border transition-shadow duration-300;
+  }
+  .glow-border:hover {
+    box-shadow:
+      0 0 0 1px hsl(var(--primary) / 0.4),
+      0 0 28px hsl(var(--primary) / 0.25);
+  }
+}
