@@ -11,6 +11,7 @@ const TELEGRAM_CHANNELS = [
 
 const NAV_LINKS = [
   { href: '#courses', key: 'courses' },
+  { href: '#quiz', key: 'quiz' },
   { href: '#why', key: 'why' },
   { href: '#how', key: 'how' },
   { href: '#faq', key: 'faq' },

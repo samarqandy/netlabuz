@@ -5,6 +5,7 @@
   },
   "Nav": {
     "courses": "Courses",
+    "quiz": "Quiz",
     "why": "Why us",
     "how": "Process",
     "faq": "FAQ",
@@ -73,6 +74,67 @@
         "description": "Smart home, Arduino, Raspberry Pi, sensors and automation."
       }
     }
+  },
+  "Quiz": {
+    "eyebrow": "Quiz",
+    "title": "Which track fits you?",
+    "subtitle": "Answer 5 questions — we'll recommend the right course for you.",
+    "progress": "Question {current}/{total}",
+    "back": "Back",
+    "restart": "Start over",
+    "resultEyebrow": "Your best match",
+    "resultCta": "Enroll in this course",
+    "questions": {
+      "q1": {
+        "q": "What's your current level?",
+        "options": {
+          "o1": "Just getting started with computers",
+          "o2": "Comfortable as an everyday user",
+          "o3": "I have an IT base and want to go deeper"
+        }
+      },
+      "q2": {
+        "q": "What would you enjoy working with most?",
+        "options": {
+          "o1": "Networks — how the internet works, routers",
+          "o2": "Servers and the command line",
+          "o3": "Cameras and security systems",
+          "o4": "Smart devices and electronics",
+          "o5": "Office software and everyday tasks"
+        }
+      },
+      "q3": {
+        "q": "What outcome do you expect from the course?",
+        "options": {
+          "o1": "My first job in IT",
+          "o2": "Becoming a server and infrastructure specialist",
+          "o3": "Launching my own service (installation, setup)",
+          "o4": "Useful skills for myself and my home"
+        }
+      },
+      "q4": {
+        "q": "How do you like solving problems?",
+        "options": {
+          "o1": "Assembling, wiring and installing by hand",
+          "o2": "Digging deep into configs and analyzing",
+          "o3": "Working fast and efficiently in ready-made systems"
+        }
+      },
+      "q5": {
+        "q": "Which work environment suits you best?",
+        "options": {
+          "o1": "A company office and corporate network",
+          "o2": "A data center and servers",
+          "o3": "Installation work on-site",
+          "o4": "A home lab and personal projects"
+        }
+      }
+    }
+  },
+  "Mentors": {
+    "eyebrow": "Mentors",
+    "title": "A team of practitioner mentors",
+    "subtitle": "You learn from specialists working in the industry."
   },
   "WhyUs": {
     "eyebrow": "Why NETLAB",

@@ -99,7 +99,7 @@ const config: Config = {
         },
       },
       animation: {
-        'grid-move': 'grid-move 18s linear infinite',
+        'grid-move': 'grid-move 32s linear infinite',
         marquee: 'marquee 32s linear infinite',
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',

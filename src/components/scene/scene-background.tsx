@@ -24,9 +24,11 @@ import { useTheme } from 'next-themes';
 const SECTION_MODE: Record<string, number> = {
   home: 0,
   courses: 1,
+  quiz: 1,
   why: 2,
   stats: 2,
   how: 3,
+  mentors: 3,
   reviews: 3,
   faq: 4,
   contact: 4,
@@ -145,63 +147,65 @@ void main(){
   float w3=clamp(1.0-abs(m-3.0),0.0,1.0);
   float w4=clamp(1.0-abs(m-4.0),0.0,1.0);
 
-  // Brend palitra + Oltin asr accenti
-  vec3 cBlue=vec3(0.00,0.42,0.95);
-  vec3 cCyan=vec3(0.00,0.85,1.00);
-  vec3 cGold=vec3(1.00,0.78,0.32); // Oltin Islom asri
-  vec3 cInd =vec3(0.40,0.48,1.00);
-  vec3 cGreen=vec3(0.00,1.00,0.55);
+  // Vazmin premium palitra — to'yinganlik pasaytirilgan, chuqur tonlar.
+  // Fon kontent bilan raqobatlashmasligi kerak: his qilinadi, ko'zga tashlanmaydi.
+  vec3 cBlue=vec3(0.10,0.32,0.72);
+  vec3 cCyan=vec3(0.15,0.55,0.75);
+  vec3 cGold=vec3(0.85,0.66,0.30); // Oltin Islom asri (yumshatilgan)
+  vec3 cInd =vec3(0.32,0.38,0.78);
+  vec3 cGreen=vec3(0.05,0.62,0.40);
 
-  vec3 base=vec3(0.012,0.018,0.035);
+  vec3 base=vec3(0.010,0.014,0.028);
   vec3 color=base;
 
   // scroll parallaks (cheksiz chuqurlik hissi)
   vec2 puv=uv + vec2(0.0, uScroll*0.6);
 
   // --- 0/1: Tarmoq (Hero: paketlar; Kurslar: tinchroq node-link) ---
+  // Kam zichlik + past yorqinlik: nozik tekstura, dominant emas
   float wnet=clamp(w0+w1, 0.0, 1.0);
   if(wnet>0.001){
-    float pkt=mix(0.45, 0.16, w1/(wnet+1e-4)); // Hero tezroq paket
-    vec2 net=network(puv*3.0, pkt);
+    float pkt=mix(0.30, 0.10, w1/(wnet+1e-4)); // sekin paketlar
+    vec2 net=network(puv*2.4, pkt);
     vec3 ncol=mix(cBlue, cCyan, w1/(wnet+1e-4));
-    color += ncol*net.x*1.10*wnet;       // tugunlar
-    color += ncol*net.y*0.85*wnet;       // bog'lar + paketlar
+    color += ncol*net.x*0.55*wnet;       // tugunlar
+    color += ncol*net.y*0.38*wnet;       // bog'lar + paketlar
   }
 
   // --- 2: Konstellatsiya + GIRIH (oltin) ---
   if(w2>0.001){
-    vec2 con=network(puv*2.2, 0.10);
-    color += cInd*con.x*1.0*w2;
-    color += mix(cInd,cGold,0.5)*con.y*0.5*w2;
+    vec2 con=network(puv*1.9, 0.07);
+    color += cInd*con.x*0.50*w2;
+    color += mix(cInd,cGold,0.5)*con.y*0.24*w2;
     float g=girih(uv, 1.6);
-    color += cGold*g*0.16*w2;            // nozik oltin girih
-    color += cGold*0.015*w2;             // iliq ambient
+    color += cGold*g*0.07*w2;            // juda nozik oltin girih
+    color += cGold*0.008*w2;             // iliq ambient
   }
 
   // --- 3: Flow-field ---
   if(w3>0.001){
     float fl=flowField(puv);
-    color += cGreen*fl*0.5*w3;
-    color += mix(cGreen,cCyan,0.5)*fbm(puv*1.5+uTime*0.05)*0.12*w3;
+    color += cGreen*fl*0.20*w3;
+    color += mix(cGreen,cCyan,0.5)*fbm(puv*1.5+uTime*0.05)*0.05*w3;
   }
 
   // --- 4: Signal to'lqinlari ---
   if(w4>0.001){
     float sw=signalWave(uv);
-    color += cBlue*sw*0.8*w4;
-    color += cCyan*sw*0.3*w4;
+    color += cBlue*sw*0.30*w4;
+    color += cCyan*sw*0.12*w4;
   }
 
-  // Yulduzlar — kosmik sahnalarda (Hero/Kurslar/Aloqa) kuchliroq
+  // Yulduzlar — juda nozik chaqnash
   float starAmt=clamp(w0+w1*0.6+w4*0.8, 0.0, 1.0);
   float s=stars(uv+vec2(uTime*0.01,0.0),14.0)+stars(uv*1.8,22.0)*0.5;
-  color += vec3(0.85,0.92,1.0)*s*starAmt*0.6;
+  color += vec3(0.85,0.92,1.0)*s*starAmt*0.30;
 
   // Vinetka — kontent kontrasti uchun
   float vig=smoothstep(1.5,0.25,length(uv));
-  color *= mix(0.5,1.0,vig);
-  // Umumiy xiralashtirish — fon kontent bilan raqobatlashmasligi uchun
-  color *= 0.68;
+  color *= mix(0.45,1.0,vig);
+  // Umumiy xiralashtirish — fon "his qilinadi, ko'rinmaydi" darajasida
+  color *= 0.60;
 
   gl_FragColor=vec4(color,1.0);
 }
@@ -315,7 +319,8 @@ export function SceneBackground() {
     const t0 = performance.now();
 
     const renderFrame = (now: number) => {
-      const time = reduce ? 0 : (now - t0) / 1000;
+      // 0.55 — sekin, bosiqroq harakat (premium his)
+      const time = reduce ? 0 : ((now - t0) / 1000) * 0.55;
       curMode += (targetMode - curMode) * 0.06;
       gl.uniform1f(uTime, time);
       gl.uniform1f(uMode, reduce ? 0 : curMode);
@@ -383,7 +388,7 @@ export function SceneBackground() {
   return (
     <div
       aria-hidden
-      className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,#0a1430_0%,#05070f_55%,#000_100%)]"
+      className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,#081022_0%,#04060d_55%,#000_100%)]"
     >
       <canvas ref={canvasRef} className="size-full" />
     </div>
