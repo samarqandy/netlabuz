@@ -11,6 +11,7 @@ import {
   type CourseLevel,
 } from '@/lib/courses';
 import { cn } from '@/lib/utils';
+import { track } from '@/lib/track';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { GlowCard } from '@/components/ui/glow-card';
@@ -132,6 +133,10 @@ export function Courses() {
                               detail: course.id,
                             })
                           );
+                          track('course_select', {
+                            course: course.id,
+                            source: 'card',
+                          });
                         }}
                       >
                         {t('detailsCta')}

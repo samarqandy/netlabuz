@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { Analytics } from '@vercel/analytics/react';
@@ -34,6 +34,14 @@ const jetbrainsMono = JetBrains_Mono({
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
+
+// Brauzer UI rangi mavzuga mos bo'ladi (mobil address bar va h.k.)
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: dark)', color: '#0A0A0A' },
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+  ],
+};
 
 export async function generateMetadata({
   params: { locale },

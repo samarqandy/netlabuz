@@ -8,6 +8,7 @@ import { ArrowRight, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Terminal } from '@/components/ui/terminal';
 import { staggerContainer, staggerItem } from '@/lib/animations';
+import { track } from '@/lib/track';
 
 const STATS = [
   { value: 50, suffix: '+', key: 'graduates' },
@@ -85,7 +86,10 @@ export function Hero() {
             className="mt-9 flex flex-col items-center gap-3 sm:flex-row"
           >
             <Button asChild size="lg" variant="accent">
-              <a href="#contact">
+              <a
+                href="#contact"
+                onClick={() => track('cta_click', { location: 'hero' })}
+              >
                 <MessageCircle className="size-4" /> {t('ctaPrimary')}
               </a>
             </Button>

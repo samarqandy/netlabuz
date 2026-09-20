@@ -7,6 +7,7 @@ import { Phone, MapPin, Send, Loader2, CheckCircle2, MessageCircle } from 'lucid
 
 import { COURSES } from '@/lib/courses';
 import { cn } from '@/lib/utils';
+import { track } from '@/lib/track';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -77,6 +78,7 @@ export function Contact() {
       setStatus('success');
       form.reset();
       setSelectedCourse('');
+      track('lead_submitted', { course });
     } catch {
       setStatus('error');
     }

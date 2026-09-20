@@ -7,6 +7,7 @@ import { ArrowLeft, ArrowRight, RotateCcw, Sparkles } from 'lucide-react';
 
 import { COURSES } from '@/lib/courses';
 import { cn } from '@/lib/utils';
+import { track } from '@/lib/track';
 import { Button } from '@/components/ui/button';
 import { Reveal } from '@/components/ui/reveal';
 import { SectionHeading } from '@/components/section-heading';
@@ -109,7 +110,14 @@ export function Quiz() {
 
   const restart = () => setAnswers([]);
   const back = () => setAnswers((a) => a.slice(0, -1));
-  const answer = (optIdx: number) => setAnswers((a) => [...a, optIdx]);
+  const answer = (optIdx: number) =>
+    setAnswers((a) => {
+      const next = [...a, optIdx];
+      if (next.length === QUESTIONS.length) {
+        track('quiz_completed', { result: computeResult(next) });
+      }
+      return next;
+    });
 
   return (
     <section
@@ -228,6 +236,10 @@ export function Quiz() {
                                 detail: resultCourse.id,
                               })
                             );
+                            track('course_select', {
+                              course: resultCourse.id,
+                              source: 'quiz',
+                            });
                           }}
                         >
                           {t('resultCta')} <ArrowRight className="size-4" />

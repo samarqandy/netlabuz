@@ -7,6 +7,7 @@ import { Menu, X, Phone } from 'lucide-react';
 
 import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
+import { track } from '@/lib/track';
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { LanguageSwitcher } from '@/components/language-switcher';
@@ -22,10 +23,44 @@ const NAV_ITEMS = [
   { href: '#contact', key: 'contact' },
 ] as const;
 
+/** Scrollspy — ekranda qaysi seksiya faolligini kuzatadi */
+function useActiveSection(ids: readonly string[]) {
+  const [active, setActive] = React.useState<string | null>(null);
+
+  React.useEffect(() => {
+    const sections = ids
+      .map((id) => document.getElementById(id))
+      .filter(Boolean) as HTMLElement[];
+    if (sections.length === 0) return;
+
+    const ratios = new Map<string, number>();
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) ratios.set(e.target.id, e.intersectionRatio);
+        let best: string | null = null;
+        let bestR = 0.05; // hech biri ko'rinmasa — faol yo'q (hero)
+        ratios.forEach((r, id) => {
+          if (r > bestR) {
+            bestR = r;
+            best = id;
+          }
+        });
+        setActive(best);
+      },
+      { threshold: [0, 0.2, 0.4, 0.6, 0.8, 1] }
+    );
+    sections.forEach((sec) => io.observe(sec));
+    return () => io.disconnect();
+  }, [ids]);
+
+  return active;
+}
+
 export function Navbar() {
   const t = useTranslations('Nav');
   const [scrolled, setScrolled] = React.useState(false);
   const [open, setOpen] = React.useState(false);
+  const active = useActiveSection(NAV_ITEMS.map((i) => i.href.slice(1)));
 
   React.useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -56,16 +91,33 @@ export function Navbar() {
 
         {/* Desktop nav */}
         <ul className="hidden items-center gap-1 lg:flex">
-          {NAV_ITEMS.map((item) => (
-            <li key={item.key}>
-              <a
-                href={item.href}
-                className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors duration-200 hover:text-foreground"
-              >
-                {t(item.key)}
-              </a>
-            </li>
-          ))}
+          {NAV_ITEMS.map((item) => {
+            const isActive = active === item.href.slice(1);
+            return (
+              <li key={item.key}>
+                <a
+                  href={item.href}
+                  aria-current={isActive ? 'true' : undefined}
+                  className={cn(
+                    'relative rounded-md px-3 py-2 text-sm font-medium transition-colors duration-200',
+                    isActive
+                      ? 'text-foreground'
+                      : 'text-muted-foreground hover:text-foreground'
+                  )}
+                >
+                  {t(item.key)}
+                  {/* Faol seksiya indikatori */}
+                  <span
+                    aria-hidden
+                    className={cn(
+                      'absolute inset-x-3 -bottom-0.5 h-px rounded-full bg-accent transition-opacity duration-200',
+                      isActive ? 'opacity-100' : 'opacity-0'
+                    )}
+                  />
+                </a>
+              </li>
+            );
+          })}
         </ul>
 
         {/* Right controls */}
@@ -73,7 +125,12 @@ export function Navbar() {
           <LanguageSwitcher />
           <ThemeToggle />
           <Button asChild variant="accent" size="sm" className="ml-1 hidden sm:inline-flex">
-            <a href="#contact">{t('cta')}</a>
+            <a
+              href="#contact"
+              onClick={() => track('cta_click', { location: 'navbar' })}
+            >
+              {t('cta')}
+            </a>
           </Button>
 
           {/* Mobile toggle */}
