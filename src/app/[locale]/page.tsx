@@ -3,6 +3,8 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Hero } from '@/components/sections/hero';
 import { TechMarquee } from '@/components/sections/tech-marquee';
 import { Courses } from '@/components/sections/courses';
+import { Quiz } from '@/components/sections/quiz';
+import { Mentors } from '@/components/sections/mentors';
 import { WhyUs } from '@/components/sections/why-us';
 import { Stats } from '@/components/sections/stats';
 import { Process } from '@/components/sections/process';
@@ -44,9 +46,11 @@ export default async function HomePage({
       <Hero />
       <TechMarquee />
       <Courses />
+      <Quiz />
       <WhyUs />
       <Stats />
       <Process />
+      <Mentors />
       <Testimonials />
       <Faq />
       <CtaBanner />

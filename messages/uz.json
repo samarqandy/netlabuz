@@ -5,6 +5,7 @@
   },
   "Nav": {
     "courses": "Kurslar",
+    "quiz": "Test",
     "why": "Nega biz",
     "how": "Jarayon",
     "faq": "Savol-javob",
@@ -73,6 +74,67 @@
         "description": "Smart home, Arduino, Raspberry Pi, sensorlar va avtomatlashtirish."
       }
     }
+  },
+  "Quiz": {
+    "eyebrow": "Test",
+    "title": "Qaysi yo'nalish sizga mos?",
+    "subtitle": "5 ta savolga javob bering — sizga mos kursni tavsiya qilamiz.",
+    "progress": "Savol {current}/{total}",
+    "back": "Orqaga",
+    "restart": "Qayta boshlash",
+    "resultEyebrow": "Sizga mos yo'nalish",
+    "resultCta": "Shu kursga yozilish",
+    "questions": {
+      "q1": {
+        "q": "Hozirgi bilim darajangiz qanday?",
+        "options": {
+          "o1": "Kompyuterni endi o'rganyapman",
+          "o2": "Kundalik darajada bemalol ishlayman",
+          "o3": "IT bazam bor, chuqurlashmoqchiman"
+        }
+      },
+      "q2": {
+        "q": "Nima bilan ishlash sizga ko'proq yoqadi?",
+        "options": {
+          "o1": "Tarmoqlar — internet qanday ishlashi, routerlar",
+          "o2": "Serverlar va terminal buyruqlari",
+          "o3": "Kameralar va xavfsizlik tizimlari",
+          "o4": "Aqlli qurilmalar va elektronika",
+          "o5": "Ofis dasturlari va kundalik vazifalar"
+        }
+      },
+      "q3": {
+        "q": "Kursdan qanday natija kutasiz?",
+        "options": {
+          "o1": "IT sohasidagi birinchi ishim",
+          "o2": "Server va infratuzilma mutaxassisi bo'lish",
+          "o3": "O'z xizmatimni yo'lga qo'yish (o'rnatish, sozlash)",
+          "o4": "O'zim va uyim uchun foydali ko'nikmalar"
+        }
+      },
+      "q4": {
+        "q": "Muammolarni qanday hal qilishni yoqtirasiz?",
+        "options": {
+          "o1": "Qo'l bilan yig'ish, ulash, o'rnatish",
+          "o2": "Sozlamalarni chuqur o'rganish va tahlil qilish",
+          "o3": "Tayyor tizimlarda tez va samarali ishlash"
+        }
+      },
+      "q5": {
+        "q": "Qaysi ish muhiti sizga yaqinroq?",
+        "options": {
+          "o1": "Kompaniya ofisi va korporativ tarmoq",
+          "o2": "Data-markaz va serverlar",
+          "o3": "Obyektlarda o'rnatish ishlari",
+          "o4": "Uy laboratoriyasi va shaxsiy loyihalar"
+        }
+      }
+    }
+  },
+  "Mentors": {
+    "eyebrow": "Ustozlar",
+    "title": "Amaliyotchi ustozlar jamoasi",
+    "subtitle": "Sohada ishlayotgan mutaxassislardan o'rganasiz."
   },
   "WhyUs": {
     "eyebrow": "Nega NETLAB",
