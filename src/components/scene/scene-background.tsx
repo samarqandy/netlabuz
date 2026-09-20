@@ -17,7 +17,8 @@ import { useTheme } from 'next-themes';
  *
  * Perf: dynamic import (scene.tsx), prefers-reduced-motion -> statik kadr,
  *       WebGL yo'q/yorug' mavzu -> CSS gradient fallback, tab yashiringanda
- *       pauza, DPR <= 2 (mobil <= 1.5), past quvvatli mobil ~30 FPS throttle.
+ *       pauza, 30 FPS cheklovi, ekran o'lchamidan past render (CSS cho'zadi)
+ *       va adaptiv sifat: sekin qurilmada o'lcham pasayadi, oxirida o'chadi.
  * Estetika: Vercel + Linear + Stripe darajasi; korporativ/ta'limiy tech.
  * ========================================================================= */
 
@@ -56,7 +57,7 @@ float noise(vec2 p){
 float fbm(vec2 p){
   float v=0.0, a=0.5;
   mat2 m=mat2(1.6,1.2,-1.2,1.6);
-  for(int i=0;i<4;i++){ v+=a*noise(p); p=m*p; a*=0.5; }
+  for(int i=0;i<3;i++){ v+=a*noise(p); p=m*p; a*=0.5; }  // 3 oktava yetarli (fon xira)
   return v;
 }
 float segDist(vec2 p, vec2 a, vec2 b){
@@ -198,7 +199,7 @@ void main(){
 
   // Yulduzlar — juda nozik chaqnash
   float starAmt=clamp(w0+w1*0.6+w4*0.8, 0.0, 1.0);
-  float s=stars(uv+vec2(uTime*0.01,0.0),14.0)+stars(uv*1.8,22.0)*0.5;
+  float s=stars(uv+vec2(uTime*0.01,0.0),16.0);
   color += vec3(0.85,0.92,1.0)*s*starAmt*0.30;
 
   // Vinetka — kontent kontrasti uchun
@@ -243,7 +244,12 @@ export function SceneBackground() {
 
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const coarse = window.matchMedia('(pointer: coarse)').matches;
-    const minFrame = coarse ? 1000 / 30 : 0; // past quvvatli mobil ~30 FPS
+    // Fon — xira tekstura, shuning uchun ekran o'lchamidan past render qilinadi
+    // va CSS uni cho'zadi. Bu piksel sonini ~10 barobar kamaytiradi.
+    // Sifat pog'onalari: sekin qurilmada pastga tushamiz, oxirida o'chiramiz.
+    const SCALES = coarse ? [0.45, 0.3, 0.2] : [0.48, 0.34, 0.22];
+    // Fon uchun 30 FPS yetarli — barcha qurilmalarda cheklaymiz
+    const minFrame = 1000 / 30;
 
     const vs = compile(gl, gl.VERTEX_SHADER, VERT);
     const fs = compile(gl, gl.FRAGMENT_SHADER, FRAG);
@@ -270,10 +276,11 @@ export function SceneBackground() {
     const uMode = gl.getUniformLocation(prog, 'uMode');
     const uScroll = gl.getUniformLocation(prog, 'uScroll');
 
-    let dpr = Math.min(window.devicePixelRatio || 1, coarse ? 1.5 : 2);
+    let quality = 0;
+    let scale = SCALES[0];
     const resize = () => {
-      const w = Math.floor(window.innerWidth * dpr);
-      const h = Math.floor(window.innerHeight * dpr);
+      const w = Math.max(1, Math.floor(window.innerWidth * scale));
+      const h = Math.max(1, Math.floor(window.innerHeight * scale));
       if (canvas.width !== w || canvas.height !== h) {
         canvas.width = w;
         canvas.height = h;
@@ -328,12 +335,54 @@ export function SceneBackground() {
       gl.drawArrays(gl.TRIANGLES, 0, 3);
     };
 
+    /* ----------------------------- Adaptiv sifat -----------------------------
+     * Qurilma sekin bo'lsa fon uni sudrab yurmasligi kerak. Render qilingan
+     * kadrlar oralig'ini kuzatamiz: barqaror sekin bo'lsa avval o'lchamni
+     * pasaytiramiz, pog'onalar tugagach sahnani butunlay o'chiramiz —
+     * ortida CSS gradient qoladi, sayt hech narsa yo'qotmaydi.
+     * -------------------------------------------------------------------- */
+    const SAMPLE = 30;          // nechta kadrdan keyin baho beriladi
+    const SLOW_MS = 45;         // median kadr oralig'i shundan yomon bo'lsa — sekin
+    let samples: number[] = [];
+    let warmup = 15;            // shader/JIT qizishi uchun birinchi kadrlar
+    let prev = 0;
+
+    const degrade = () => {
+      quality += 1;
+      if (quality < SCALES.length) {
+        scale = SCALES[quality];
+        resize();
+      } else {
+        // Oxirgi chora: sahnani to'xtatamiz va canvasni yashiramiz
+        running = false;
+        cancelAnimationFrame(raf);
+        canvas.style.display = 'none';
+      }
+      samples = [];
+      warmup = 15;
+    };
+
+    const sample = (now: number) => {
+      if (prev) {
+        if (warmup > 0) warmup -= 1;
+        else samples.push(now - prev);
+      }
+      prev = now;
+      if (samples.length >= SAMPLE) {
+        const sorted = [...samples].sort((a, b) => a - b);
+        const median = sorted[sorted.length >> 1];
+        samples = [];
+        if (median > SLOW_MS) degrade();
+      }
+    };
+
     const loop = (now: number) => {
       if (!running) return;
       raf = requestAnimationFrame(loop);
-      if (now - last < minFrame) return; // FPS throttle (mobil)
+      if (now - last < minFrame) return; // 30 FPS cheklovi
       last = now;
       renderFrame(now);
+      sample(now);
     };
 
     if (reduce) {
@@ -344,7 +393,6 @@ export function SceneBackground() {
     }
 
     const onResize = () => {
-      dpr = Math.min(window.devicePixelRatio || 1, coarse ? 1.5 : 2);
       resize();
       onScroll();
       if (reduce) renderFrame(performance.now());
@@ -355,9 +403,11 @@ export function SceneBackground() {
       if (document.hidden) {
         running = false;
         cancelAnimationFrame(raf);
-      } else if (!reduce) {
+      } else if (!reduce && quality < SCALES.length) {
         running = true;
         last = 0;
+        prev = 0;          // tanaffusdan keyingi uzun oraliq sekinlik hisoblanmasin
+        samples = [];
         raf = requestAnimationFrame(loop);
       }
     };
