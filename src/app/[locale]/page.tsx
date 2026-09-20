@@ -15,6 +15,7 @@ import { CtaBanner } from '@/components/sections/cta-banner';
 import { Contact } from '@/components/sections/contact';
 import { FloatingCta } from '@/components/floating-cta';
 import { COURSES } from '@/lib/courses';
+import { ORG, safeJsonLd } from '@/lib/org';
 
 export default async function HomePage({
   params: { locale },
@@ -38,51 +39,38 @@ export default async function HomePage({
     })),
   };
 
-  // Course structured data — kurslar qidiruvda alohida ko'rinishi uchun
+  // Course structured data — har kurs alohida Course obyekti sifatida.
+  // Eslatma: ItemList karuseli har kursga alohida sahifa talab qiladi;
+  // per-kurs sahifalar qo'shilganda ItemList + unikal url'larga o'tkaziladi.
+  // Tashkilot ma'lumotlari layout'dagi EducationalOrganization'ga @id orqali
+  // bog'lanadi (NAP takrorlanmaydi).
   const tCourses = await getTranslations({ locale, namespace: 'Courses' });
-  const coursesJsonLd = {
+  const coursesJsonLd = COURSES.map((course) => ({
     '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    itemListElement: COURSES.map((course, i) => ({
-      '@type': 'ListItem',
-      position: i + 1,
-      item: {
-        '@type': 'Course',
-        name: tCourses(`items.${course.id}.name`),
-        description: tCourses(`items.${course.id}.description`),
-        url: `https://netlab.uz/${locale}#courses`,
-        provider: {
-          '@type': 'EducationalOrganization',
-          name: 'NETLAB',
-          sameAs: 'https://netlab.uz',
-        },
-        hasCourseInstance: {
-          '@type': 'CourseInstance',
-          courseMode: 'Onsite',
-          location: {
-            '@type': 'Place',
-            name: 'NETLAB',
-            address: {
-              '@type': 'PostalAddress',
-              streetAddress: 'Dahbed 11',
-              addressLocality: 'Samarqand',
-              addressCountry: 'UZ',
-            },
-          },
-        },
+    '@type': 'Course',
+    name: tCourses(`items.${course.id}.name`),
+    description: tCourses(`items.${course.id}.description`),
+    provider: { '@id': `${ORG.url}/#organization` },
+    hasCourseInstance: {
+      '@type': 'CourseInstance',
+      courseMode: 'Onsite',
+      location: {
+        '@type': 'Place',
+        name: ORG.name,
+        address: ORG.address,
       },
-    })),
-  };
+    },
+  }));
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(faqJsonLd) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(coursesJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(coursesJsonLd) }}
       />
       <Hero />
       <TechMarquee />

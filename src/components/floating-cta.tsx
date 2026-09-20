@@ -6,8 +6,9 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Send } from 'lucide-react';
 
 import { track } from '@/lib/track';
+import { ORG } from '@/lib/org';
 
-const TELEGRAM = 'https://t.me/netlabuz';
+const TELEGRAM = ORG.telegram;
 
 /**
  * Suzuvchi Telegram tugmasi — O'zbekiston bozorida asosiy aloqa kanali.

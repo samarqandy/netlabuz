@@ -8,11 +8,12 @@ import { Menu, X, Phone } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import { track } from '@/lib/track';
+import { ORG } from '@/lib/org';
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { LanguageSwitcher } from '@/components/language-switcher';
 
-const PHONE = '+998936803113';
+const PHONE = ORG.phone;
 
 const NAV_ITEMS = [
   { href: '#courses', key: 'courses' },
@@ -22,6 +23,10 @@ const NAV_ITEMS = [
   { href: '#faq', key: 'faq' },
   { href: '#contact', key: 'contact' },
 ] as const;
+
+// Modul darajasida — har render'da yangi massiv yaratilmasin
+// (aks holda useActiveSection effekti observer'ni qayta quradi)
+const SECTION_IDS = NAV_ITEMS.map((i) => i.href.slice(1));
 
 /** Scrollspy — ekranda qaysi seksiya faolligini kuzatadi */
 function useActiveSection(ids: readonly string[]) {
@@ -60,7 +65,7 @@ export function Navbar() {
   const t = useTranslations('Nav');
   const [scrolled, setScrolled] = React.useState(false);
   const [open, setOpen] = React.useState(false);
-  const active = useActiveSection(NAV_ITEMS.map((i) => i.href.slice(1)));
+  const active = useActiveSection(SECTION_IDS);
 
   React.useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -171,7 +176,13 @@ export function Navbar() {
               ))}
               <li className="mt-2 flex flex-col gap-2">
                 <Button asChild variant="accent">
-                  <a href="#contact" onClick={() => setOpen(false)}>
+                  <a
+                    href="#contact"
+                    onClick={() => {
+                      setOpen(false);
+                      track('cta_click', { location: 'navbar_mobile' });
+                    }}
+                  >
                     {t('cta')}
                   </a>
                 </Button>

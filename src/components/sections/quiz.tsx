@@ -110,14 +110,15 @@ export function Quiz() {
 
   const restart = () => setAnswers([]);
   const back = () => setAnswers((a) => a.slice(0, -1));
-  const answer = (optIdx: number) =>
-    setAnswers((a) => {
-      const next = [...a, optIdx];
-      if (next.length === QUESTIONS.length) {
-        track('quiz_completed', { result: computeResult(next) });
-      }
-      return next;
-    });
+  const answer = (optIdx: number) => {
+    // track() updater tashqarisida: React updater'ni qayta chaqirishi mumkin
+    // (StrictMode/replay) — hodisa ikki marta yozilmasligi kerak.
+    const next = [...answers, optIdx];
+    if (next.length === QUESTIONS.length) {
+      track('quiz_completed', { result: computeResult(next) });
+    }
+    setAnswers(next);
+  };
 
   return (
     <section

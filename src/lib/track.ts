@@ -12,7 +12,8 @@ import { track as vercelTrack } from '@vercel/analytics';
  *  lead_submitted  { course }            — forma muvaffaqiyatli yuborildi
  * ========================================================================= */
 
-type Props = Record<string, string>;
+// Vercel Analytics qabul qiladigan qiymat turlari bilan mos
+type Props = Record<string, string | number | boolean | null>;
 
 /** Analytics xatosi UX'ni hech qachon buzmasligi kerak */
 export function track(event: string, props?: Props) {
