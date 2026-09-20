@@ -47,7 +47,7 @@
     "advanced": "Advanced",
     "duration": "{months} mo",
     "certificate": "Certificate",
-    "detailsCta": "Enroll",
+    "detailsCta": "Learn more",
     "items": {
       "computer": {
         "name": "Computer Literacy",
@@ -72,6 +72,228 @@
       "iot": {
         "name": "Smart Home & IoT",
         "description": "Smart home, Arduino, Raspberry Pi, sensors and automation."
+      }
+    }
+  },
+  "CourseDetail": {
+    "breadcrumbHome": "Home",
+    "breadcrumbCourses": "Courses",
+    "backToCourses": "All courses",
+    "metaDuration": "Duration",
+    "metaLevel": "Level",
+    "metaFormat": "Format",
+    "metaFormatValue": "On-site — Samarkand",
+    "metaLanguage": "Language",
+    "metaLanguageValue": "Uzbek / Russian",
+    "metaCertificate": "Certificate",
+    "metaCertificateValue": "Included",
+    "ctaPrimary": "Leave a request",
+    "ctaSecondary": "Ask on Telegram",
+    "outcomesTitle": "What you can do after this course",
+    "curriculumTitle": "Curriculum",
+    "curriculumSubtitle": "{count} modules — each reinforced with hands-on lab work.",
+    "moduleLabel": "Module",
+    "toolsTitle": "Technologies used in this course",
+    "audienceTitle": "Who is it for?",
+    "requirementsTitle": "Requirements",
+    "rolesTitle": "Career directions",
+    "relatedTitle": "Other courses",
+    "bottomCtaTitle": "Want to enroll in this course?",
+    "bottomCtaSubtitle": "Leave a request — our specialist will contact you with details on the curriculum, schedule and pricing.",
+    "metaTitleSuffix": "NETLAB — IT training center in Samarkand",
+    "computer": {
+      "tagline": "Learn computers from zero: Windows, Office apps, online safety and AI assistants — the office skills employers expect today.",
+      "modules": {
+        "basics": "Computer and Windows fundamentals",
+        "internet": "Internet, email and staying safe online",
+        "word": "MS Word — working with documents",
+        "excel": "MS Excel — spreadsheets and calculations",
+        "present": "Building presentations",
+        "cloud": "Cloud services and AI assistants"
+      },
+      "outcomes": {
+        "office": "Work confidently in Word, Excel and PowerPoint",
+        "excel": "Build reports and tables with Excel formulas",
+        "docs": "Format documents properly and export them to PDF",
+        "safety": "Protect yourself from scams, viruses and password theft",
+        "ai": "Use AI assistants like ChatGPT for everyday work"
+      },
+      "audience": {
+        "beginner": "Anyone starting with computers from zero",
+        "office": "People preparing for office work",
+        "entrepreneur": "Entrepreneurs digitizing their business"
+      },
+      "requirements": {
+        "none": "No prior preparation required",
+        "laptop": "A laptop is optional — computers are provided"
+      },
+      "roles": {
+        "operator": "Operator / data entry specialist",
+        "assistant": "Office assistant",
+        "officeWorker": "Document management clerk"
+      }
+    },
+    "cisco": {
+      "tagline": "A hands-on course aligned with CCNA 200-301: design, configure, secure and troubleshoot networks on real Cisco and MikroTik gear.",
+      "modules": {
+        "fundamentals": "Network fundamentals: OSI, TCP/IP and hardware",
+        "addressing": "IPv4/IPv6 addressing and subnetting",
+        "switching": "Switching: VLAN, trunking, STP",
+        "routing": "Routing: static routes and OSPF",
+        "services": "Network services: DHCP, DNS, NAT, ACL",
+        "mikrotik": "MikroTik RouterOS in practice",
+        "wireless": "Wi-Fi networks and wireless security",
+        "monitoring": "Monitoring, troubleshooting and automation basics"
+      },
+      "outcomes": {
+        "design": "Design a small or mid-size business network",
+        "configure": "Configure Cisco and MikroTik routers from scratch",
+        "troubleshoot": "Diagnose faults with Wireshark and the CLI",
+        "secure": "Secure a network with ACLs, firewalls and VPNs",
+        "ccna": "Prepare independently for the CCNA exam"
+      },
+      "audience": {
+        "starter": "People starting a career in IT",
+        "admin": "System administrators and support engineers",
+        "isp": "ISP staff and corporate IT departments"
+      },
+      "requirements": {
+        "pcBasics": "Confident computer skills",
+        "english": "Basic technical English reading"
+      },
+      "roles": {
+        "netAdmin": "Network administrator",
+        "noc": "NOC / monitoring engineer",
+        "support": "Technical support specialist"
+      }
+    },
+    "iptelephony": {
+      "tagline": "Build a company phone system from scratch: Asterisk, FreePBX, IVR, call-center queues and CRM integration.",
+      "modules": {
+        "voip": "VoIP fundamentals and the SIP protocol",
+        "asterisk": "Installing Asterisk and writing dialplans",
+        "freepbx": "FreePBX: extensions and trunks",
+        "features": "IVR, queues, conferencing and call recording",
+        "quality": "Voice quality: codecs, QoS and NAT",
+        "security": "Security and integration with external systems"
+      },
+      "outcomes": {
+        "deploy": "Deploy an IP PBX for a company from scratch",
+        "dialplan": "Write call routing rules",
+        "ivr": "Configure voice menus (IVR) and call queues",
+        "quality": "Diagnose and fix voice quality problems",
+        "integrate": "Connect telephony to CRM and other systems"
+      },
+      "audience": {
+        "netAdmin": "Network and system administrators",
+        "itSupport": "In-house IT staff",
+        "callCenter": "Anyone setting up a call center"
+      },
+      "requirements": {
+        "networkBasics": "Understanding of IP, ports and NAT",
+        "linuxBasics": "Basic Linux terminal skills"
+      },
+      "roles": {
+        "voipEngineer": "VoIP engineer",
+        "telephonyAdmin": "Telephony administrator",
+        "integrator": "Communications systems integrator"
+      }
+    },
+    "security": {
+      "tagline": "CCTV systems from design to handover: IP cameras, NVRs, video analytics and secure remote access.",
+      "modules": {
+        "basics": "CCTV fundamentals and choosing hardware",
+        "cameras": "IP cameras and network configuration",
+        "storage": "NVR/DVR, drives and calculating archive capacity",
+        "install": "Design, cabling and installation",
+        "remote": "Remote access and system hardening",
+        "analytics": "Video analytics and smart integrations"
+      },
+      "outcomes": {
+        "design": "Plan camera placement for a site",
+        "install": "Install and wire cameras professionally",
+        "configure": "Configure the NVR, recording schedules and users",
+        "remote": "Set up secure remote viewing from a phone",
+        "analytics": "Configure motion, line-crossing and plate recognition"
+      },
+      "audience": {
+        "installer": "People doing installation work",
+        "securityStaff": "Security service staff",
+        "entrepreneur": "Entrepreneurs launching their own service"
+      },
+      "requirements": {
+        "pcBasics": "Basic computer and networking understanding",
+        "handsOn": "Willingness to work hands-on with tools"
+      },
+      "roles": {
+        "cctvInstaller": "CCTV installation specialist",
+        "securityEngineer": "Security systems engineer",
+        "serviceOwner": "Owner of an installation business"
+      }
+    },
+    "linux": {
+      "tagline": "Run servers professionally: Linux, Nginx, Docker, automation and monitoring — your first step toward DevOps.",
+      "modules": {
+        "basics": "Linux fundamentals and the terminal",
+        "system": "Users, permissions and system services",
+        "network": "Networking and server hardening",
+        "services": "Web server, databases and SSL",
+        "scripting": "Bash scripting and automation",
+        "docker": "Docker and containers",
+        "ops": "Git, CI/CD and monitoring basics"
+      },
+      "outcomes": {
+        "server": "Set up and run a Linux server from scratch",
+        "automate": "Automate routine tasks with scripts",
+        "deploy": "Deploy sites and apps with Docker",
+        "secure": "Harden a server against attacks and take backups",
+        "monitor": "Find problems through monitoring and logs"
+      },
+      "audience": {
+        "itStudent": "IT students and graduates",
+        "sysadmin": "Windows admins moving to Linux",
+        "devops": "Anyone starting a DevOps path"
+      },
+      "requirements": {
+        "pcBasics": "Confident computer skills",
+        "networkBasics": "Basic understanding of IP and ports"
+      },
+      "roles": {
+        "linuxAdmin": "Linux administrator",
+        "devopsJunior": "Junior DevOps engineer",
+        "serverEngineer": "Server infrastructure engineer"
+      }
+    },
+    "iot": {
+      "tagline": "Build a smart home with your own hands: ESP32, Raspberry Pi, MQTT, Zigbee/Matter and Home Assistant.",
+      "modules": {
+        "electronics": "Electronics and sensor fundamentals",
+        "arduino": "Programming Arduino and ESP32",
+        "raspberry": "Raspberry Pi — your home server",
+        "protocols": "IoT protocols: MQTT, Zigbee, Matter",
+        "homeassistant": "Home Assistant and automation",
+        "project": "Final project: a smart home system"
+      },
+      "outcomes": {
+        "build": "Assemble devices from sensors and relays",
+        "program": "Program Wi-Fi control on an ESP32",
+        "connect": "Connect devices over MQTT and Zigbee",
+        "automate": "Write automation scenarios in Home Assistant",
+        "project": "Present a fully working smart home project"
+      },
+      "audience": {
+        "hobbyist": "Hobbyists who enjoy tinkering",
+        "student": "School leavers and university students",
+        "installer": "People launching a smart home install service"
+      },
+      "requirements": {
+        "pcBasics": "Basic computer skills",
+        "curiosity": "No programming experience needed — curiosity is enough"
+      },
+      "roles": {
+        "iotSpecialist": "IoT specialist",
+        "smartHomeIntegrator": "Smart home integrator",
+        "maker": "Electronics / maker track"
       }
     }
   },

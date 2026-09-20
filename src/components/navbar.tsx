@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, X, Phone } from 'lucide-react';
 
@@ -63,6 +63,10 @@ function useActiveSection(ids: readonly string[]) {
 
 export function Navbar() {
   const t = useTranslations('Nav');
+  // Havolalar to'liq yo'l bilan: kurs sahifasidan ham bosh sahifa
+  // bo'limlariga o'tadi (bosh sahifada esa oddiy scroll bo'lib qoladi)
+  const locale = useLocale();
+  const hrefFor = (hash: string) => `/${locale}${hash}`;
   const [scrolled, setScrolled] = React.useState(false);
   const [open, setOpen] = React.useState(false);
   const active = useActiveSection(SECTION_IDS);
@@ -101,7 +105,7 @@ export function Navbar() {
             return (
               <li key={item.key}>
                 <a
-                  href={item.href}
+                  href={hrefFor(item.href)}
                   aria-current={isActive ? 'true' : undefined}
                   className={cn(
                     'relative rounded-md px-3 py-2 text-sm font-medium transition-colors duration-200',
@@ -131,7 +135,7 @@ export function Navbar() {
           <ThemeToggle />
           <Button asChild variant="accent" size="sm" className="ml-1 hidden sm:inline-flex">
             <a
-              href="#contact"
+              href={hrefFor('#contact')}
               onClick={() => track('cta_click', { location: 'navbar' })}
             >
               {t('cta')}
@@ -166,7 +170,7 @@ export function Navbar() {
               {NAV_ITEMS.map((item) => (
                 <li key={item.key}>
                   <a
-                    href={item.href}
+                    href={hrefFor(item.href)}
                     onClick={() => setOpen(false)}
                     className="block rounded-md px-3 py-3 text-base font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
                   >
@@ -177,7 +181,7 @@ export function Navbar() {
               <li className="mt-2 flex flex-col gap-2">
                 <Button asChild variant="accent">
                   <a
-                    href="#contact"
+                    href={hrefFor('#contact')}
                     onClick={() => {
                       setOpen(false);
                       track('cta_click', { location: 'navbar_mobile' });

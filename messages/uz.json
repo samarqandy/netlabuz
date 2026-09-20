@@ -47,7 +47,7 @@
     "advanced": "Yuqori",
     "duration": "{months} oy",
     "certificate": "Sertifikat",
-    "detailsCta": "Yozilish",
+    "detailsCta": "Batafsil",
     "items": {
       "computer": {
         "name": "Kompyuter savodxonligi",
@@ -72,6 +72,228 @@
       "iot": {
         "name": "Aqlli uy & IoT",
         "description": "Smart home, Arduino, Raspberry Pi, sensorlar va avtomatlashtirish."
+      }
+    }
+  },
+  "CourseDetail": {
+    "breadcrumbHome": "Bosh sahifa",
+    "breadcrumbCourses": "Kurslar",
+    "backToCourses": "Barcha kurslar",
+    "metaDuration": "Davomiyligi",
+    "metaLevel": "Daraja",
+    "metaFormat": "Format",
+    "metaFormatValue": "Oflayn — Samarqand",
+    "metaLanguage": "Dars tili",
+    "metaLanguageValue": "O'zbek / rus",
+    "metaCertificate": "Sertifikat",
+    "metaCertificateValue": "Beriladi",
+    "ctaPrimary": "Ariza qoldirish",
+    "ctaSecondary": "Telegram orqali savol berish",
+    "outcomesTitle": "Kursdan keyin nima qila olasiz?",
+    "curriculumTitle": "Kurs dasturi",
+    "curriculumSubtitle": "{count} modul — har biri amaliy laboratoriya ishi bilan mustahkamlanadi.",
+    "moduleLabel": "Modul",
+    "toolsTitle": "Kursda ishlatiladigan texnologiyalar",
+    "audienceTitle": "Kim uchun?",
+    "requirementsTitle": "Talablar",
+    "rolesTitle": "Kursdan keyingi yo'nalishlar",
+    "relatedTitle": "Boshqa kurslar",
+    "bottomCtaTitle": "Shu kursga yozilmoqchimisiz?",
+    "bottomCtaSubtitle": "Ariza qoldiring — mutaxassisimiz bog'lanib, dastur, jadval va narx haqida batafsil aytib beradi.",
+    "metaTitleSuffix": "NETLAB — Samarqand IT o'quv markazi",
+    "computer": {
+      "tagline": "Kompyuterni noldan o'rganing: Windows, Office dasturlari, internet xavfsizligi va AI yordamchilari bilan zamonaviy ofis ko'nikmalari.",
+      "modules": {
+        "basics": "Kompyuter va Windows asoslari",
+        "internet": "Internet, email va xavfsiz ishlash",
+        "word": "MS Word — hujjatlar bilan ishlash",
+        "excel": "MS Excel — jadval va hisob-kitoblar",
+        "present": "Prezentatsiya tayyorlash",
+        "cloud": "Bulutli xizmatlar va AI yordamchilari"
+      },
+      "outcomes": {
+        "office": "Word, Excel va PowerPoint'da ishonchli ishlash",
+        "excel": "Excel formulalari bilan hisobot va jadvallar tayyorlash",
+        "docs": "Hujjatlarni to'g'ri rasmiylashtirish va PDF'ga chiqarish",
+        "safety": "Firibgarlik, virus va parol o'g'irlanishidan himoyalanish",
+        "ai": "ChatGPT kabi AI yordamchilaridan ish uchun foydalanish"
+      },
+      "audience": {
+        "beginner": "Kompyuterni noldan o'rganmoqchi bo'lganlar",
+        "office": "Ofis ishiga tayyorgarlik ko'rayotganlar",
+        "entrepreneur": "Biznesini raqamli yuritmoqchi tadbirkorlar"
+      },
+      "requirements": {
+        "none": "Oldindan tayyorgarlik talab qilinmaydi",
+        "laptop": "Noutbuk ixtiyoriy — markazda kompyuter beriladi"
+      },
+      "roles": {
+        "operator": "Operator / ma'lumot kirituvchi",
+        "assistant": "Ofis yordamchisi",
+        "officeWorker": "Hujjatchilik bo'yicha xodim"
+      }
+    },
+    "cisco": {
+      "tagline": "CCNA 200-301 dasturiga moslashgan amaliy kurs: Cisco va MikroTik uskunalarida tarmoq qurish, sozlash, himoyalash va diagnostika.",
+      "modules": {
+        "fundamentals": "Tarmoq asoslari: OSI, TCP/IP va uskunalar",
+        "addressing": "IPv4/IPv6 adreslash va subnetting",
+        "switching": "Kommutatsiya: VLAN, Trunk, STP",
+        "routing": "Marshrutlash: statik marshrutlar va OSPF",
+        "services": "Tarmoq xizmatlari: DHCP, DNS, NAT, ACL",
+        "mikrotik": "MikroTik RouterOS amaliyoti",
+        "wireless": "Wi-Fi tarmoqlar va simsiz xavfsizlik",
+        "monitoring": "Monitoring, diagnostika va avtomatlashtirish asoslari"
+      },
+      "outcomes": {
+        "design": "Kichik va o'rta korxona tarmog'ini loyihalash",
+        "configure": "Cisco va MikroTik routerlarini noldan sozlash",
+        "troubleshoot": "Nosozliklarni Wireshark va CLI orqali tahlil qilish",
+        "secure": "ACL, firewall va VPN bilan tarmoqni himoyalash",
+        "ccna": "CCNA imtihoniga mustaqil tayyorgarlik ko'rish"
+      },
+      "audience": {
+        "starter": "IT sohasida karyera boshlamoqchilar",
+        "admin": "Tizim administratorlari va texnik yordam xodimlari",
+        "isp": "Internet-provayder va korxona IT bo'limi xodimlari"
+      },
+      "requirements": {
+        "pcBasics": "Kompyuterda ishonchli ishlash ko'nikmasi",
+        "english": "Texnik ingliz tilini o'qiy olish (boshlang'ich daraja)"
+      },
+      "roles": {
+        "netAdmin": "Tarmoq administratori",
+        "noc": "NOC / monitoring muhandisi",
+        "support": "Texnik qo'llab-quvvatlash mutaxassisi"
+      }
+    },
+    "iptelephony": {
+      "tagline": "Korxona telefon tizimini noldan quring: Asterisk, FreePBX, IVR, call-markaz navbatlari va CRM integratsiyasi.",
+      "modules": {
+        "voip": "VoIP asoslari va SIP protokoli",
+        "asterisk": "Asterisk o'rnatish va dialplan",
+        "freepbx": "FreePBX: ichki raqamlar va trunk",
+        "features": "IVR, navbatlar, konferensiya va suhbat yozuvi",
+        "quality": "Ovoz sifati: kodeklar, QoS va NAT",
+        "security": "Xavfsizlik va tashqi tizimlar bilan integratsiya"
+      },
+      "outcomes": {
+        "deploy": "Korxona uchun IP-ATS'ni noldan o'rnatish",
+        "dialplan": "Qo'ng'iroqlarni marshrutlash qoidalarini yozish",
+        "ivr": "Ovozli menyu (IVR) va navbatlarni sozlash",
+        "quality": "Ovoz sifati muammolarini aniqlash va bartaraf etish",
+        "integrate": "Telefoniyani CRM va boshqa tizimlarga ulash"
+      },
+      "audience": {
+        "netAdmin": "Tarmoq va tizim administratorlari",
+        "itSupport": "Korxona IT xodimlari",
+        "callCenter": "Call-markaz tashkil qilmoqchilar"
+      },
+      "requirements": {
+        "networkBasics": "Tarmoq asoslari (IP, port, NAT) haqida tushuncha",
+        "linuxBasics": "Linux terminalida boshlang'ich ko'nikma"
+      },
+      "roles": {
+        "voipEngineer": "VoIP muhandisi",
+        "telephonyAdmin": "Telefoniya administratori",
+        "integrator": "Aloqa tizimlari integratori"
+      }
+    },
+    "security": {
+      "tagline": "Video nazorat tizimlarini loyihalashdan ishga tushirishgacha: IP kameralar, NVR, video-analitika va xavfsiz masofaviy kirish.",
+      "modules": {
+        "basics": "Video nazorat asoslari va uskuna tanlovi",
+        "cameras": "IP kameralar va tarmoq sozlamalari",
+        "storage": "NVR/DVR, disklar va arxiv hajmini hisoblash",
+        "install": "Loyihalash, kabel o'tkazish va montaj",
+        "remote": "Masofaviy kirish va tizim xavfsizligi",
+        "analytics": "Video-analitika va aqlli integratsiyalar"
+      },
+      "outcomes": {
+        "design": "Obyekt uchun kamera joylashuvini loyihalash",
+        "install": "Kameralarni professional o'rnatish va ulash",
+        "configure": "NVR, yozuv jadvali va foydalanuvchilarni sozlash",
+        "remote": "Telefondan xavfsiz masofaviy kuzatuvni yo'lga qo'yish",
+        "analytics": "Harakat, chiziq kesish va avtoraqam analitikasini sozlash"
+      },
+      "audience": {
+        "installer": "Montaj ishlari bilan shug'ullanuvchilar",
+        "securityStaff": "Xavfsizlik xizmati xodimlari",
+        "entrepreneur": "O'z xizmatini ochmoqchi tadbirkorlar"
+      },
+      "requirements": {
+        "pcBasics": "Kompyuter va tarmoq haqida boshlang'ich tushuncha",
+        "handsOn": "Qo'l mehnati va asboblar bilan ishlashga tayyorlik"
+      },
+      "roles": {
+        "cctvInstaller": "CCTV montaj mutaxassisi",
+        "securityEngineer": "Xavfsizlik tizimlari muhandisi",
+        "serviceOwner": "O'z montaj xizmati egasi"
+      }
+    },
+    "linux": {
+      "tagline": "Serverlarni professional boshqaring: Linux, Nginx, Docker, avtomatlashtirish va monitoring — DevOps yo'liga birinchi qadam.",
+      "modules": {
+        "basics": "Linux asoslari va terminal",
+        "system": "Foydalanuvchilar, huquqlar va tizim xizmatlari",
+        "network": "Tarmoq sozlamalari va server xavfsizligi",
+        "services": "Veb-server, ma'lumotlar bazasi va SSL",
+        "scripting": "Bash skriptlari va avtomatlashtirish",
+        "docker": "Docker va konteynerlar",
+        "ops": "Git, CI/CD va monitoring asoslari"
+      },
+      "outcomes": {
+        "server": "Linux serverni noldan sozlash va boshqarish",
+        "automate": "Kundalik vazifalarni skript bilan avtomatlashtirish",
+        "deploy": "Sayt va ilovalarni Docker bilan joylashtirish",
+        "secure": "Serverni hujumlardan himoyalash va zaxira nusxa olish",
+        "monitor": "Monitoring va loglar orqali muammolarni topish"
+      },
+      "audience": {
+        "itStudent": "IT yo'nalishidagi talabalar va bitiruvchilar",
+        "sysadmin": "Linux'ga o'tmoqchi Windows administratorlari",
+        "devops": "DevOps yo'nalishini boshlamoqchilar"
+      },
+      "requirements": {
+        "pcBasics": "Kompyuterda ishonchli ishlash",
+        "networkBasics": "IP va portlar haqida boshlang'ich tushuncha"
+      },
+      "roles": {
+        "linuxAdmin": "Linux administrator",
+        "devopsJunior": "Junior DevOps muhandisi",
+        "serverEngineer": "Server infratuzilmasi muhandisi"
+      }
+    },
+    "iot": {
+      "tagline": "Aqlli uy tizimini o'z qo'lingiz bilan yarating: ESP32, Raspberry Pi, MQTT, Zigbee/Matter va Home Assistant.",
+      "modules": {
+        "electronics": "Elektronika va sensorlar asoslari",
+        "arduino": "Arduino va ESP32 dasturlash",
+        "raspberry": "Raspberry Pi — uy serveri",
+        "protocols": "IoT protokollari: MQTT, Zigbee, Matter",
+        "homeassistant": "Home Assistant va avtomatizatsiya",
+        "project": "Yakuniy loyiha: aqlli uy tizimi"
+      },
+      "outcomes": {
+        "build": "Sensor va rele asosida qurilma yig'ish",
+        "program": "ESP32'ni Wi-Fi orqali boshqarishni dasturlash",
+        "connect": "Qurilmalarni MQTT va Zigbee orqali ulash",
+        "automate": "Home Assistant'da avtomatik ssenariylar yozish",
+        "project": "To'liq ishlaydigan aqlli uy loyihasini taqdim etish"
+      },
+      "audience": {
+        "hobbyist": "Texnikaga qiziquvchi havaskorlar",
+        "student": "Maktab bitiruvchilari va talabalar",
+        "installer": "Aqlli uy o'rnatish xizmatini ochmoqchilar"
+      },
+      "requirements": {
+        "pcBasics": "Kompyuterda ishlash ko'nikmasi",
+        "curiosity": "Dasturlash tajribasi shart emas — qiziqish yetarli"
+      },
+      "roles": {
+        "iotSpecialist": "IoT mutaxassisi",
+        "smartHomeIntegrator": "Aqlli uy integratori",
+        "maker": "Elektronika / maker yo'nalishi"
       }
     }
   },

@@ -33,15 +33,21 @@ export function Contact() {
   const [errors, setErrors] = React.useState<Errors>({});
   const [selectedCourse, setSelectedCourse] = React.useState('');
 
-  // Kurs kartasidagi "Yozilish" tugmasi formada kursni oldindan tanlaydi
+  // Kursni oldindan tanlash:
+  //  1) sahifa ichidagi tugmalar — `netlab:select-course` hodisasi
+  //  2) kurs sahifasidan kelgan havola — `?course=<id>` query
+  // (query useSearchParams'siz o'qiladi: statik sahifa Suspense talab qilmasin)
   React.useEffect(() => {
-    const onSelect = (e: Event) => {
-      const id = (e as CustomEvent<string>).detail;
-      if (COURSES.some((c) => c.id === id)) {
+    const preselect = (id: string | null) => {
+      if (id && COURSES.some((c) => c.id === id)) {
         setSelectedCourse(id);
         setErrors((prev) => ({ ...prev, course: false }));
       }
     };
+
+    preselect(new URLSearchParams(window.location.search).get('course'));
+
+    const onSelect = (e: Event) => preselect((e as CustomEvent<string>).detail);
     window.addEventListener('netlab:select-course', onSelect);
     return () => window.removeEventListener('netlab:select-course', onSelect);
   }, []);

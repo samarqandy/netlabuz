@@ -1,29 +1,48 @@
 import type { MetadataRoute } from 'next';
 
-import { routing } from '@/i18n/routing';
+import { routing, type Locale } from '@/i18n/routing';
+import { getPathname } from '@/i18n/navigation';
+import { COURSE_DETAILS } from '@/lib/course-details';
+import { ORG } from '@/lib/org';
 
-const BASE_URL = 'https://netlab.uz';
+const BASE_URL = ORG.url;
 
 /**
- * Sitemap — Next.js App Router konvensiyasi (/sitemap.xml).
- * Hozir sayt single-page: faqat 3 til bosh sahifasi mavjud.
- * Har bir yozuvga hreflang alternates qo'shilgan (i18n SEO).
- *
- * Kelajakda alohida sahifalar (masalan /uz/kurslar) qo'shilsa,
- * shu yerga real route bilan birga qo'shamiz.
+ * Sitemap (/sitemap.xml) — bosh sahifa + har bir kurs sahifasi,
+ * uch tilda. Har yozuvda hreflang alternates (i18n SEO).
+ * Kurs yo'llari tilga moslashgan: /uz/kurslar/..., /ru/kursy/..., /en/courses/...
  */
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
-  const languages = Object.fromEntries(
+  // Bosh sahifa
+  const homeLanguages = Object.fromEntries(
     routing.locales.map((l) => [l, `${BASE_URL}/${l}`])
   );
-
-  return routing.locales.map((locale) => ({
+  const home: MetadataRoute.Sitemap = routing.locales.map((locale) => ({
     url: `${BASE_URL}/${locale}`,
     lastModified,
     changeFrequency: 'weekly',
     priority: 1,
-    alternates: { languages },
+    alternates: { languages: homeLanguages },
   }));
+
+  // Kurs sahifalari
+  const courses: MetadataRoute.Sitemap = Object.values(COURSE_DETAILS).flatMap(
+    (detail) => {
+      const href = { pathname: '/courses/[slug]' as const, params: { slug: detail.slug } };
+      const languages = Object.fromEntries(
+        routing.locales.map((l) => [l, `${BASE_URL}${getPathname({ locale: l, href })}`])
+      );
+      return routing.locales.map((locale) => ({
+        url: `${BASE_URL}${getPathname({ locale: locale as Locale, href })}`,
+        lastModified,
+        changeFrequency: 'monthly' as const,
+        priority: 0.8,
+        alternates: { languages },
+      }));
+    }
+  );
+
+  return [...home, ...courses];
 }
