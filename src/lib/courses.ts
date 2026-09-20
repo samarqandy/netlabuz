@@ -11,9 +11,18 @@ import {
 export type CourseLevel = 'beginner' | 'intermediate' | 'advanced';
 export type GlowColor = 'blue' | 'green' | 'cyan';
 
+/** Kurs identifikatorlari — i18n kalitlari va forma qiymatlari bilan bir xil */
+export type CourseId =
+  | 'computer'
+  | 'cisco'
+  | 'iptelephony'
+  | 'security'
+  | 'linux'
+  | 'iot';
+
 export interface Course {
   /** i18n kaliti (Courses.items.<id>) va form qiymati bilan mos */
-  id: string;
+  id: CourseId;
   level: CourseLevel;
   icon: LucideIcon;
   /** Davomiyligi (oy) — PLACEHOLDER, real qiymat bilan almashtiring */

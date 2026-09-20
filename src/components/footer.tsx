@@ -1,7 +1,9 @@
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Phone, MapPin, Send } from 'lucide-react';
 
 import { COURSES } from '@/lib/courses';
+import { COURSE_DETAILS } from '@/lib/course-details';
+import { Link } from '@/i18n/navigation';
 import { ORG } from '@/lib/org';
 
 const PHONE = ORG.phone;
@@ -20,6 +22,7 @@ export function Footer() {
   const t = useTranslations('Footer');
   const tn = useTranslations('Nav');
   const tc = useTranslations('Courses');
+  const locale = useLocale();
   const year = new Date().getFullYear();
 
   return (
@@ -59,7 +62,7 @@ export function Footer() {
               {NAV_LINKS.map((l) => (
                 <li key={l.key}>
                   <a
-                    href={l.href}
+                    href={`/${locale}${l.href}`}
                     className="text-muted-foreground transition-colors hover:text-foreground"
                   >
                     {tn(l.key)}
@@ -77,12 +80,15 @@ export function Footer() {
             <ul className="mt-4 space-y-2.5 text-sm">
               {COURSES.map((c) => (
                 <li key={c.id}>
-                  <a
-                    href="#courses"
+                  <Link
+                    href={{
+                      pathname: '/courses/[slug]',
+                      params: { slug: COURSE_DETAILS[c.id].slug },
+                    }}
                     className="text-muted-foreground transition-colors hover:text-foreground"
                   >
                     {tc(`items.${c.id}.name`)}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

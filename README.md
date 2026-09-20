@@ -107,12 +107,34 @@ Matnlar `messages/{uz,ru,en}.json` da, namespace'lar bo'yicha (`Meta`, `Nav`, `H
 
 ---
 
+## Kurs sahifalari
+
+Har kursning alohida sahifasi bor, URL tilga moslashgan (next-intl `pathnames`):
+
+| Til | URL namunasi |
+|---|---|
+| uz | `/uz/kurslar/cisco-mikrotik-tarmoqlar` |
+| ru | `/ru/kursy/cisco-mikrotik-tarmoqlar` |
+| en | `/en/courses/cisco-mikrotik-tarmoqlar` |
+
+- **Ma'lumot:** `src/lib/course-details.ts` — slug, modullar (texnologiya chiplari bilan), natija/auditoriya/talab/karyera kalitlari, asboblar.
+- **Matnlar:** `messages/{uz,ru,en}.json` → `CourseDetail` namespace.
+- **Sahifa:** `src/app/[locale]/courses/[slug]/page.tsx` — breadcrumb, hero + meta panel, natijalar, dastur akkordioni + yopishuvchi yozilish kartasi, texnologiyalar, kim uchun/talablar/karyera, CTA, boshqa kurslar.
+- **SEO:** har kursga `Course` + `BreadcrumbList` JSON-LD, tilga mos canonical/hreflang, sitemap'da 18 ta kurs URL'i.
+- **Konversiya:** "Ariza qoldirish" → `/{locale}?course=<id>#contact`, forma kursni avtomatik tanlaydi.
+
+Yangi kurs qo'shish: `courses.ts` ga yozuv → `course-details.ts` ga slug/modullar → uch tilda `CourseDetail.<id>` matnlari.
+
+---
+
 ## Holat (2026-09-20)
 
 **Tayyor:** to'liq bosh sahifa — Hero (terminal + typewriter), Texnologiyalar marquee, Courses (filtr + mavzu chiplari + formada avto-tanlash), WhyUs (6 afzallik), Stats, Process, Testimonials, FAQ (accordion + FAQPage JSON-LD), CTA banner, Contact (forma → api/send, xarita havolasi), Footer, suzuvchi Telegram tugmasi. SEO (dinamik OG, sitemap, robots, JSON-LD, hreflang), custom 404 + error sahifalar, favicon, @vercel/analytics + speed-insights, ESLint.
 
-**⚠️ E'lon qilishdan oldin tasdiqlash/almashtirish SHART:**
+**⚠️ Tasdiqlash/almashtirish SHART (sayt jonli ishlayapti):**
 - `messages/*.json` dagi **Testimonials.items** — NAMUNA matnlar. Haqiqiy bitiruvchilar fikrlari (rozilik bilan) bilan almashtiring.
 - `src/lib/courses.ts` dagi kurs davomiyliklari (`months`) — placeholder.
+- `messages/*.json` → **CourseDetail** — o'quv dasturlari sohaning joriy standartlari asosida yozilgan (CCNA 200-301, Linux/DevOps, Matter/Home Assistant). Markazning real dasturiga moslab tekshiring.
 - Narxlar qo'shilmagan (FAQ'da "konsultatsiyada aniqlanadi" deyilgan) — real narx qo'shish tavsiya etiladi (raqobatchilar shaffof narx ko'rsatadi).
 - Statistika raqamlari (50+ bitiruvchi, 5+ yil) — tasdiqlang.
+- `src/lib/mentors.ts` bo'sh — ustozlar ma'lumoti qo'shilsa, seksiya avtomatik paydo bo'ladi.

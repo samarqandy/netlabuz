@@ -10,6 +10,8 @@ import {
   GLOW_TEXT,
   type CourseLevel,
 } from '@/lib/courses';
+import { COURSE_DETAILS } from '@/lib/course-details';
+import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import { track } from '@/lib/track';
 import { Badge } from '@/components/ui/badge';
@@ -124,24 +126,21 @@ export function Courses() {
                       size="sm"
                       className="group/btn -mr-2 text-primary hover:text-primary"
                     >
-                      <a
-                        href="#contact"
-                        onClick={() => {
-                          // Contact formasida kursni oldindan tanlash
-                          window.dispatchEvent(
-                            new CustomEvent('netlab:select-course', {
-                              detail: course.id,
-                            })
-                          );
-                          track('course_select', {
+                      <Link
+                        href={{
+                          pathname: '/courses/[slug]',
+                          params: { slug: COURSE_DETAILS[course.id].slug },
+                        }}
+                        onClick={() =>
+                          track('course_open', {
                             course: course.id,
                             source: 'card',
-                          });
-                        }}
+                          })
+                        }
                       >
                         {t('detailsCta')}
                         <ArrowRight className="size-4 transition-transform duration-200 group-hover/btn:translate-x-1" />
-                      </a>
+                      </Link>
                     </Button>
                   </div>
                 </GlowCard>
