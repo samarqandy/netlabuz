@@ -19,7 +19,7 @@ export function Stats() {
   const t = useTranslations('Stats');
 
   return (
-    <section id="why" className="scroll-mt-20 py-20 sm:py-28">
+    <section id="stats" className="scroll-mt-20 py-20 sm:py-28">
       <div className="container">
         <Reveal>
           <SectionHeading
@@ -47,7 +47,7 @@ export function Stats() {
                 className="flex flex-col items-center gap-2 bg-card px-6 py-10 text-center"
               >
                 <Icon className="size-7 text-accent" strokeWidth={1.75} />
-                <dd className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl">
+                <dd className="font-mono text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
                   <CountUp value={value} suffix={suffix} />
                 </dd>
                 <dt className="text-sm text-muted-foreground">{t(key)}</dt>

@@ -17,6 +17,8 @@ import { SectionHeading } from '@/components/section-heading';
 
 const PHONE = '+998936803113';
 const TELEGRAM = 'https://t.me/netlabuz';
+const MAP_URL =
+  'https://maps.google.com/?q=Dahbed+11,+Samarkand,+Uzbekistan';
 const PHONE_RE = /^\+?998[0-9]{9}$/;
 
 type Status = 'idle' | 'sending' | 'success' | 'error';
@@ -28,6 +30,20 @@ export function Contact() {
 
   const [status, setStatus] = React.useState<Status>('idle');
   const [errors, setErrors] = React.useState<Errors>({});
+  const [selectedCourse, setSelectedCourse] = React.useState('');
+
+  // Kurs kartasidagi "Yozilish" tugmasi formada kursni oldindan tanlaydi
+  React.useEffect(() => {
+    const onSelect = (e: Event) => {
+      const id = (e as CustomEvent<string>).detail;
+      if (COURSES.some((c) => c.id === id)) {
+        setSelectedCourse(id);
+        setErrors((prev) => ({ ...prev, course: false }));
+      }
+    };
+    window.addEventListener('netlab:select-course', onSelect);
+    return () => window.removeEventListener('netlab:select-course', onSelect);
+  }, []);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -60,6 +76,7 @@ export function Contact() {
       if (!res.ok) throw new Error('request failed');
       setStatus('success');
       form.reset();
+      setSelectedCourse('');
     } catch {
       setStatus('error');
     }
@@ -97,9 +114,11 @@ export function Contact() {
                 external
               />
               <ContactRow
+                href={MAP_URL}
                 Icon={MapPin}
                 label={t('infoAddress')}
                 value={t('address')}
+                external
               />
             </div>
           </Reveal>
@@ -170,7 +189,14 @@ export function Contact() {
                     </div>
 
                     <Field label={t('course')} htmlFor="course" error={errors.course && t('courseError')}>
-                      <Select id="course" name="course" defaultValue="" aria-invalid={errors.course} required>
+                      <Select
+                        id="course"
+                        name="course"
+                        value={selectedCourse}
+                        onChange={(e) => setSelectedCourse(e.target.value)}
+                        aria-invalid={errors.course}
+                        required
+                      >
                         <option value="" disabled>
                           {t('coursePlaceholder')}
                         </option>

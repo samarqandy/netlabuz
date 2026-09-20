@@ -58,6 +58,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-mono)', 'ui-monospace', 'monospace'],
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -84,6 +85,10 @@ const config: Config = {
           from: { backgroundPosition: '0 0' },
           to: { backgroundPosition: '44px 44px' },
         },
+        marquee: {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
+        },
         'accordion-down': {
           from: { height: '0' },
           to: { height: 'var(--radix-accordion-content-height)' },
@@ -95,6 +100,7 @@ const config: Config = {
       },
       animation: {
         'grid-move': 'grid-move 18s linear infinite',
+        marquee: 'marquee 32s linear infinite',
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
       },

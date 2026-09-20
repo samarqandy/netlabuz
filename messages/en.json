@@ -1,73 +1,117 @@
 {
   "Meta": {
-    "title": "NETLAB — IT Training Center in Samarkand",
-    "description": "100% hands-on IT courses in Cisco, Linux, IoT, CCTV and network administration. The leading IT training center in Samarkand."
+    "title": "NETLAB — IT Training Center in Samarkand | Cisco, Linux, IoT Courses",
+    "description": "100% hands-on IT courses: Cisco, Linux, IoT, CCTV and network administration. Real equipment, experienced mentors, certificate and career support — in Samarkand."
   },
   "Nav": {
     "courses": "Courses",
-    "how": "How it works",
     "why": "Why us",
+    "how": "Process",
+    "faq": "FAQ",
     "contact": "Contact",
     "cta": "Enroll now"
   },
   "Hero": {
-    "badge": "#1 IT education platform in Samarkand",
-    "titleLine1": "Start your career",
-    "titleAccent": "in IT",
-    "titleLine2": "",
-    "subtitle": "Cisco, Linux, IoT and other modern technologies",
-    "ctaPrimary": "Explore courses",
-    "ctaSecondary": "Call us",
+    "badge": "IT training center in Samarkand — enrollment open",
+    "titleLine1": "Learn by doing.",
+    "titleAccent": "Launch your career",
+    "titleLine2": "in IT.",
+    "subtitle": "Cisco, Linux, IoT and CCTV — on real equipment, guided by experienced mentors. Finish with a certificate and career support.",
+    "ctaPrimary": "Free consultation",
+    "ctaSecondary": "View courses",
+    "terminalTitle": "netlab — terminal",
+    "roles": [
+      "network engineer",
+      "linux administrator",
+      "voip specialist",
+      "cctv specialist",
+      "iot enthusiast"
+    ],
     "stats": {
       "graduates": "Graduates",
-      "practice": "Practice",
+      "practice": "Hands-on",
       "directions": "Tracks"
     }
+  },
+  "Marquee": {
+    "label": "Technologies we teach"
   },
   "Courses": {
     "eyebrow": "Courses",
     "title": "What will you learn?",
-    "subtitle": "Every course is hands-on lab work on real equipment — real-world scenarios.",
+    "subtitle": "Every course includes hands-on lab work on real equipment — from zero to professional level.",
     "filterAll": "All",
     "beginner": "Beginner",
     "intermediate": "Intermediate",
     "advanced": "Advanced",
     "duration": "{months} mo",
-    "detailsCta": "Learn more",
+    "certificate": "Certificate",
+    "detailsCta": "Enroll",
     "items": {
       "computer": {
-        "name": "Computer literacy",
-        "description": "PC basics, MS Office, internet and cyber-safety — from zero to a professional level."
+        "name": "Computer Literacy",
+        "description": "Computer basics, MS Office, internet and cybersecurity — from zero to professional level."
       },
       "cisco": {
-        "name": "Cisco / MikroTik networks",
-        "description": "Routing, switching, VLAN, VPN and network security. Aimed at the CCNA level."
+        "name": "Cisco / MikroTik Networks",
+        "description": "Routing, switching, VLAN, VPN and network security. Aligned with the CCNA level."
       },
       "iptelephony": {
-        "name": "IP telephony",
-        "description": "VoIP, Asterisk, FreePBX, the SIP protocol and corporate phone systems."
+        "name": "IP Telephony",
+        "description": "VoIP, Asterisk, FreePBX, the SIP protocol and corporate phone system setup."
       },
       "security": {
-        "name": "Security & video surveillance",
-        "description": "CCTV installation and setup. IP cameras, DVR/NVR and monitoring systems."
+        "name": "Security & CCTV",
+        "description": "CCTV installation and configuration. IP cameras, DVR/NVR and monitoring systems."
       },
       "linux": {
-        "name": "Linux administration",
+        "name": "Linux Administration",
         "description": "Server management, shell scripting, Docker and DevOps practices."
       },
       "iot": {
-        "name": "Smart home & IoT",
+        "name": "Smart Home & IoT",
         "description": "Smart home, Arduino, Raspberry Pi, sensors and automation."
       }
     }
   },
-  "Stats": {
+  "WhyUs": {
     "eyebrow": "Why NETLAB",
+    "title": "Not memorizing — doing",
+    "subtitle": "You learn the theory by working with real equipment.",
+    "features": {
+      "lab": {
+        "title": "Real lab environment",
+        "description": "Cisco routers, servers, IP cameras — classes run on real hardware, not simulators."
+      },
+      "practice": {
+        "title": "100% hands-on",
+        "description": "Every topic is reinforced with a lab exercise you complete yourself."
+      },
+      "mentors": {
+        "title": "Experienced mentors",
+        "description": "Learn from practitioners who work in the industry."
+      },
+      "certificate": {
+        "title": "Certificate",
+        "description": "Students who successfully finish a course receive a NETLAB certificate."
+      },
+      "career": {
+        "title": "Career support",
+        "description": "CV preparation, interview practice and support in finding a job."
+      },
+      "consult": {
+        "title": "Free consultation",
+        "description": "A specialist helps you pick the right track — free of charge."
+      }
+    }
+  },
+  "Stats": {
+    "eyebrow": "Results",
     "title": "NETLAB in numbers",
-    "subtitle": "Our results and trust built over the years.",
+    "subtitle": "Results and trust built over the years.",
     "graduates": "Graduates",
     "experience": "Years of experience",
-    "practice": "Hands-on practice",
+    "practice": "Hands-on classes",
     "directions": "Learning tracks"
   },
   "Process": {
@@ -76,55 +120,130 @@
     "subtitle": "From application to certificate — four simple steps.",
     "steps": {
       "apply": {
-        "title": "Send a request",
+        "title": "Apply",
         "description": "Fill in the form or give us a call."
       },
       "consult": {
         "title": "Free consultation",
-        "description": "A specialist helps you pick the right track."
+        "description": "A specialist helps you choose the right track."
       },
       "learn": {
         "title": "Hands-on learning",
-        "description": "Learn on real equipment with experienced instructors."
+        "description": "Learn on real equipment with experienced mentors."
       },
       "certificate": {
-        "title": "Certificate & career",
-        "description": "Finish the course and get a certificate plus career support."
+        "title": "Certificate & job",
+        "description": "Finish the course, get your certificate and career support."
       }
     }
   },
+  "Testimonials": {
+    "eyebrow": "Reviews",
+    "title": "What our graduates say",
+    "subtitle": "Real impressions from people who studied at NETLAB.",
+    "items": {
+      "t1": {
+        "name": "Jasur",
+        "course": "Cisco / MikroTik Networks",
+        "text": "The classes were hands-on from start to finish — we configured routers with our own hands. Theory is immediately reinforced in practice, and that's what I liked most."
+      },
+      "t2": {
+        "name": "Dilnoza",
+        "course": "Computer Literacy",
+        "text": "I started from zero and came in nervous. The mentors patiently answered every question — now I work on a computer with confidence."
+      },
+      "t3": {
+        "name": "Sardor",
+        "course": "Linux Administration",
+        "text": "Working with servers in a real environment was invaluable. After the course I started working in my field."
+      }
+    }
+  },
+  "Faq": {
+    "eyebrow": "FAQ",
+    "title": "Frequently asked questions",
+    "subtitle": "Didn't find your answer? Call us or write on Telegram.",
+    "items": {
+      "experience": {
+        "q": "Do I need prior experience to start?",
+        "a": "No. Our courses are split by level — from absolute beginner to advanced. At the free consultation we'll pick the track that matches your level."
+      },
+      "format": {
+        "q": "What format are the classes in?",
+        "a": "Classes are held in person at our center in Samarkand (11 Dahbed street). Every topic is reinforced with hands-on lab work on real equipment."
+      },
+      "certificate": {
+        "q": "Do I get a certificate at the end?",
+        "a": "Yes. Every student who successfully completes a course receives a NETLAB certificate."
+      },
+      "price": {
+        "q": "How much do the courses cost?",
+        "a": "Pricing depends on the track and duration. Call us or leave a request — we'll answer all your questions at the free consultation."
+      },
+      "job": {
+        "q": "Do you help with finding a job?",
+        "a": "Yes. We help graduates with CV preparation, interview practice and finding suitable openings."
+      },
+      "enroll": {
+        "q": "How do I enroll?",
+        "a": "Fill in the form on the site, call us or write on Telegram — our operator will contact you with all the details."
+      }
+    }
+  },
+  "CtaBanner": {
+    "title": "Start your IT career today",
+    "subtitle": "Leave a request — our specialist will contact you and help you choose the right track.",
+    "primary": "Leave a request",
+    "secondary": "Write on Telegram"
+  },
   "Contact": {
     "eyebrow": "Contact",
-    "title": "Send a request",
-    "subtitle": "Fill in the form — we'll get back to you shortly.",
+    "title": "Leave a request",
+    "subtitle": "Fill in the form — we will contact you shortly.",
     "name": "Name",
     "namePlaceholder": "Your name",
     "phone": "Phone",
     "email": "Email",
     "course": "Course",
-    "coursePlaceholder": "Choose a course",
+    "coursePlaceholder": "Select a course",
     "message": "Message",
     "messagePlaceholder": "Your question or comment",
     "optional": "optional",
     "submit": "Send",
     "sending": "Sending...",
     "successTitle": "Request received!",
-    "successText": "Thank you! Our operator will contact you soon.",
+    "successText": "Thank you! Our operator will contact you shortly.",
     "again": "Send another",
-    "errorText": "Something went wrong. Please try again or call us.",
-    "nameError": "Enter your name (at least 2 characters).",
+    "errorText": "Something went wrong. Please try again or give us a call.",
+    "nameError": "Enter your name (at least 2 letters).",
     "phoneError": "Enter a valid phone: +998XXXXXXXXX",
-    "courseError": "Please choose a course.",
+    "courseError": "Select a course.",
     "infoPhone": "Phone",
     "infoAddress": "Address",
-    "address": "11 Dahbed St, Samarkand"
+    "address": "11 Dahbed street, Samarkand",
+    "mapCta": "Open in maps"
+  },
+  "Floating": {
+    "telegram": "Write on Telegram",
+    "call": "Call us"
+  },
+  "NotFound": {
+    "code": "404 — connection not found",
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist or has been moved. Head back home to find what you need.",
+    "cta": "Back to home"
+  },
+  "ErrorPage": {
+    "title": "Something went wrong",
+    "description": "An unexpected error occurred. Refresh the page — if the problem persists, let us know.",
+    "cta": "Try again"
   },
   "Footer": {
-    "about": "The leading IT training center in Samarkand. 100% hands-on courses in Cisco, Linux, IoT and CCTV.",
+    "about": "IT training center in Samarkand. 100% hands-on courses in Cisco, Linux, IoT and CCTV.",
     "navTitle": "Pages",
     "coursesTitle": "Courses",
     "contactTitle": "Contact",
-    "address": "11 Dahbed St, Samarkand",
+    "address": "11 Dahbed street, Samarkand",
     "rights": "All rights reserved.",
     "tagline": "IT education in Samarkand"
   },

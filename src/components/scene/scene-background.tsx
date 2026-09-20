@@ -25,7 +25,10 @@ const SECTION_MODE: Record<string, number> = {
   home: 0,
   courses: 1,
   why: 2,
+  stats: 2,
   how: 3,
+  reviews: 3,
+  faq: 4,
   contact: 4,
 };
 
@@ -197,7 +200,8 @@ void main(){
   // Vinetka — kontent kontrasti uchun
   float vig=smoothstep(1.5,0.25,length(uv));
   color *= mix(0.5,1.0,vig);
-  color *= 0.92;
+  // Umumiy xiralashtirish — fon kontent bilan raqobatlashmasligi uchun
+  color *= 0.68;
 
   gl_FragColor=vec4(color,1.0);
 }
