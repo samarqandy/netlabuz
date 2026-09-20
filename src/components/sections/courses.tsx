@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { useTranslations } from 'next-intl';
-import { ArrowRight, Clock } from 'lucide-react';
+import { ArrowRight, Award, Clock } from 'lucide-react';
 
 import {
   COURSES,
@@ -94,10 +94,28 @@ export function Courses() {
                     {t(`items.${course.id}.description`)}
                   </p>
 
-                  <div className="mt-6 flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
-                      <Clock className="size-4" />
-                      {t('duration', { months: course.months })}
+                  {/* Asosiy mavzular */}
+                  <ul className="mt-4 flex flex-wrap gap-1.5">
+                    {course.topics.map((topic) => (
+                      <li
+                        key={topic}
+                        className="rounded-md border border-border/60 bg-secondary/40 px-2 py-0.5 font-mono text-xs text-muted-foreground"
+                      >
+                        {topic}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="mt-5 flex items-center justify-between border-t border-border/60 pt-4">
+                    <span className="flex items-center gap-3 text-sm text-muted-foreground">
+                      <span className="inline-flex items-center gap-1.5">
+                        <Clock className="size-4" />
+                        {t('duration', { months: course.months })}
+                      </span>
+                      <span className="inline-flex items-center gap-1.5">
+                        <Award className="size-4" />
+                        {t('certificate')}
+                      </span>
                     </span>
                     <Button
                       asChild
@@ -105,7 +123,17 @@ export function Courses() {
                       size="sm"
                       className="group/btn -mr-2 text-primary hover:text-primary"
                     >
-                      <a href="#contact">
+                      <a
+                        href="#contact"
+                        onClick={() => {
+                          // Contact formasida kursni oldindan tanlash
+                          window.dispatchEvent(
+                            new CustomEvent('netlab:select-course', {
+                              detail: course.id,
+                            })
+                          );
+                        }}
+                      >
                         {t('detailsCta')}
                         <ArrowRight className="size-4 transition-transform duration-200 group-hover/btn:translate-x-1" />
                       </a>

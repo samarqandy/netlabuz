@@ -1,39 +1,52 @@
 {
   "Meta": {
-    "title": "NETLAB — Samarqand IT O'quv Markazi",
-    "description": "Cisco, Linux, IoT, CCTV va tarmoq administratsiyasi bo'yicha 100% amaliy IT kurslar. Samarqanddagi yetakchi IT o'quv markazi."
+    "title": "NETLAB — Samarqand IT O'quv Markazi | Cisco, Linux, IoT kurslari",
+    "description": "Cisco, Linux, IoT, CCTV va tarmoq administratsiyasi bo'yicha 100% amaliy IT kurslar. Haqiqiy uskunalar, tajribali ustozlar, sertifikat va karyera yordami — Samarqandda."
   },
   "Nav": {
     "courses": "Kurslar",
-    "how": "Qanday ishlaydi",
     "why": "Nega biz",
+    "how": "Jarayon",
+    "faq": "Savol-javob",
     "contact": "Aloqa",
     "cta": "Ro'yxatdan o'tish"
   },
   "Hero": {
-    "badge": "Samarqandda #1 IT ta'lim platformasi",
-    "titleLine1": "IT sohasida",
-    "titleAccent": "karyera",
-    "titleLine2": "boshlang",
-    "subtitle": "Cisco, Linux, IoT va boshqa zamonaviy texnologiyalar",
-    "ctaPrimary": "Kurslarni ko'rish",
-    "ctaSecondary": "Qo'ng'iroq qilish",
+    "badge": "Samarqand IT o'quv markazi — yangi guruhlarga qabul ochiq",
+    "titleLine1": "Amaliyotda o'rganing.",
+    "titleAccent": "IT karyerangizni",
+    "titleLine2": "boshlang.",
+    "subtitle": "Cisco, Linux, IoT va video nazorat — haqiqiy uskunalarda, tajribali ustozlar bilan. Kurs yakunida sertifikat va karyera yordami.",
+    "ctaPrimary": "Bepul konsultatsiya",
+    "ctaSecondary": "Kurslarni ko'rish",
+    "terminalTitle": "netlab — terminal",
+    "roles": [
+      "tarmoq muhandisi",
+      "linux administrator",
+      "voip mutaxassisi",
+      "cctv mutaxassisi",
+      "iot ishqibozi"
+    ],
     "stats": {
       "graduates": "Bitiruvchi",
       "practice": "Amaliyot",
       "directions": "Yo'nalish"
     }
   },
+  "Marquee": {
+    "label": "Biz o'rgatadigan texnologiyalar"
+  },
   "Courses": {
     "eyebrow": "Kurslar",
     "title": "Nimani o'rganasiz?",
-    "subtitle": "Barcha kurslar haqiqiy uskunalarda amaliy laboratoriya ishi bilan — haqiqiy stsenariylar.",
+    "subtitle": "Barcha kurslar haqiqiy uskunalarda amaliy laboratoriya ishi bilan — noldan professional darajagacha.",
     "filterAll": "Barchasi",
     "beginner": "Boshlang'ich",
     "intermediate": "O'rta",
     "advanced": "Yuqori",
     "duration": "{months} oy",
-    "detailsCta": "Batafsil",
+    "certificate": "Sertifikat",
+    "detailsCta": "Yozilish",
     "items": {
       "computer": {
         "name": "Kompyuter savodxonligi",
@@ -61,8 +74,39 @@
       }
     }
   },
-  "Stats": {
+  "WhyUs": {
     "eyebrow": "Nega NETLAB",
+    "title": "O'qish emas — amaliyot",
+    "subtitle": "Nazariyani kitobdan emas, haqiqiy uskunalar bilan ishlab o'rganasiz.",
+    "features": {
+      "lab": {
+        "title": "Haqiqiy laboratoriya",
+        "description": "Cisco routerlari, serverlar, IP kameralar — darslar haqiqiy uskunalarda o'tadi, simulyatorda emas."
+      },
+      "practice": {
+        "title": "100% amaliyot",
+        "description": "Har bir mavzu qo'lda bajariladigan laboratoriya ishi bilan mustahkamlanadi."
+      },
+      "mentors": {
+        "title": "Tajribali ustozlar",
+        "description": "Sohada ishlayotgan amaliyotchi mutaxassislardan o'rganasiz."
+      },
+      "certificate": {
+        "title": "Sertifikat",
+        "description": "Kursni muvaffaqiyatli tugatganlarga NETLAB sertifikati topshiriladi."
+      },
+      "career": {
+        "title": "Karyera yordami",
+        "description": "CV tayyorlash, suhbatga tayyorgarlik va ish topishda qo'llab-quvvatlash."
+      },
+      "consult": {
+        "title": "Bepul konsultatsiya",
+        "description": "Yo'nalish tanlashda mutaxassis bilan bepul maslahatlashasiz."
+      }
+    }
+  },
+  "Stats": {
+    "eyebrow": "Natijalar",
     "title": "Raqamlarda NETLAB",
     "subtitle": "Yillar davomidagi natijalarimiz va ishonchimiz.",
     "graduates": "Bitiruvchilar",
@@ -93,6 +137,65 @@
       }
     }
   },
+  "Testimonials": {
+    "eyebrow": "Fikrlar",
+    "title": "Bitiruvchilar nima deydi?",
+    "subtitle": "NETLAB'da o'qiganlarning haqiqiy taassurotlari.",
+    "items": {
+      "t1": {
+        "name": "Jasur",
+        "course": "Cisco / MikroTik tarmoqlar",
+        "text": "Darslar boshidan oxirigacha amaliy o'tdi — routerlarni qo'limizda sozladik. Nazariya darhol amalda mustahkamlanadi, shu narsa menga eng yoqqani."
+      },
+      "t2": {
+        "name": "Dilnoza",
+        "course": "Kompyuter savodxonligi",
+        "text": "Noldan boshlagan edim, qo'rqib kelgandim. Ustozlar har bir savolga erinmasdan javob berishdi, endi kompyuterda bemalol ishlayman."
+      },
+      "t3": {
+        "name": "Sardor",
+        "course": "Linux administratsiya",
+        "text": "Serverlar bilan haqiqiy muhitda ishlash tajribasi juda qimmatli bo'ldi. Kursdan keyin o'z yo'nalishimda ishlashni boshladim."
+      }
+    }
+  },
+  "Faq": {
+    "eyebrow": "Savol-javob",
+    "title": "Ko'p beriladigan savollar",
+    "subtitle": "Javob topolmadingizmi? Bizga qo'ng'iroq qiling yoki Telegram orqali yozing.",
+    "items": {
+      "experience": {
+        "q": "O'qish uchun oldindan tajriba kerakmi?",
+        "a": "Yo'q. Kurslarimiz noldan boshlanadigan darajadan yuqori darajagacha bo'lingan. Bepul konsultatsiyada bilim darajangizga mos yo'nalishni birga tanlaymiz."
+      },
+      "format": {
+        "q": "Darslar qanday formatda o'tadi?",
+        "a": "Darslar Samarqanddagi markazimizda (Dahbed ko'chasi 11) jonli o'tadi. Har bir mavzu haqiqiy uskunalarda amaliy laboratoriya ishi bilan mustahkamlanadi."
+      },
+      "certificate": {
+        "q": "Kurs yakunida sertifikat beriladimi?",
+        "a": "Ha. Kursni muvaffaqiyatli tugatgan har bir o'quvchiga NETLAB sertifikati topshiriladi."
+      },
+      "price": {
+        "q": "Kurslar narxi qancha?",
+        "a": "Narx yo'nalish va davomiylikka bog'liq. Aniq ma'lumot uchun qo'ng'iroq qiling yoki ariza qoldiring — bepul konsultatsiyada barcha savollaringizga javob beramiz."
+      },
+      "job": {
+        "q": "Ish topishga yordam berasizmi?",
+        "a": "Ha. Bitiruvchilarimizga CV tayyorlash, suhbatga tayyorgarlik va mos ish o'rinlarini topishda yordam beramiz."
+      },
+      "enroll": {
+        "q": "Qanday ro'yxatdan o'taman?",
+        "a": "Saytdagi formani to'ldiring, qo'ng'iroq qiling yoki Telegram orqali yozing — operatorimiz siz bilan bog'lanib, barcha tafsilotlarni aytib beradi."
+      }
+    }
+  },
+  "CtaBanner": {
+    "title": "IT karyerangizni bugun boshlang",
+    "subtitle": "Ariza qoldiring — mutaxassisimiz siz bilan bog'lanib, mos yo'nalishni tanlashga yordam beradi.",
+    "primary": "Ariza qoldirish",
+    "secondary": "Telegram orqali yozish"
+  },
   "Contact": {
     "eyebrow": "Aloqa",
     "title": "Ariza qoldiring",
@@ -117,10 +220,26 @@
     "courseError": "Kursni tanlang.",
     "infoPhone": "Telefon",
     "infoAddress": "Manzil",
-    "address": "Dahbed ko'chasi 11, Samarqand"
+    "address": "Dahbed ko'chasi 11, Samarqand",
+    "mapCta": "Xaritada ochish"
+  },
+  "Floating": {
+    "telegram": "Telegram orqali yozish",
+    "call": "Qo'ng'iroq qilish"
+  },
+  "NotFound": {
+    "code": "404 — ulanish topilmadi",
+    "title": "Sahifa topilmadi",
+    "description": "Siz izlagan sahifa mavjud emas yoki ko'chirilgan. Bosh sahifaga qaytib, kerakli bo'limni toping.",
+    "cta": "Bosh sahifaga qaytish"
+  },
+  "ErrorPage": {
+    "title": "Xatolik yuz berdi",
+    "description": "Kutilmagan xatolik. Iltimos, sahifani yangilab ko'ring — muammo takrorlansa, bizga xabar bering.",
+    "cta": "Qayta urinish"
   },
   "Footer": {
-    "about": "Samarqanddagi yetakchi IT o'quv markazi. Cisco, Linux, IoT va video nazorat bo'yicha 100% amaliy kurslar.",
+    "about": "Samarqanddagi IT o'quv markazi. Cisco, Linux, IoT va video nazorat bo'yicha 100% amaliy kurslar.",
     "navTitle": "Sahifalar",
     "coursesTitle": "Kurslar",
     "contactTitle": "Aloqa",

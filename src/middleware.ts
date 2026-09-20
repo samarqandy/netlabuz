@@ -4,7 +4,8 @@ import { routing } from './i18n/routing';
 export default createMiddleware(routing);
 
 export const config = {
-  // Minimal matcher: root redirect (/ -> /uz) va locale-prefiksli yo'llar.
-  // Prefiksiz yo'llar (masalan /courses) bu yerda 404 beradi.
-  matcher: ['/', '/(uz|ru|en)/:path*'],
+  // api, _next/_vercel ichki yo'llari va statik fayllardan (nuqtali)
+  // tashqari hamma yo'l middleware orqali o'tadi — prefiksiz yo'llar
+  // default tilga redirect bo'lib, so'ng [...rest] catch-all 404 beradi.
+  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],
 };

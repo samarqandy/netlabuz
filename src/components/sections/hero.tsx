@@ -3,29 +3,28 @@
 import * as React from 'react';
 import { useTranslations } from 'next-intl';
 import { motion, useReducedMotion } from 'framer-motion';
-import { ArrowRight, Phone, Cpu, Network, Terminal } from 'lucide-react';
+import { ArrowRight, MessageCircle } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
+import { Terminal } from '@/components/ui/terminal';
 import { staggerContainer, staggerItem } from '@/lib/animations';
-
-const PHONE = '+998936803113';
 
 const STATS = [
   { value: 50, suffix: '+', key: 'graduates' },
   { value: 100, suffix: '%', key: 'practice' },
-  { value: 6, suffix: '+', key: 'directions' },
+  { value: 6, suffix: '', key: 'directions' },
 ] as const;
 
 export function Hero() {
   const t = useTranslations('Hero');
-  // CountUp/FloatingIcons (transform bo'lmagan/JS logikasi) uchun kerak.
-  // Variant darajasidagi reduced-motion global MotionConfig orqali boshqariladi.
+  // CountUp (JS logikasi) uchun kerak; variantlar global MotionConfig orqali.
   const reduce = useReducedMotion();
+  const roles = t.raw('roles') as string[];
 
   return (
     <section
       id="home"
-      className="relative flex min-h-[92vh] items-center overflow-hidden pt-16"
+      className="relative flex min-h-[92vh] items-center overflow-hidden pt-24 sm:pt-16"
     >
       {/* Animated tech grid background */}
       <div
@@ -39,82 +38,90 @@ export function Hero() {
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-24 bottom-0 -z-10 size-[24rem] rounded-full bg-accent/20 blur-[120px]"
+        className="pointer-events-none absolute -right-24 bottom-0 -z-10 size-[24rem] rounded-full bg-accent/15 blur-[120px]"
       />
 
       <motion.div
         variants={staggerContainer}
         initial="initial"
         animate="animate"
-        className="container flex flex-col items-center text-center"
+        className="container grid items-center gap-12 py-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16"
       >
-        {/* Badge */}
-        <motion.div
-          variants={staggerItem}
-          className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-4 py-1.5 text-sm font-medium text-muted-foreground backdrop-blur"
-        >
-          <span className="relative flex size-2">
-            <span className="absolute inline-flex size-full animate-ping rounded-full bg-accent opacity-75" />
-            <span className="relative inline-flex size-2 rounded-full bg-accent" />
-          </span>
-          {t('badge')}
+        {/* Chap: matn + CTA + statistika */}
+        <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+          {/* Badge */}
+          <motion.div
+            variants={staggerItem}
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-4 py-1.5 text-sm font-medium text-muted-foreground backdrop-blur"
+          >
+            <span className="relative flex size-2">
+              <span className="absolute inline-flex size-full animate-ping rounded-full bg-accent opacity-75" />
+              <span className="relative inline-flex size-2 rounded-full bg-accent" />
+            </span>
+            {t('badge')}
+          </motion.div>
+
+          {/* Title */}
+          <motion.h1
+            variants={staggerItem}
+            className="max-w-3xl text-balance text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl md:text-6xl"
+          >
+            {t('titleLine1')}{' '}
+            <span className="text-gradient-tech">{t('titleAccent')}</span>{' '}
+            {t('titleLine2')}
+          </motion.h1>
+
+          {/* Subtitle */}
+          <motion.p
+            variants={staggerItem}
+            className="mt-6 max-w-xl text-pretty text-base text-muted-foreground sm:text-lg"
+          >
+            {t('subtitle')}
+          </motion.p>
+
+          {/* CTAs */}
+          <motion.div
+            variants={staggerItem}
+            className="mt-9 flex flex-col items-center gap-3 sm:flex-row"
+          >
+            <Button asChild size="lg" variant="accent">
+              <a href="#contact">
+                <MessageCircle className="size-4" /> {t('ctaPrimary')}
+              </a>
+            </Button>
+            <Button asChild size="lg" variant="outline">
+              <a href="#courses">
+                {t('ctaSecondary')} <ArrowRight className="size-4" />
+              </a>
+            </Button>
+          </motion.div>
+
+          {/* Stats */}
+          <motion.dl
+            variants={staggerItem}
+            className="mt-12 grid w-full max-w-md grid-cols-3 gap-4 sm:gap-8"
+          >
+            {STATS.map((stat) => (
+              <div
+                key={stat.key}
+                className="flex flex-col items-center lg:items-start"
+              >
+                <dt className="sr-only">{t(`stats.${stat.key}`)}</dt>
+                <dd className="font-mono text-3xl font-bold text-foreground sm:text-4xl">
+                  <CountUp value={stat.value} suffix={stat.suffix} reduce={!!reduce} />
+                </dd>
+                <span className="mt-1 text-sm text-muted-foreground">
+                  {t(`stats.${stat.key}`)}
+                </span>
+              </div>
+            ))}
+          </motion.dl>
+        </div>
+
+        {/* O'ng: terminal (lg dan boshlab yonda, mobilda pastda) */}
+        <motion.div variants={staggerItem} className="w-full max-w-xl lg:max-w-none">
+          <Terminal title={t('terminalTitle')} roles={roles} />
         </motion.div>
-
-        {/* Title */}
-        <motion.h1
-          variants={staggerItem}
-          className="max-w-4xl text-balance text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
-        >
-          {t('titleLine1')}{' '}
-          <span className="text-gradient-tech">{t('titleAccent')}</span>{' '}
-          {t('titleLine2')}
-        </motion.h1>
-
-        {/* Subtitle */}
-        <motion.p
-          variants={staggerItem}
-          className="mt-6 max-w-2xl text-pretty text-base text-muted-foreground sm:text-lg"
-        >
-          {t('subtitle')}
-        </motion.p>
-
-        {/* CTAs */}
-        <motion.div
-          variants={staggerItem}
-          className="mt-9 flex flex-col items-center gap-3 sm:flex-row"
-        >
-          <Button asChild size="lg" variant="accent">
-            <a href="#courses">
-              {t('ctaPrimary')} <ArrowRight className="size-4" />
-            </a>
-          </Button>
-          <Button asChild size="lg" variant="outline">
-            <a href={`tel:${PHONE}`}>
-              <Phone className="size-4" /> {t('ctaSecondary')}
-            </a>
-          </Button>
-        </motion.div>
-
-        {/* Stats */}
-        <motion.dl
-          variants={staggerItem}
-          className="mt-14 grid w-full max-w-2xl grid-cols-3 gap-4 sm:gap-8"
-        >
-          {STATS.map((stat) => (
-            <div key={stat.key} className="flex flex-col items-center">
-              <dt className="sr-only">{t(`stats.${stat.key}`)}</dt>
-              <dd className="text-3xl font-extrabold text-foreground sm:text-4xl">
-                <CountUp value={stat.value} suffix={stat.suffix} reduce={!!reduce} />
-              </dd>
-              <span className="mt-1 text-sm text-muted-foreground">
-                {t(`stats.${stat.key}`)}
-              </span>
-            </div>
-          ))}
-        </motion.dl>
-
-        {/* Floating tech icons (decorative) */}
-        <FloatingIcons reduce={!!reduce} />
       </motion.div>
     </section>
   );
@@ -155,33 +162,5 @@ function CountUp({
       {display}
       {suffix}
     </span>
-  );
-}
-
-/** Dekorativ suzuvchi texno-ikonkalar */
-function FloatingIcons({ reduce }: { reduce: boolean }) {
-  const icons = [
-    { Icon: Cpu, className: 'left-[6%] top-[22%]' },
-    { Icon: Network, className: 'right-[8%] top-[30%]' },
-    { Icon: Terminal, className: 'left-[12%] bottom-[14%]' },
-  ];
-  return (
-    <>
-      {icons.map(({ Icon, className }, i) => (
-        <motion.div
-          key={i}
-          aria-hidden
-          className={`pointer-events-none absolute hidden text-primary/30 lg:block ${className}`}
-          animate={reduce ? undefined : { y: [0, -14, 0] }}
-          transition={{
-            duration: 4 + i,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-        >
-          <Icon className="size-10" />
-        </motion.div>
-      ))}
-    </>
   );
 }

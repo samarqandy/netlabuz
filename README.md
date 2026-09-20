@@ -107,12 +107,12 @@ Matnlar `messages/{uz,ru,en}.json` da, namespace'lar bo'yicha (`Meta`, `Nav`, `H
 
 ---
 
-## Holat (2026-06-21)
+## Holat (2026-09-20)
 
-**Tayyor:** loyiha strukturasi, Tailwind/mavzu, i18n routing + middleware, layout + navbar, **Hero**, **Courses** (daraja bo'yicha filtr), SEO (dinamik OG, sitemap, robots, JSON-LD, hreflang), UI kit.
+**Tayyor:** to'liq bosh sahifa — Hero (terminal + typewriter), Texnologiyalar marquee, Courses (filtr + mavzu chiplari + formada avto-tanlash), WhyUs (6 afzallik), Stats, Process, Testimonials, FAQ (accordion + FAQPage JSON-LD), CTA banner, Contact (forma → api/send, xarita havolasi), Footer, suzuvchi Telegram tugmasi. SEO (dinamik OG, sitemap, robots, JSON-LD, hreflang), custom 404 + error sahifalar, favicon, @vercel/analytics + speed-insights, ESLint.
 
-**Qolgan seksiyalar:** Stats (counterlar), Process, Testimonials (slider), Gallery, Contact (forma → api/send), Footer.
-
-**Polish:** @vercel/analytics + speed-insights, custom 404/500, loading spinner.
-
-**Tasdiqlash kerak:** `src/lib/courses.ts` dagi kurs davomiyliklari (`months`) — placeholder; narxlar qo'shilmagan.
+**⚠️ E'lon qilishdan oldin tasdiqlash/almashtirish SHART:**
+- `messages/*.json` dagi **Testimonials.items** — NAMUNA matnlar. Haqiqiy bitiruvchilar fikrlari (rozilik bilan) bilan almashtiring.
+- `src/lib/courses.ts` dagi kurs davomiyliklari (`months`) — placeholder.
+- Narxlar qo'shilmagan (FAQ'da "konsultatsiyada aniqlanadi" deyilgan) — real narx qo'shish tavsiya etiladi (raqobatchilar shaffof narx ko'rsatadi).
+- Statistika raqamlari (50+ bitiruvchi, 5+ yil) — tasdiqlang.
