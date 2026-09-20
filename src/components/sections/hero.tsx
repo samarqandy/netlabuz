@@ -34,11 +34,11 @@ export function Hero() {
       {/* Glow blobs */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -left-32 top-10 -z-10 size-[28rem] rounded-full bg-primary/20 blur-[120px]"
+        className="pointer-events-none absolute -left-32 top-10 -z-10 size-[28rem] rounded-full bg-primary/10 blur-[120px]"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-24 bottom-0 -z-10 size-[24rem] rounded-full bg-accent/15 blur-[120px]"
+        className="pointer-events-none absolute -right-24 bottom-0 -z-10 size-[24rem] rounded-full bg-accent/[0.07] blur-[120px]"
       />
 
       <motion.div
