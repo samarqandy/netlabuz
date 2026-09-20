@@ -7,6 +7,8 @@ import { Phone, MapPin, Send, Loader2, CheckCircle2, MessageCircle } from 'lucid
 
 import { COURSES } from '@/lib/courses';
 import { cn } from '@/lib/utils';
+import { track } from '@/lib/track';
+import { ORG } from '@/lib/org';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -15,10 +17,9 @@ import { Select } from '@/components/ui/select';
 import { Reveal } from '@/components/ui/reveal';
 import { SectionHeading } from '@/components/section-heading';
 
-const PHONE = '+998936803113';
-const TELEGRAM = 'https://t.me/netlabuz';
-const MAP_URL =
-  'https://maps.google.com/?q=Dahbed+11,+Samarkand,+Uzbekistan';
+const PHONE = ORG.phone;
+const TELEGRAM = ORG.telegram;
+const MAP_URL = ORG.mapUrl;
 const PHONE_RE = /^\+?998[0-9]{9}$/;
 
 type Status = 'idle' | 'sending' | 'success' | 'error';
@@ -77,6 +78,7 @@ export function Contact() {
       setStatus('success');
       form.reset();
       setSelectedCourse('');
+      track('lead_submitted', { course });
     } catch {
       setStatus('error');
     }
@@ -85,7 +87,9 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="scroll-mt-20 border-t border-border/60 bg-secondary/20 py-20 sm:py-28"
+      // overflow-hidden: slideIn reveal'larning boshlang'ich translateX(±32px)
+      // holati mobilda gorizontal scroll ochmasligi uchun
+      className="scroll-mt-20 overflow-hidden border-t border-border/60 bg-secondary/20 py-20 sm:py-28"
     >
       <div className="container">
         <Reveal>
@@ -98,7 +102,9 @@ export function Contact() {
 
         <div className="mx-auto mt-12 grid max-w-5xl gap-8 lg:grid-cols-5">
           {/* Aloqa ma'lumotlari */}
-          <Reveal variant="slideInLeft" className="lg:col-span-2">
+          {/* min-w-0: grid item ichidagi select min-content kengligi
+              kartani viewport'dan chiqarib yubormasligi uchun */}
+          <Reveal variant="slideInLeft" className="min-w-0 lg:col-span-2">
             <div className="flex h-full flex-col gap-4">
               <ContactRow
                 href={`tel:${PHONE}`}
@@ -110,8 +116,9 @@ export function Contact() {
                 href={TELEGRAM}
                 Icon={MessageCircle}
                 label="Telegram"
-                value="@netlabuz"
+                value={ORG.telegramHandle}
                 external
+                onClick={() => track('telegram_click', { location: 'contact' })}
               />
               <ContactRow
                 href={MAP_URL}
@@ -124,7 +131,7 @@ export function Contact() {
           </Reveal>
 
           {/* Forma */}
-          <Reveal variant="slideInRight" className="lg:col-span-3">
+          <Reveal variant="slideInRight" className="min-w-0 lg:col-span-3">
             <div className="relative rounded-2xl border border-border bg-card p-6 shadow-sm sm:p-8">
               <AnimatePresence mode="wait">
                 {status === 'success' ? (
@@ -257,12 +264,14 @@ function ContactRow({
   label,
   value,
   external,
+  onClick,
 }: {
   href?: string;
   Icon: React.ComponentType<{ className?: string }>;
   label: string;
   value: string;
   external?: boolean;
+  onClick?: () => void;
 }) {
   const inner = (
     <>
@@ -286,6 +295,7 @@ function ContactRow({
     <a
       href={href}
       {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+      onClick={onClick}
       className={cn(base, 'hover:border-primary/50 hover:bg-card/80')}
     >
       {inner}

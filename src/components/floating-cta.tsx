@@ -5,7 +5,10 @@ import { useTranslations } from 'next-intl';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Send } from 'lucide-react';
 
-const TELEGRAM = 'https://t.me/netlabuz';
+import { track } from '@/lib/track';
+import { ORG } from '@/lib/org';
+
+const TELEGRAM = ORG.telegram;
 
 /**
  * Suzuvchi Telegram tugmasi — O'zbekiston bozorida asosiy aloqa kanali.
@@ -32,6 +35,7 @@ export function FloatingCta() {
           rel="noopener noreferrer"
           aria-label={t('telegram')}
           title={t('telegram')}
+          onClick={() => track('telegram_click', { location: 'floating' })}
           initial={{ opacity: 0, scale: 0.6, y: 16 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.6, y: 16 }}

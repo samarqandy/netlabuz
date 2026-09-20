@@ -2,12 +2,10 @@ import { useTranslations } from 'next-intl';
 import { Phone, MapPin, Send } from 'lucide-react';
 
 import { COURSES } from '@/lib/courses';
+import { ORG } from '@/lib/org';
 
-const PHONE = '+998936803113';
-const TELEGRAM_CHANNELS = [
-  { label: '@netlabuz', href: 'https://t.me/netlabuz' },
-  { label: '@netlab_sam', href: 'https://t.me/netlab_sam' },
-];
+const PHONE = ORG.phone;
+const TELEGRAM_CHANNELS = ORG.telegramChannels;
 
 const NAV_LINKS = [
   { href: '#courses', key: 'courses' },

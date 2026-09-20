@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { Analytics } from '@vercel/analytics/react';
@@ -11,6 +11,7 @@ import {
 } from 'next-intl/server';
 
 import { routing, type Locale } from '@/i18n/routing';
+import { ORG, safeJsonLd } from '@/lib/org';
 import { ThemeProvider } from '@/components/theme-provider';
 import { MotionProvider } from '@/components/motion-provider';
 import { Navbar } from '@/components/navbar';
@@ -34,6 +35,12 @@ const jetbrainsMono = JetBrains_Mono({
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
+
+// Brauzer UI rangi — sayt standart holatda dark (next-themes defaultTheme),
+// shuning uchun OS sozlamasidan qat'i nazar dark rang beriladi.
+export const viewport: Viewport = {
+  themeColor: '#0A0A0A',
+};
 
 export async function generateMetadata({
   params: { locale },
@@ -96,19 +103,15 @@ export default async function LocaleLayout({
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'EducationalOrganization',
-    name: 'NETLAB',
+    '@id': `${ORG.url}/#organization`,
+    name: ORG.name,
     alternateName: 'NETLAB Samarqand',
-    url: `https://netlab.uz/${locale}`,
-    logo: 'https://netlab.uz/uz/opengraph-image',
+    url: `${ORG.url}/${locale}`,
+    logo: `${ORG.url}/uz/opengraph-image`,
     description: tMeta('description'),
-    telephone: '+998936803113',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Dahbed 11',
-      addressLocality: 'Samarqand',
-      addressCountry: 'UZ',
-    },
-    sameAs: ['https://t.me/netlabuz', 'https://t.me/netlab_sam'],
+    telephone: ORG.phone,
+    address: ORG.address,
+    sameAs: ORG.telegramChannels.map((ch) => ch.href),
   };
 
   return (
@@ -116,7 +119,7 @@ export default async function LocaleLayout({
       <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans`}>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }}
         />
         <ThemeProvider
           attribute="class"

@@ -5,8 +5,10 @@ import { ArrowRight, Send } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Reveal } from '@/components/ui/reveal';
+import { track } from '@/lib/track';
+import { ORG } from '@/lib/org';
 
-const TELEGRAM = 'https://t.me/netlabuz';
+const TELEGRAM = ORG.telegram;
 
 export function CtaBanner() {
   const t = useTranslations('CtaBanner');
@@ -38,12 +40,20 @@ export function CtaBanner() {
             </p>
             <div className="relative mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Button asChild size="lg" variant="accent">
-                <a href="#contact">
+                <a
+                  href="#contact"
+                  onClick={() => track('cta_click', { location: 'banner' })}
+                >
                   {t('primary')} <ArrowRight className="size-4" />
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <a href={TELEGRAM} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={TELEGRAM}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => track('telegram_click', { location: 'banner' })}
+                >
                   <Send className="size-4" /> {t('secondary')}
                 </a>
               </Button>
