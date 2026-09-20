@@ -4,6 +4,7 @@ import { Phone, MapPin, Send } from 'lucide-react';
 import { COURSES } from '@/lib/courses';
 import { COURSE_DETAILS } from '@/lib/course-details';
 import { Link } from '@/i18n/navigation';
+import { Logo } from '@/components/brand/logo';
 import { ORG } from '@/lib/org';
 
 const PHONE = ORG.phone;
@@ -31,9 +32,7 @@ export function Footer() {
         <div className="grid gap-10 lg:grid-cols-12">
           {/* Brand */}
           <div className="lg:col-span-4">
-            <span className="text-2xl font-extrabold tracking-tight">
-              <span className="text-gradient-tech">NET</span>LAB
-            </span>
+            <Logo markClassName="h-9" wordClassName="text-xl" />
             <p className="mt-4 max-w-xs text-sm text-muted-foreground">
               {t('about')}
             </p>

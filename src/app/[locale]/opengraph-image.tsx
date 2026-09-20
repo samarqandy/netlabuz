@@ -1,11 +1,16 @@
 import { ImageResponse } from 'next/og';
 
 import { routing } from '@/i18n/routing';
+import { getMark } from '@/components/brand/logo';
 
 // OG rasm metadata (Next.js fayl-konvensiyasi: og:image avtomatik ulanadi)
 export const alt = 'NETLAB — IT ta\'lim markazi';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
+
+// Belgi o'lchami (viewBox nisbati 963.9 x 585)
+const MARK_HEIGHT = 128;
+const MARK_WIDTH = Math.round((963.9 / 585) * MARK_HEIGHT);
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -23,6 +28,7 @@ export default function OgImage({
   params: { locale: string };
 }) {
   const tagline = TAGLINES[locale] ?? TAGLINES.uz;
+  const mark = getMark('full');
 
   return new ImageResponse(
     (
@@ -57,18 +63,37 @@ export default function OgImage({
           netlab.uz
         </div>
 
-        {/* Wordmark */}
+        {/* Logotip: belgi + so'z-belgi */}
         <div
           style={{
             display: 'flex',
-            fontSize: 168,
-            fontWeight: 800,
-            lineHeight: 1,
-            marginTop: 28,
+            alignItems: 'center',
+            gap: 38,
+            marginTop: 34,
           }}
         >
-          <span style={{ color: '#0088FF' }}>NET</span>
-          <span style={{ color: '#ffffff' }}>LAB</span>
+          <svg
+            width={MARK_WIDTH}
+            height={MARK_HEIGHT}
+            viewBox={mark.viewBox}
+            fill="#ffffff"
+          >
+            {mark.dots.map((d, i) => (
+              <circle key={i} cx={d.cx} cy={d.cy} r={d.r} />
+            ))}
+          </svg>
+          <div
+            style={{
+              display: 'flex',
+              fontSize: 126,
+              fontWeight: 700,
+              letterSpacing: 18,
+              lineHeight: 1,
+              color: '#ffffff',
+            }}
+          >
+            NETLAB
+          </div>
         </div>
 
         {/* Tagline */}

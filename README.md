@@ -138,3 +138,15 @@ Yangi kurs qo'shish: `courses.ts` ga yozuv → `course-details.ts` ga slug/modul
 - Narxlar qo'shilmagan (FAQ'da "konsultatsiyada aniqlanadi" deyilgan) — real narx qo'shish tavsiya etiladi (raqobatchilar shaffof narx ko'rsatadi).
 - Statistika raqamlari (50+ bitiruvchi, 5+ yil) — tasdiqlang.
 - `src/lib/mentors.ts` bo'sh — ustozlar ma'lumoti qo'shilsa, seksiya avtomatik paydo bo'ladi.
+
+---
+
+## Brend logotipi
+
+Logotip rasm emas, **vektor komponent**: `src/components/brand/logo.tsx`.
+
+- Belgi — 45 nuqtadan iborat yaqinlashuvchi uchburchak (9 qator: 9→1). Geometriya rasmiy logotipdan o'lchab olingan va kodda qayta tiklangan.
+- Rang `currentColor` orqali meros qilinadi — qorong'i mavzuda oq, yorug'da qora.
+- Variantlar: `full` (navbar, footer, OG) va `compact` — pastki 5 qator, favicon/ilova ikonkalari uchun (kichik o'lchamda to'liq belgining yuqori nuqtalari subpiksel bo'lib yo'qoladi).
+
+Ikonkalarni qayta generatsiya qilish kerak bo'lsa, manba — `src/app/icon.svg` (favicon) va undan olingan PNG'lar: `src/app/apple-icon.png`, `public/icons/icon-{192,512,512-maskable}.png`.

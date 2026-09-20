@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, X, Phone } from 'lucide-react';
 
 import { Link } from '@/i18n/navigation';
+import { Logo } from '@/components/brand/logo';
 import { cn } from '@/lib/utils';
 import { track } from '@/lib/track';
 import { ORG } from '@/lib/org';
@@ -91,11 +92,10 @@ export function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-2 text-xl font-extrabold tracking-tight"
           aria-label="NETLAB"
+          className="transition-opacity duration-200 hover:opacity-80"
         >
-          <span className="text-gradient-tech">NET</span>
-          <span className="-ml-2">LAB</span>
+          <Logo />
         </Link>
 
         {/* Desktop nav */}
