@@ -69,5 +69,6 @@ export const MENTORS: Mentor[] = [
     ],
     experienceYears: 15,
     site: 'https://khaydarov.uz',
+    photo: '/mentors/suxrob-xaydarov.jpg',
   },
 ];
