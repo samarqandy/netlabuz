@@ -414,6 +414,42 @@
       }
     }
   },
+  "Lab": {
+    "eyebrow": "Lab",
+    "title": "Not a simulator — real equipment",
+    "subtitle": "Classes run in our equipped lab. Every topic is reinforced with hands-on work.",
+    "openHoursLabel": "Lab open",
+    "practiceLabel": "Hands-on practice",
+    "practiceValue": "100%",
+    "workstationLabel": "Per student",
+    "workstationValue": "Own workstation",
+    "categories": {
+      "network": {
+        "title": "Network equipment",
+        "description": "Wire, configure and troubleshoot routers and switches with your own hands."
+      },
+      "servers": {
+        "title": "Servers",
+        "description": "Install Linux servers from scratch and bring services up."
+      },
+      "cctv": {
+        "title": "Video surveillance",
+        "description": "Connect IP cameras and configure the NVR and recording schedules."
+      },
+      "telephony": {
+        "title": "IP telephony",
+        "description": "Build a company PBX and work with extensions and IVR."
+      },
+      "iot": {
+        "title": "IoT bench",
+        "description": "Wire sensors and relays, and assemble smart home scenarios."
+      },
+      "workstations": {
+        "title": "Workstations",
+        "description": "A separate computer for every student — your own laptop is optional."
+      }
+    }
+  },
   "Stats": {
     "eyebrow": "Results",
     "title": "NETLAB in numbers",

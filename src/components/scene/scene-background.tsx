@@ -28,6 +28,7 @@ const SECTION_MODE: Record<string, number> = {
   path: 1,
   quiz: 1,
   why: 2,
+  lab: 2,
   stats: 2,
   how: 3,
   mentors: 3,
