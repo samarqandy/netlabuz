@@ -25,6 +25,7 @@ import { useTheme } from 'next-themes';
 const SECTION_MODE: Record<string, number> = {
   home: 0,
   courses: 1,
+  path: 1,
   quiz: 1,
   why: 2,
   stats: 2,

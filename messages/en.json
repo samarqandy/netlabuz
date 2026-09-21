@@ -10,7 +10,8 @@
     "how": "Process",
     "faq": "FAQ",
     "contact": "Contact",
-    "cta": "Enroll now"
+    "cta": "Enroll now",
+    "path": "Paths"
   },
   "Hero": {
     "badge": "IT training center in Samarkand — enrollment open",
@@ -294,6 +295,30 @@
         "iotSpecialist": "IoT specialist",
         "smartHomeIntegrator": "Smart home integrator",
         "maker": "Electronics / maker track"
+      }
+    }
+  },
+  "Tracks": {
+    "eyebrow": "Career path",
+    "title": "What order should you learn in?",
+    "subtitle": "Our courses build on each other. Take them in this order and you go from zero to specialist.",
+    "stepLabel": "step",
+    "resultLabel": "Outcome",
+    "items": {
+      "network": {
+        "title": "Network and server specialist",
+        "description": "From computer basics to building networks and running servers.",
+        "result": "Network administrator · NOC engineer · Linux administrator"
+      },
+      "security": {
+        "title": "Security and video surveillance",
+        "description": "On top of networking: designing and installing CCTV systems.",
+        "result": "CCTV installer · Security systems engineer"
+      },
+      "communications": {
+        "title": "Communications and automation",
+        "description": "Corporate telephony and smart devices, built on a network foundation.",
+        "result": "VoIP engineer · Smart home integrator"
       }
     }
   },

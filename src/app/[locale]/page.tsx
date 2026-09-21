@@ -4,6 +4,7 @@ import { Hero } from '@/components/sections/hero';
 import { TechMarquee } from '@/components/sections/tech-marquee';
 import { Courses } from '@/components/sections/courses';
 import { Quiz } from '@/components/sections/quiz';
+import { Tracks } from '@/components/sections/tracks';
 import { Mentors } from '@/components/sections/mentors';
 import { WhyUs } from '@/components/sections/why-us';
 import { Stats } from '@/components/sections/stats';
@@ -82,6 +83,7 @@ export default async function HomePage({
       <Hero />
       <TechMarquee />
       <Courses />
+      <Tracks />
       <Quiz />
       <WhyUs />
       <Stats />

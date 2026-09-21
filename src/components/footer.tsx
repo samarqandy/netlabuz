@@ -12,6 +12,7 @@ const TELEGRAM_CHANNELS = ORG.telegramChannels;
 
 const NAV_LINKS = [
   { href: '#courses', key: 'courses' },
+  { href: '#path', key: 'path' },
   { href: '#quiz', key: 'quiz' },
   { href: '#why', key: 'why' },
   { href: '#how', key: 'how' },

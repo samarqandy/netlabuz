@@ -18,6 +18,7 @@ const PHONE = ORG.phone;
 
 const NAV_ITEMS = [
   { href: '#courses', key: 'courses' },
+  { href: '#path', key: 'path' },
   { href: '#quiz', key: 'quiz' },
   { href: '#why', key: 'why' },
   { href: '#how', key: 'how' },

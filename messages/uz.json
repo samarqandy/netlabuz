@@ -10,7 +10,8 @@
     "how": "Jarayon",
     "faq": "Savol-javob",
     "contact": "Aloqa",
-    "cta": "Ro'yxatdan o'tish"
+    "cta": "Ro'yxatdan o'tish",
+    "path": "Yo'nalishlar"
   },
   "Hero": {
     "badge": "Samarqand IT o'quv markazi — yangi guruhlarga qabul ochiq",
@@ -294,6 +295,30 @@
         "iotSpecialist": "IoT mutaxassisi",
         "smartHomeIntegrator": "Aqlli uy integratori",
         "maker": "Elektronika / maker yo'nalishi"
+      }
+    }
+  },
+  "Tracks": {
+    "eyebrow": "Karyera yo'li",
+    "title": "Qaysi tartibda o'rganish kerak?",
+    "subtitle": "Kurslarimiz bir-birini to'ldiradi. Quyidagi ketma-ketlik bo'yicha o'rgansangiz — noldan mutaxassisgacha yetasiz.",
+    "stepLabel": "qadam",
+    "resultLabel": "Natija",
+    "items": {
+      "network": {
+        "title": "Tarmoq va server mutaxassisi",
+        "description": "Kompyuter asoslaridan boshlab tarmoq qurish va serverlarni boshqarishgacha.",
+        "result": "Tarmoq administratori · NOC muhandisi · Linux administrator"
+      },
+      "security": {
+        "title": "Xavfsizlik va video nazorat",
+        "description": "Tarmoq bilimi ustiga video nazorat tizimlarini loyihalash va o'rnatish.",
+        "result": "CCTV montaj mutaxassisi · Xavfsizlik tizimlari muhandisi"
+      },
+      "communications": {
+        "title": "Aloqa va avtomatlashtirish",
+        "description": "Korporativ telefoniya va aqlli qurilmalarni ulash — tarmoq asosida.",
+        "result": "VoIP muhandisi · Aqlli uy integratori"
       }
     }
   },
