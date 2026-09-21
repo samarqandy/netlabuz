@@ -58,7 +58,8 @@ export function Tracks() {
                   <ol className="relative mt-6 flex-1 space-y-3">
                     {item.courses.map((courseId, i) => {
                       const course = COURSES.find((c) => c.id === courseId);
-                      if (!course) return null;
+                      const detail = COURSE_DETAILS[courseId];
+                      if (!course || !detail) return null;
                       const isLast = i === item.courses.length - 1;
                       return (
                         <li key={courseId} className="relative flex gap-3">
@@ -78,7 +79,7 @@ export function Tracks() {
                           <Link
                             href={{
                               pathname: '/courses/[slug]',
-                              params: { slug: COURSE_DETAILS[courseId].slug },
+                              params: { slug: detail.slug },
                             }}
                             onClick={() =>
                               trackEvent('course_open', {

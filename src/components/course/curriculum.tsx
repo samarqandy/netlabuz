@@ -18,6 +18,8 @@ import {
 export function Curriculum({ courseId }: { courseId: CourseId }) {
   const t = useTranslations('CourseDetail');
   const detail = COURSE_DETAILS[courseId];
+  // Dasturi yo'q kurs (tayyorlanmoqda) — sahifasi ham bo'lmaydi
+  if (!detail) return null;
 
   return (
     <Accordion

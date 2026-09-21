@@ -1,8 +1,7 @@
 import { useLocale, useTranslations } from 'next-intl';
 import { Phone, MapPin, Send } from 'lucide-react';
 
-import { COURSES } from '@/lib/courses';
-import { COURSE_DETAILS } from '@/lib/course-details';
+import { COURSE_DETAIL_ENTRIES } from '@/lib/course-details';
 import { Link } from '@/i18n/navigation';
 import { Logo } from '@/components/brand/logo';
 import { ORG } from '@/lib/org';
@@ -78,16 +77,16 @@ export function Footer() {
               {t('coursesTitle')}
             </h3>
             <ul className="mt-4 space-y-2.5 text-sm">
-              {COURSES.map((c) => (
-                <li key={c.id}>
+              {COURSE_DETAIL_ENTRIES.map(([id, detail]) => (
+                <li key={id}>
                   <Link
                     href={{
                       pathname: '/courses/[slug]',
-                      params: { slug: COURSE_DETAILS[c.id].slug },
+                      params: { slug: detail.slug },
                     }}
                     className="text-muted-foreground transition-colors hover:text-foreground"
                   >
-                    {tc(`items.${c.id}.name`)}
+                    {tc(`items.${id}.name`)}
                   </Link>
                 </li>
               ))}

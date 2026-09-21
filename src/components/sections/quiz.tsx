@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, RotateCcw, Sparkles } from 'lucide-react';
 
-import { COURSES } from '@/lib/courses';
+import { ACTIVE_COURSES, type CourseId } from '@/lib/courses';
 import { cn } from '@/lib/utils';
 import { track } from '@/lib/track';
 import { Button } from '@/components/ui/button';
@@ -18,7 +18,7 @@ import { SectionHeading } from '@/components/section-heading';
  * Matnlar messages/*.json (Quiz), og'irliklar shu yerda.
  * ========================================================================= */
 
-type CourseId = 'computer' | 'cisco' | 'iptelephony' | 'security' | 'linux' | 'iot';
+/** Savol javobining kurslarga beradigan ballari (faqat ishga tushgan kurslar) */
 type Weights = Partial<Record<CourseId, number>>;
 
 const QUESTIONS: { id: string; options: { id: string; weights: Weights }[] }[] = [
@@ -69,28 +69,24 @@ const QUESTIONS: { id: string; options: { id: string; weights: Weights }[] }[] =
 ];
 
 function computeResult(answers: number[]): CourseId {
-  const scores: Record<CourseId, number> = {
-    computer: 0,
-    cisco: 0,
-    iptelephony: 0,
-    security: 0,
-    linux: 0,
-    iot: 0,
-  };
+  // Ballar — katalog o'zgarsa ham buzilmasligi uchun Partial
+  const scores: Partial<Record<CourseId, number>> = {};
   answers.forEach((optIdx, qIdx) => {
     const weights = QUESTIONS[qIdx]?.options[optIdx]?.weights ?? {};
     for (const [id, pts] of Object.entries(weights)) {
-      scores[id as CourseId] += pts ?? 0;
+      const key = id as CourseId;
+      scores[key] = (scores[key] ?? 0) + (pts ?? 0);
     }
   });
   let best: CourseId = 'computer';
   let bestScore = -1;
-  // COURSES tartibi — teng ballda birinchisi ustun
-  for (const course of COURSES) {
-    const id = course.id as CourseId;
-    if (scores[id] > bestScore) {
-      best = id;
-      bestScore = scores[id];
+  // Faqat ishga tushgan kurslar tavsiya qilinadi.
+  // ACTIVE_COURSES tartibi — teng ballda birinchisi ustun
+  for (const course of ACTIVE_COURSES) {
+    const score = scores[course.id] ?? 0;
+    if (score > bestScore) {
+      best = course.id;
+      bestScore = score;
     }
   }
   return best;
@@ -105,7 +101,7 @@ export function Quiz() {
   const finished = step >= QUESTIONS.length;
   const resultId = finished ? computeResult(answers) : null;
   const resultCourse = resultId
-    ? COURSES.find((c) => c.id === resultId)
+    ? ACTIVE_COURSES.find((c) => c.id === resultId)
     : null;
 
   const restart = () => setAnswers([]);

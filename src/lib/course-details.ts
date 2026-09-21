@@ -29,7 +29,7 @@ export interface CourseDetail {
   tools: string[];
 }
 
-export const COURSE_DETAILS: Record<CourseId, CourseDetail> = {
+export const COURSE_DETAILS: Partial<Record<CourseId, CourseDetail>> = {
   computer: {
     slug: 'kompyuter-savodxonligi',
     modules: [
@@ -136,9 +136,24 @@ export const COURSE_DETAILS: Record<CourseId, CourseDetail> = {
   },
 };
 
+/**
+ * Batafsil sahifasi bor kurslar — [id, detail] juftliklari.
+ * `COURSE_DETAILS` Partial bo'lgani uchun (tayyorlanayotgan kurslarda dastur
+ * yo'q) ro'yxatlarni shu yerdan oling: qiymatlar `undefined` bo'lmaydi.
+ */
+export const COURSE_DETAIL_ENTRIES = Object.entries(COURSE_DETAILS) as [
+  CourseId,
+  CourseDetail,
+][];
+
 /** slug → kurs id (route uchun) */
 export const SLUG_TO_ID = Object.fromEntries(
-  Object.entries(COURSE_DETAILS).map(([id, d]) => [d.slug, id as CourseId])
+  COURSE_DETAIL_ENTRIES.map(([id, d]) => [d.slug, id])
 ) as Record<string, CourseId>;
 
-export const COURSE_SLUGS = Object.values(COURSE_DETAILS).map((d) => d.slug);
+export const COURSE_SLUGS = COURSE_DETAIL_ENTRIES.map(([, d]) => d.slug);
+
+/** Kursning batafsil sahifasi bormi (tayyorlanayotganlarda yo'q) */
+export function hasDetail(id: CourseId): boolean {
+  return COURSE_DETAILS[id] !== undefined;
+}

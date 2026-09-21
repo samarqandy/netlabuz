@@ -49,6 +49,10 @@
     "duration": "{months} mo",
     "certificate": "Certificate",
     "detailsCta": "Learn more",
+    "priceFrom": "from {price} UZS / month",
+    "priceValue": "{price} UZS",
+    "soon": "Coming soon",
+    "soonCta": "Notify me",
     "items": {
       "computer": {
         "name": "Computer Literacy",
@@ -73,6 +77,22 @@
       "iot": {
         "name": "Smart Home & IoT",
         "description": "Smart home, Arduino, Raspberry Pi, sensors and automation."
+      },
+      "cybersecurity": {
+        "name": "Cybersecurity",
+        "description": "Network defence: firewalls, VPN, IDS/IPS and the fundamentals of penetration testing."
+      },
+      "devops": {
+        "name": "DevOps & Containers",
+        "description": "Docker, Kubernetes, CI/CD and Ansible — automating modern infrastructure."
+      },
+      "windows": {
+        "name": "Windows Server & Active Directory",
+        "description": "Domains, users, group policies and core enterprise services."
+      },
+      "cabling": {
+        "name": "Structured cabling (SCS)",
+        "description": "Structured cabling systems: design, installation, crimping and certification."
       }
     }
   },
@@ -82,6 +102,7 @@
     "backToCourses": "All courses",
     "metaDuration": "Duration",
     "metaLevel": "Level",
+    "metaPrice": "Monthly price",
     "metaFormat": "Format",
     "metaFormatValue": "On-site — Samarkand",
     "metaLanguage": "Language",
@@ -523,7 +544,7 @@
       },
       "price": {
         "q": "How much do the courses cost?",
-        "a": "Pricing depends on the track and duration. Call us or leave a request — we'll answer all your questions at the free consultation."
+        "a": "The monthly price of every course is shown on the course card and on its page. The final amount depends on the group (daytime/evening) and the payment plan — we give an exact quote at the free consultation."
       },
       "job": {
         "q": "Do you help with finding a job?",

@@ -11,6 +11,7 @@ import {
   type CourseLevel,
 } from '@/lib/courses';
 import { COURSE_DETAILS } from '@/lib/course-details';
+import { formatPrice } from '@/lib/price';
 import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import { track } from '@/lib/track';
@@ -75,19 +76,27 @@ export function Courses() {
         >
           {visible.map((course) => {
             const Icon = course.icon;
+            const detail = COURSE_DETAILS[course.id];
+            const soon = course.status === 'soon';
             return (
               <StaggerItem key={course.id} className="h-full">
-                <GlowCard glow={course.glow} className="flex h-full flex-col">
+                <GlowCard
+                  glow={course.glow}
+                  lift={soon ? 0 : 6}
+                  className="flex h-full flex-col"
+                >
                   <div className="flex items-start justify-between gap-4">
                     <div
                       className={cn(
                         'grid size-14 place-items-center rounded-xl border border-border bg-secondary/40',
-                        GLOW_TEXT[course.glow]
+                        soon ? 'text-muted-foreground' : GLOW_TEXT[course.glow]
                       )}
                     >
                       <Icon className="size-7" strokeWidth={1.75} />
                     </div>
-                    <Badge variant={course.level}>{t(course.level)}</Badge>
+                    <Badge variant={soon ? 'outline' : course.level}>
+                      {soon ? t('soon') : t(course.level)}
+                    </Badge>
                   </div>
 
                   <h3 className="mt-5 text-xl font-bold tracking-tight">
@@ -109,39 +118,77 @@ export function Courses() {
                     ))}
                   </ul>
 
-                  <div className="mt-5 flex items-center justify-between border-t border-border/60 pt-4">
-                    <span className="flex items-center gap-3 text-sm text-muted-foreground">
-                      <span className="inline-flex items-center gap-1.5">
-                        <Clock className="size-4" />
-                        {t('duration', { months: course.months })}
+                  <div className="mt-5 flex items-end justify-between gap-3 border-t border-border/60 pt-4">
+                    <span className="flex min-w-0 flex-col gap-1.5 text-sm text-muted-foreground">
+                      <span className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                        <span className="inline-flex items-center gap-1.5">
+                          <Clock className="size-4" />
+                          {t('duration', { months: course.months })}
+                        </span>
+                        <span className="inline-flex items-center gap-1.5">
+                          <Award className="size-4" />
+                          {t('certificate')}
+                        </span>
                       </span>
-                      <span className="inline-flex items-center gap-1.5">
-                        <Award className="size-4" />
-                        {t('certificate')}
-                      </span>
+                      {/* Narx faqat tasdiqlangan bo'lsa ko'rinadi */}
+                      {course.priceFrom !== undefined && (
+                        <span className="font-semibold text-foreground">
+                          {t('priceFrom', { price: formatPrice(course.priceFrom) })}
+                        </span>
+                      )}
                     </span>
-                    <Button
-                      asChild
-                      variant="ghost"
-                      size="sm"
-                      className="group/btn -mr-2 text-primary hover:text-primary"
-                    >
-                      <Link
-                        href={{
-                          pathname: '/courses/[slug]',
-                          params: { slug: COURSE_DETAILS[course.id].slug },
-                        }}
-                        onClick={() =>
-                          track('course_open', {
-                            course: course.id,
-                            source: 'card',
-                          })
-                        }
+
+                    {detail ? (
+                      <Button
+                        asChild
+                        variant="ghost"
+                        size="sm"
+                        className="group/btn -mr-2 shrink-0 text-primary hover:text-primary"
                       >
-                        {t('detailsCta')}
-                        <ArrowRight className="size-4 transition-transform duration-200 group-hover/btn:translate-x-1" />
-                      </Link>
-                    </Button>
+                        <Link
+                          href={{
+                            pathname: '/courses/[slug]',
+                            params: { slug: detail.slug },
+                          }}
+                          onClick={() =>
+                            track('course_open', {
+                              course: course.id,
+                              source: 'card',
+                            })
+                          }
+                        >
+                          {t('detailsCta')}
+                          <ArrowRight className="size-4 transition-transform duration-200 group-hover/btn:translate-x-1" />
+                        </Link>
+                      </Button>
+                    ) : (
+                      /* Tayyorlanayotgan kurs — qiziqish bildirish uchun
+                         forma kursni oldindan tanlab ochiladi */
+                      <Button
+                        asChild
+                        variant="ghost"
+                        size="sm"
+                        className="group/btn -mr-2 shrink-0 text-muted-foreground hover:text-foreground"
+                      >
+                        <a
+                          href="#contact"
+                          onClick={() => {
+                            window.dispatchEvent(
+                              new CustomEvent('netlab:select-course', {
+                                detail: course.id,
+                              })
+                            );
+                            track('course_select', {
+                              course: course.id,
+                              source: 'card_soon',
+                            });
+                          }}
+                        >
+                          {t('soonCta')}
+                          <ArrowRight className="size-4 transition-transform duration-200 group-hover/btn:translate-x-1" />
+                        </a>
+                      </Button>
+                    )}
                   </div>
                 </GlowCard>
               </StaggerItem>

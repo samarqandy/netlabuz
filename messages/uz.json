@@ -49,6 +49,10 @@
     "duration": "{months} oy",
     "certificate": "Sertifikat",
     "detailsCta": "Batafsil",
+    "priceFrom": "Oyiga {price} so'mdan",
+    "priceValue": "{price} so'm",
+    "soon": "Tez orada",
+    "soonCta": "Xabar berish",
     "items": {
       "computer": {
         "name": "Kompyuter savodxonligi",
@@ -73,6 +77,22 @@
       "iot": {
         "name": "Aqlli uy & IoT",
         "description": "Smart home, Arduino, Raspberry Pi, sensorlar va avtomatlashtirish."
+      },
+      "cybersecurity": {
+        "name": "Kiberxavfsizlik",
+        "description": "Tarmoq himoyasi: firewall, VPN, IDS/IPS va penetratsion testlash asoslari."
+      },
+      "devops": {
+        "name": "DevOps va konteynerlar",
+        "description": "Docker, Kubernetes, CI/CD va Ansible — zamonaviy infratuzilmani avtomatlashtirish."
+      },
+      "windows": {
+        "name": "Windows Server va Active Directory",
+        "description": "Domen, foydalanuvchilar, GPO va korporativ xizmatlarni boshqarish."
+      },
+      "cabling": {
+        "name": "SKS — tarmoq kabellari",
+        "description": "Strukturali kabel tizimlari: loyihalash, montaj, krimplash va testlash."
       }
     }
   },
@@ -82,6 +102,7 @@
     "backToCourses": "Barcha kurslar",
     "metaDuration": "Davomiyligi",
     "metaLevel": "Daraja",
+    "metaPrice": "Oylik narx",
     "metaFormat": "Format",
     "metaFormatValue": "Oflayn — Samarqand",
     "metaLanguage": "Dars tili",
@@ -523,7 +544,7 @@
       },
       "price": {
         "q": "Kurslar narxi qancha?",
-        "a": "Narx yo'nalish va davomiylikka bog'liq. Aniq ma'lumot uchun qo'ng'iroq qiling yoki ariza qoldiring — bepul konsultatsiyada barcha savollaringizga javob beramiz."
+        "a": "Har bir kursning oylik narxi kurs kartasida va kurs sahifasida ochiq ko'rsatilgan. Yakuniy summa guruh (kunduzgi/kechki) va to'lov shakliga qarab o'zgarishi mumkin — aniq hisob-kitobni bepul konsultatsiyada beramiz."
       },
       "job": {
         "q": "Ish topishga yordam berasizmi?",
