@@ -21,6 +21,11 @@ export const ORG = {
     addressLocality: 'Samarqand',
     addressCountry: 'UZ',
   },
+  /** Asoschi — footer va JSON-LD (Person) shu yerdan oladi */
+  founder: {
+    name: 'Suxrob Xaydarov',
+    site: 'https://khaydarov.uz',
+  },
 } as const;
 
 /**

@@ -12,14 +12,20 @@ import {
   MapPin,
   Target,
   UserCheck,
+  Wallet,
   type LucideIcon,
 } from 'lucide-react';
 
 import { routing, type Locale } from '@/i18n/routing';
 import { Link, getPathname } from '@/i18n/navigation';
-import { COURSES, GLOW_TEXT } from '@/lib/courses';
-import { COURSE_DETAILS, SLUG_TO_ID } from '@/lib/course-details';
+import { ACTIVE_COURSES, GLOW_TEXT } from '@/lib/courses';
+import {
+  COURSE_DETAILS,
+  COURSE_DETAIL_ENTRIES,
+  SLUG_TO_ID,
+} from '@/lib/course-details';
 import { ORG, safeJsonLd } from '@/lib/org';
+import { formatPrice, PRICE_CURRENCY } from '@/lib/price';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import { GlowCard } from '@/components/ui/glow-card';
@@ -33,7 +39,7 @@ type Params = { locale: string; slug: string };
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
-    Object.values(COURSE_DETAILS).map((detail) => ({
+    COURSE_DETAIL_ENTRIES.map(([, detail]) => ({
       locale,
       slug: detail.slug,
     }))
@@ -44,9 +50,11 @@ export function generateStaticParams() {
 function findCourse(slug: string) {
   const id = SLUG_TO_ID[slug];
   if (!id) return null;
-  const course = COURSES.find((c) => c.id === id);
-  if (!course) return null;
-  return { id, course, detail: COURSE_DETAILS[id] };
+  const course = ACTIVE_COURSES.find((c) => c.id === id);
+  const detail = COURSE_DETAILS[id];
+  // Tayyorlanayotgan kursda dastur yo'q — sahifa ham ochilmaydi (404)
+  if (!course || !detail) return null;
+  return { id, course, detail };
 }
 
 export async function generateMetadata({
@@ -111,6 +119,16 @@ export default async function CoursePage({
 
   const META = [
     { Icon: Clock, label: td('metaDuration'), value: t('duration', { months: course.months }) },
+    // Narx faqat `priceFrom` kiritilgan kursda ko'rinadi
+    ...(course.priceFrom !== undefined
+      ? [
+          {
+            Icon: Wallet,
+            label: td('metaPrice'),
+            value: t('priceValue', { price: formatPrice(course.priceFrom) }),
+          },
+        ]
+      : []),
     { Icon: GraduationCap, label: td('metaLevel'), value: t(course.level) },
     { Icon: MapPin, label: td('metaFormat'), value: td('metaFormatValue') },
     { Icon: Languages, label: td('metaLanguage'), value: td('metaLanguageValue') },
@@ -143,6 +161,29 @@ export default async function CoursePage({
           address: ORG.address,
         },
       },
+      // Narx tasdiqlangan bo'lsagina offers qo'shiladi (Google
+      // tasdiqlanmagan narxni noto'g'ri deb belgilaydi)
+      ...(course.priceFrom !== undefined
+        ? {
+            offers: {
+              '@type': 'Offer',
+              category: 'Paid',
+              availability: 'https://schema.org/InStock',
+              url: `${ORG.url}${canonical}`,
+              price: course.priceFrom,
+              priceCurrency: PRICE_CURRENCY,
+              // Narx oylik — UN/CEFACT 'MON' birligi bilan aniqlashtiriladi
+              priceSpecification: {
+                '@type': 'UnitPriceSpecification',
+                price: course.priceFrom,
+                priceCurrency: PRICE_CURRENCY,
+                unitCode: 'MON',
+                billingDuration: 1,
+                billingIncrement: 1,
+              },
+            },
+          }
+        : {}),
     },
     {
       '@context': 'https://schema.org',
@@ -165,7 +206,11 @@ export default async function CoursePage({
     },
   ];
 
-  const related = COURSES.filter((c) => c.id !== id).slice(0, 3);
+  // O'xshash kurslar — faqat sahifasi bor (ishga tushgan) kurslar
+  const related = ACTIVE_COURSES.flatMap((c) => {
+    const d = COURSE_DETAILS[c.id];
+    return c.id !== id && d ? [{ course: c, detail: d }] : [];
+  }).slice(0, 3);
 
   return (
     <>
@@ -417,7 +462,7 @@ export default async function CoursePage({
           </div>
 
           <StaggerGroup className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {related.map((rc) => {
+            {related.map(({ course: rc, detail: rd }) => {
               const RelatedIcon = rc.icon;
               return (
                 <StaggerItem key={rc.id} className="h-full">
@@ -442,7 +487,7 @@ export default async function CoursePage({
                     <Link
                       href={{
                         pathname: '/courses/[slug]',
-                        params: { slug: COURSE_DETAILS[rc.id].slug },
+                        params: { slug: rd.slug },
                       }}
                       className="group/link mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors hover:text-accent"
                     >

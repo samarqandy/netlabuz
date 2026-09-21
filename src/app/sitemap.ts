@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 
 import { routing, type Locale } from '@/i18n/routing';
 import { getPathname } from '@/i18n/navigation';
-import { COURSE_DETAILS } from '@/lib/course-details';
+import { COURSE_SLUGS } from '@/lib/course-details';
 import { ORG } from '@/lib/org';
 
 const BASE_URL = ORG.url;
@@ -28,9 +28,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // Kurs sahifalari
-  const courses: MetadataRoute.Sitemap = Object.values(COURSE_DETAILS).flatMap(
-    (detail) => {
-      const href = { pathname: '/courses/[slug]' as const, params: { slug: detail.slug } };
+  const courses: MetadataRoute.Sitemap = COURSE_SLUGS.flatMap(
+    (slug) => {
+      const href = { pathname: '/courses/[slug]' as const, params: { slug } };
       const languages = Object.fromEntries(
         routing.locales.map((l) => [l, `${BASE_URL}${getPathname({ locale: l, href })}`])
       );

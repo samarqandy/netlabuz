@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Phone, MapPin, Send, Loader2, CheckCircle2, MessageCircle } from 'lucide-react';
 
-import { COURSES } from '@/lib/courses';
+import { ACTIVE_COURSES, COURSES, SOON_COURSES } from '@/lib/courses';
 import { cn } from '@/lib/utils';
 import { track } from '@/lib/track';
 import { ORG } from '@/lib/org';
@@ -213,11 +213,22 @@ export function Contact() {
                         <option value="" disabled>
                           {t('coursePlaceholder')}
                         </option>
-                        {COURSES.map((c) => (
+                        {ACTIVE_COURSES.map((c) => (
                           <option key={c.id} value={c.id}>
                             {tc(`items.${c.id}.name`)}
                           </option>
                         ))}
+                        {/* Tayyorlanayotgan yo'nalishlar — qiziqish bildirish
+                            uchun (guruh ochilganda bog'lanamiz) */}
+                        {SOON_COURSES.length > 0 && (
+                          <optgroup label={tc('soon')}>
+                            {SOON_COURSES.map((c) => (
+                              <option key={c.id} value={c.id}>
+                                {tc(`items.${c.id}.name`)}
+                              </option>
+                            ))}
+                          </optgroup>
+                        )}
                       </Select>
                     </Field>
 

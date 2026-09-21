@@ -7,10 +7,12 @@
     "courses": "Courses",
     "quiz": "Quiz",
     "why": "Why us",
+    "mentors": "Mentors",
     "how": "Process",
     "faq": "FAQ",
     "contact": "Contact",
-    "cta": "Enroll now"
+    "cta": "Enroll now",
+    "path": "Paths"
   },
   "Hero": {
     "badge": "IT training center in Samarkand — enrollment open",
@@ -46,8 +48,15 @@
     "intermediate": "Intermediate",
     "advanced": "Advanced",
     "duration": "{months} mo",
+    "durationHours": "{hours} h",
     "certificate": "Certificate",
     "detailsCta": "Learn more",
+    "groupProfessions": "Professions",
+    "groupSkills": "Skills",
+    "priceFrom": "from {price} UZS / month",
+    "priceValue": "{price} UZS",
+    "soon": "Coming soon",
+    "soonCta": "Notify me",
     "items": {
       "computer": {
         "name": "Computer Literacy",
@@ -72,6 +81,34 @@
       "iot": {
         "name": "Smart Home & IoT",
         "description": "Smart home, Arduino, Raspberry Pi, sensors and automation."
+      },
+      "cybersecurity": {
+        "name": "Cybersecurity",
+        "description": "Network defence: firewalls, VPN, IDS/IPS and the fundamentals of penetration testing."
+      },
+      "devops": {
+        "name": "DevOps & Containers",
+        "description": "Docker, Kubernetes, CI/CD and Ansible — automating modern infrastructure."
+      },
+      "windows": {
+        "name": "Windows Server & Active Directory",
+        "description": "Domains, users, group policies and core enterprise services."
+      },
+      "cabling": {
+        "name": "Structured cabling (SCS)",
+        "description": "Structured cabling systems: design, installation, crimping and certification."
+      },
+      "aicoding": {
+        "name": "Building with AI: Claude Code and Codex",
+        "description": "Working with AI agents on a real project: context, MCP, the Git flow and keeping code quality under control."
+      },
+      "aiops": {
+        "name": "AI for IT specialists",
+        "description": "Log analysis, writing scripts and configs, documentation — speeding up everyday admin work with AI."
+      },
+      "aibasics": {
+        "name": "AI fundamentals",
+        "description": "Working with ChatGPT and Claude, writing good prompts, and solving everyday tasks with text, spreadsheets and images."
       }
     }
   },
@@ -81,6 +118,7 @@
     "backToCourses": "All courses",
     "metaDuration": "Duration",
     "metaLevel": "Level",
+    "metaPrice": "Monthly price",
     "metaFormat": "Format",
     "metaFormatValue": "On-site — Samarkand",
     "metaLanguage": "Language",
@@ -297,6 +335,30 @@
       }
     }
   },
+  "Tracks": {
+    "eyebrow": "Career path",
+    "title": "What order should you learn in?",
+    "subtitle": "Our courses build on each other. Take them in this order and you go from zero to specialist.",
+    "stepLabel": "step",
+    "resultLabel": "Outcome",
+    "items": {
+      "network": {
+        "title": "Network and server specialist",
+        "description": "From computer basics to building networks and running servers.",
+        "result": "Network administrator · NOC engineer · Linux administrator"
+      },
+      "security": {
+        "title": "Security and video surveillance",
+        "description": "On top of networking: designing and installing CCTV systems.",
+        "result": "CCTV installer · Security systems engineer"
+      },
+      "communications": {
+        "title": "Communications and automation",
+        "description": "Corporate telephony and smart devices, built on a network foundation.",
+        "result": "VoIP engineer · Smart home integrator"
+      }
+    }
+  },
   "Quiz": {
     "eyebrow": "Quiz",
     "title": "Which track fits you?",
@@ -356,7 +418,10 @@
   "Mentors": {
     "eyebrow": "Mentors",
     "title": "A team of practitioner mentors",
-    "subtitle": "You learn from specialists working in the industry."
+    "subtitle": "You learn from specialists working in the industry.",
+    "experience": "{years}+ years of hands-on experience",
+    "credentialsTitle": "Certifications",
+    "siteLabel": "Personal website"
   },
   "WhyUs": {
     "eyebrow": "Why NETLAB",
@@ -386,6 +451,42 @@
       "consult": {
         "title": "Free consultation",
         "description": "A specialist helps you pick the right track — free of charge."
+      }
+    }
+  },
+  "Lab": {
+    "eyebrow": "Lab",
+    "title": "Not a simulator — real equipment",
+    "subtitle": "Classes run in our equipped lab. Every topic is reinforced with hands-on work.",
+    "openHoursLabel": "Lab open",
+    "practiceLabel": "Hands-on practice",
+    "practiceValue": "100%",
+    "workstationLabel": "Per student",
+    "workstationValue": "Own workstation",
+    "categories": {
+      "network": {
+        "title": "Network equipment",
+        "description": "Wire, configure and troubleshoot routers and switches with your own hands."
+      },
+      "servers": {
+        "title": "Servers",
+        "description": "Install Linux servers from scratch and bring services up."
+      },
+      "cctv": {
+        "title": "Video surveillance",
+        "description": "Connect IP cameras and configure the NVR and recording schedules."
+      },
+      "telephony": {
+        "title": "IP telephony",
+        "description": "Build a company PBX and work with extensions and IVR."
+      },
+      "iot": {
+        "title": "IoT bench",
+        "description": "Wire sensors and relays, and assemble smart home scenarios."
+      },
+      "workstations": {
+        "title": "Workstations",
+        "description": "A separate computer for every student — your own laptop is optional."
       }
     }
   },
@@ -462,7 +563,7 @@
       },
       "price": {
         "q": "How much do the courses cost?",
-        "a": "Pricing depends on the track and duration. Call us or leave a request — we'll answer all your questions at the free consultation."
+        "a": "The monthly price of every course is shown on the course card and on its page. The final amount depends on the group (daytime/evening) and the payment plan — we give an exact quote at the free consultation."
       },
       "job": {
         "q": "Do you help with finding a job?",
@@ -529,7 +630,8 @@
     "contactTitle": "Contact",
     "address": "11 Dahbed street, Samarkand",
     "rights": "All rights reserved.",
-    "tagline": "IT education in Samarkand"
+    "tagline": "IT education in Samarkand",
+    "founder": "Founder"
   },
   "Theme": {
     "toggle": "Toggle theme",

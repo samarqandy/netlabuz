@@ -7,10 +7,12 @@
     "courses": "Kurslar",
     "quiz": "Test",
     "why": "Nega biz",
+    "mentors": "Ustozlar",
     "how": "Jarayon",
     "faq": "Savol-javob",
     "contact": "Aloqa",
-    "cta": "Ro'yxatdan o'tish"
+    "cta": "Ro'yxatdan o'tish",
+    "path": "Yo'nalishlar"
   },
   "Hero": {
     "badge": "Samarqand IT o'quv markazi — yangi guruhlarga qabul ochiq",
@@ -46,8 +48,15 @@
     "intermediate": "O'rta",
     "advanced": "Yuqori",
     "duration": "{months} oy",
+    "durationHours": "{hours} soat",
     "certificate": "Sertifikat",
     "detailsCta": "Batafsil",
+    "groupProfessions": "Kasblar",
+    "groupSkills": "Ko'nikmalar",
+    "priceFrom": "Oyiga {price} so'mdan",
+    "priceValue": "{price} so'm",
+    "soon": "Tez orada",
+    "soonCta": "Xabar berish",
     "items": {
       "computer": {
         "name": "Kompyuter savodxonligi",
@@ -72,6 +81,34 @@
       "iot": {
         "name": "Aqlli uy & IoT",
         "description": "Smart home, Arduino, Raspberry Pi, sensorlar va avtomatlashtirish."
+      },
+      "cybersecurity": {
+        "name": "Kiberxavfsizlik",
+        "description": "Tarmoq himoyasi: firewall, VPN, IDS/IPS va penetratsion testlash asoslari."
+      },
+      "devops": {
+        "name": "DevOps va konteynerlar",
+        "description": "Docker, Kubernetes, CI/CD va Ansible — zamonaviy infratuzilmani avtomatlashtirish."
+      },
+      "windows": {
+        "name": "Windows Server va Active Directory",
+        "description": "Domen, foydalanuvchilar, GPO va korporativ xizmatlarni boshqarish."
+      },
+      "cabling": {
+        "name": "SKS — tarmoq kabellari",
+        "description": "Strukturali kabel tizimlari: loyihalash, montaj, krimplash va testlash."
+      },
+      "aicoding": {
+        "name": "AI bilan dasturlash: Claude Code va Codex",
+        "description": "AI agentlari bilan real loyihada ishlash: kontekst, MCP, Git oqimi va kod sifatini nazorat qilish."
+      },
+      "aiops": {
+        "name": "IT mutaxassisi uchun AI",
+        "description": "Log tahlili, skript va konfiguratsiya yozish, hujjatlashtirish — kundalik admin ishini AI bilan tezlashtirish."
+      },
+      "aibasics": {
+        "name": "Sun'iy intellekt asoslari",
+        "description": "ChatGPT va Claude bilan ishlash, to'g'ri prompt yozish, matn, jadval va tasvir bilan kundalik vazifalarni yechish."
       }
     }
   },
@@ -81,6 +118,7 @@
     "backToCourses": "Barcha kurslar",
     "metaDuration": "Davomiyligi",
     "metaLevel": "Daraja",
+    "metaPrice": "Oylik narx",
     "metaFormat": "Format",
     "metaFormatValue": "Oflayn — Samarqand",
     "metaLanguage": "Dars tili",
@@ -297,6 +335,30 @@
       }
     }
   },
+  "Tracks": {
+    "eyebrow": "Karyera yo'li",
+    "title": "Qaysi tartibda o'rganish kerak?",
+    "subtitle": "Kurslarimiz bir-birini to'ldiradi. Quyidagi ketma-ketlik bo'yicha o'rgansangiz — noldan mutaxassisgacha yetasiz.",
+    "stepLabel": "qadam",
+    "resultLabel": "Natija",
+    "items": {
+      "network": {
+        "title": "Tarmoq va server mutaxassisi",
+        "description": "Kompyuter asoslaridan boshlab tarmoq qurish va serverlarni boshqarishgacha.",
+        "result": "Tarmoq administratori · NOC muhandisi · Linux administrator"
+      },
+      "security": {
+        "title": "Xavfsizlik va video nazorat",
+        "description": "Tarmoq bilimi ustiga video nazorat tizimlarini loyihalash va o'rnatish.",
+        "result": "CCTV montaj mutaxassisi · Xavfsizlik tizimlari muhandisi"
+      },
+      "communications": {
+        "title": "Aloqa va avtomatlashtirish",
+        "description": "Korporativ telefoniya va aqlli qurilmalarni ulash — tarmoq asosida.",
+        "result": "VoIP muhandisi · Aqlli uy integratori"
+      }
+    }
+  },
   "Quiz": {
     "eyebrow": "Test",
     "title": "Qaysi yo'nalish sizga mos?",
@@ -356,7 +418,10 @@
   "Mentors": {
     "eyebrow": "Ustozlar",
     "title": "Amaliyotchi ustozlar jamoasi",
-    "subtitle": "Sohada ishlayotgan mutaxassislardan o'rganasiz."
+    "subtitle": "Sohada ishlayotgan mutaxassislardan o'rganasiz.",
+    "experience": "{years}+ yil amaliy tajriba",
+    "credentialsTitle": "Sertifikatlar",
+    "siteLabel": "Shaxsiy sayt"
   },
   "WhyUs": {
     "eyebrow": "Nega NETLAB",
@@ -386,6 +451,42 @@
       "consult": {
         "title": "Bepul konsultatsiya",
         "description": "Yo'nalish tanlashda mutaxassis bilan bepul maslahatlashasiz."
+      }
+    }
+  },
+  "Lab": {
+    "eyebrow": "Laboratoriya",
+    "title": "Simulyatorda emas — haqiqiy uskunalarda",
+    "subtitle": "Darslar markazimizdagi jihozlangan laboratoriyada o'tadi. Har bir mavzu qo'lda bajariladigan ish bilan mustahkamlanadi.",
+    "openHoursLabel": "Laboratoriya ochiq",
+    "practiceLabel": "Amaliy mashg'ulot",
+    "practiceValue": "100%",
+    "workstationLabel": "Har o'quvchiga",
+    "workstationValue": "Alohida ish o'rni",
+    "categories": {
+      "network": {
+        "title": "Tarmoq uskunalari",
+        "description": "Router va kommutatorlarni qo'lda ulab, sozlab, nosozligini topasiz."
+      },
+      "servers": {
+        "title": "Serverlar",
+        "description": "Linux serverlarni noldan o'rnatib, xizmatlarni ishga tushirasiz."
+      },
+      "cctv": {
+        "title": "Video nazorat",
+        "description": "IP kameralarni ulab, NVR va yozuv jadvalini sozlaysiz."
+      },
+      "telephony": {
+        "title": "IP-telefoniya",
+        "description": "Korporativ ATS qurib, ichki raqamlar va IVR bilan ishlaysiz."
+      },
+      "iot": {
+        "title": "IoT stendi",
+        "description": "Sensor va relelarni ulab, aqlli uy ssenariylarini yig'asiz."
+      },
+      "workstations": {
+        "title": "Ish stantsiyalari",
+        "description": "Har bir o'quvchi uchun alohida kompyuter — o'z noutbukingiz shart emas."
       }
     }
   },
@@ -462,7 +563,7 @@
       },
       "price": {
         "q": "Kurslar narxi qancha?",
-        "a": "Narx yo'nalish va davomiylikka bog'liq. Aniq ma'lumot uchun qo'ng'iroq qiling yoki ariza qoldiring — bepul konsultatsiyada barcha savollaringizga javob beramiz."
+        "a": "Har bir kursning oylik narxi kurs kartasida va kurs sahifasida ochiq ko'rsatilgan. Yakuniy summa guruh (kunduzgi/kechki) va to'lov shakliga qarab o'zgarishi mumkin — aniq hisob-kitobni bepul konsultatsiyada beramiz."
       },
       "job": {
         "q": "Ish topishga yordam berasizmi?",
@@ -529,7 +630,8 @@
     "contactTitle": "Aloqa",
     "address": "Dahbed ko'chasi 11, Samarqand",
     "rights": "Barcha huquqlar himoyalangan.",
-    "tagline": "Samarqandda IT ta'lim"
+    "tagline": "Samarqandda IT ta'lim",
+    "founder": "Asoschi"
   },
   "Theme": {
     "toggle": "Mavzuni almashtirish",
