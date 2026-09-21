@@ -154,10 +154,11 @@ Ishga tushirilganda: `status` ni olib tashlang → `course-details.ts` ga dastur
 
 Narx `courses.ts` dagi `priceFrom` maydonida — **oylik, so'mda**. Kiritilmagan kursda narx hech qayerda ko'rsatilmaydi (karta, kurs sahifasi, JSON-LD) — taxminiy raqam yozilmaydi.
 
-- Joriy narxlar ilm.uz ro'yxatidan (2026-09-21) **30% past** qilib olingan; manba va hisob `courses.ts` sarlavha izohida.
-- Ko'rinishi: kartada `Courses.priceFrom` ("Oyiga 980 000 so'mdan"), kurs sahifasi meta panelida `Courses.priceValue`.
+- Kasb dasturlarida narx **oylik**, qisqa kurslarda (`kind: 'skill'`) — **kurs uchun to'liq**.
+- Joriy narxlar ikki bosqichda aniqlangan: (1) ilm.uz ro'yxatidan 30% past, (2) O'zbekiston bozori bilan solishtirib tekshirilgan (oflayn IT kurslari ~790 000 – 2 190 000 so'm/oy). Manba va hisob `courses.ts` sarlavha izohida.
+- Ko'rinishi: kartada `Courses.priceFrom` ("Oyiga 980 000 so'mdan") yoki `Courses.priceCourse` ("Kurs uchun 1 100 000 so'm"), kurs sahifasi meta panelida `Courses.priceValue`.
 - Raqam `Intl` emas, `src/lib/price.ts` dagi `formatPrice()` bilan formatlanadi — brauzerlarda 'uz' lokali bo'lmagani uchun aks holda hydration xatosi chiqadi.
-- schema.org: `Offer` + `UnitPriceSpecification` (`unitCode: 'MON'`) — narx oylik ekani qidiruv tizimiga aniq aytiladi.
+- schema.org: kasb dasturida `Offer` + `UnitPriceSpecification` (`unitCode: 'MON'`) — narx oylik ekani qidiruv tizimiga aniq aytiladi; qisqa kursda narx kurs uchun to'liq, shuning uchun `UnitPriceSpecification` qo'shilmaydi.
 
 ---
 
@@ -168,7 +169,7 @@ Narx `courses.ts` dagi `priceFrom` maydonida — **oylik, so'mda**. Kiritilmagan
 **⚠️ Tasdiqlash/almashtirish SHART (sayt jonli ishlayapti):**
 - `messages/*.json` dagi **Testimonials.items** — NAMUNA matnlar. Haqiqiy bitiruvchilar fikrlari (rozilik bilan) bilan almashtiring.
 - `src/lib/courses.ts` dagi kurs davomiyliklari (`months`) — placeholder.
-- `messages/*.json` → **CourseDetail** — o'quv dasturlari sohaning joriy standartlari asosida yozilgan (CCNA 200-301, Linux/DevOps, Matter/Home Assistant). Markazning real dasturiga moslab tekshiring.
+- `messages/*.json` → **CourseDetail** — o'quv dasturlari sohaning joriy standartlari asosida yozilgan (CCNA 200-301, Linux/DevOps, Matter/Home Assistant, Claude Code / Codex 2026). Markazning real dasturiga moslab tekshiring. AI kurslari vositalari tez o'zgaradi — modullarni vaqti-vaqti bilan yangilang.
 - **Narxlar:** `cisco`, `iptelephony`, `security`, `linux` — ilm.uz'dan 30% past qilib qo'yildi. `computer` va `iot` da ilm.uz'da ekvivalent yo'q — narx berilmagan, kartada ko'rsatilmaydi. Narxlar oylik deb belgilangan; ilm.uz raqamlari oylik emas, kurs uchun to'liq bo'lsa, `Courses.priceFrom`/`priceValue` matnlarini o'zgartirish kerak.
 - Statistika raqamlari (50+ bitiruvchi, 5+ yil) — tasdiqlang.
 - `src/lib/mentors.ts` — hozircha bitta yozuv: markaz asoschisi (ma'lumot o'z rezyumesidan, 2026-09). Boshqa ustozlar qo'shilganda seksiya avtomatik kengayadi; har biridan ma'lumot va rozilik olinishi shart.

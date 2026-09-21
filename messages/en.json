@@ -55,6 +55,7 @@
     "groupSkills": "Skills",
     "priceFrom": "from {price} UZS / month",
     "priceValue": "{price} UZS",
+    "priceCourse": "{price} UZS for the course",
     "soon": "Coming soon",
     "soonCta": "Notify me",
     "items": {
@@ -119,6 +120,7 @@
     "metaDuration": "Duration",
     "metaLevel": "Level",
     "metaPrice": "Monthly price",
+    "metaPriceCourse": "Course price",
     "metaFormat": "Format",
     "metaFormatValue": "On-site — Samarkand",
     "metaLanguage": "Language",
@@ -332,6 +334,106 @@
         "iotSpecialist": "IoT specialist",
         "smartHomeIntegrator": "Smart home integrator",
         "maker": "Electronics / maker track"
+      }
+    },
+    "aicoding": {
+      "tagline": "Working with Claude Code and Codex on a real project: giving the agent the right context, planning the task, keeping code quality under control and shipping the work.",
+      "modules": {
+        "foundations": "How an AI agent works: model, context, tokens",
+        "claudecode": "Claude Code: setup and the daily workflow",
+        "context": "Project context: CLAUDE.md, AGENTS.md and Skills",
+        "codex": "Codex: CLI, the IDE extension and cloud tasks",
+        "extend": "Extending it: MCP servers, subagents and hooks",
+        "quality": "Code quality, tests and security",
+        "project": "Final project: finishing a task in a real repository"
+      },
+      "outcomes": {
+        "workflow": "Work in the Explore → Plan → Code → Commit loop",
+        "context": "Write project context files (CLAUDE.md / AGENTS.md)",
+        "review": "Review AI-written code and catch its mistakes",
+        "automate": "Automate repetitive work with MCP and hooks",
+        "ship": "Take a task from start to pull request"
+      },
+      "audience": {
+        "dev": "Developers who want to work several times faster",
+        "starter": "People learning to code who want the right habits from day one",
+        "itpro": "IT specialists who write scripts and automation"
+      },
+      "requirements": {
+        "terminal": "Basic terminal and Git skills",
+        "english": "Technical English at reading level",
+        "laptop": "Your own laptop — we set up the accounts together in class"
+      },
+      "roles": {
+        "aiDeveloper": "AI-assisted developer",
+        "automationEngineer": "Automation engineer",
+        "freelancer": "Freelancer / independent projects"
+      }
+    },
+    "aiops": {
+      "tagline": "Speeding up everyday admin work with AI: log analysis, scripts and configuration, documentation and automation.",
+      "modules": {
+        "basics": "AI tools and their limits",
+        "prompt": "Prompting techniques for admin work",
+        "scripts": "Scripts and configuration: Bash, Python, Ansible",
+        "logs": "Analysing logs and investigating incidents",
+        "docs": "Runbooks, diagrams and the knowledge base",
+        "automation": "Automation: n8n, APIs and MCP",
+        "security": "Privacy, corporate policy and local models"
+      },
+      "outcomes": {
+        "prompt": "Write prompts that give a precise result",
+        "script": "Write and verify Bash/Python/Ansible scripts quickly",
+        "triage": "Analyse logs and errors and find the root cause",
+        "document": "Produce runbooks and network documentation quickly",
+        "automate": "Automate repetitive tasks with scenarios and bots"
+      },
+      "audience": {
+        "sysadmin": "System administrators",
+        "netadmin": "Network engineers",
+        "support": "Technical support staff"
+      },
+      "requirements": {
+        "itBasics": "Experience working in IT (admin or support)",
+        "terminal": "Comfortable working in a terminal"
+      },
+      "roles": {
+        "sysadminAi": "AI-assisted system administrator",
+        "automationEngineer": "Automation engineer",
+        "itLead": "IT team lead / a move towards DevOps"
+      }
+    },
+    "aibasics": {
+      "tagline": "Speeding up everyday work with ChatGPT and Claude: good prompts, text, spreadsheets, images and safe use.",
+      "modules": {
+        "intro": "What artificial intelligence is and how it works",
+        "prompt": "Writing prompts: role, context and examples",
+        "text": "Working with text: letters, documents, summaries",
+        "data": "Spreadsheets and reports: working with Excel and CSV",
+        "media": "Images and presentations",
+        "work": "Everyday use: search, translation, planning",
+        "safety": "Safety: confidential data and fact-checking"
+      },
+      "outcomes": {
+        "tools": "Pick the right tool for the task (ChatGPT, Claude, Gemini)",
+        "prompt": "Write prompts with a predictable result",
+        "documents": "Produce letters, documents and slides in minutes",
+        "data": "Analyse spreadsheet data and build reports",
+        "safety": "Protect confidential data and verify the answers"
+      },
+      "audience": {
+        "office": "Office staff and managers",
+        "entrepreneur": "Entrepreneurs and small business owners",
+        "teacher": "Teachers and students"
+      },
+      "requirements": {
+        "pcBasics": "Basic computer skills",
+        "none": "No programming knowledge needed"
+      },
+      "roles": {
+        "officeWorker": "Office worker using AI",
+        "aiAssistant": "AI assistant / content production",
+        "entrepreneur": "Entrepreneur applying AI in business"
       }
     }
   },

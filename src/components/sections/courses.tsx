@@ -100,10 +100,13 @@ function CourseCard({ course }: { course: Course }) {
               {t('certificate')}
             </span>
           </span>
-          {/* Narx faqat tasdiqlangan bo'lsa ko'rinadi */}
+          {/* Narx faqat tasdiqlangan bo'lsa ko'rinadi. Qisqa kursda narx
+              kurs uchun to'liq, kasb dasturida — oylik. */}
           {course.priceFrom !== undefined && (
             <span className="font-semibold text-foreground">
-              {t('priceFrom', { price: formatPrice(course.priceFrom) })}
+              {t(course.hours !== undefined ? 'priceCourse' : 'priceFrom', {
+                price: formatPrice(course.priceFrom),
+              })}
             </span>
           )}
         </span>

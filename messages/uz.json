@@ -55,6 +55,7 @@
     "groupSkills": "Ko'nikmalar",
     "priceFrom": "Oyiga {price} so'mdan",
     "priceValue": "{price} so'm",
+    "priceCourse": "Kurs uchun {price} so'm",
     "soon": "Tez orada",
     "soonCta": "Xabar berish",
     "items": {
@@ -119,6 +120,7 @@
     "metaDuration": "Davomiyligi",
     "metaLevel": "Daraja",
     "metaPrice": "Oylik narx",
+    "metaPriceCourse": "Kurs narxi",
     "metaFormat": "Format",
     "metaFormatValue": "Oflayn — Samarqand",
     "metaLanguage": "Dars tili",
@@ -332,6 +334,106 @@
         "iotSpecialist": "IoT mutaxassisi",
         "smartHomeIntegrator": "Aqlli uy integratori",
         "maker": "Elektronika / maker yo'nalishi"
+      }
+    },
+    "aicoding": {
+      "tagline": "Claude Code va Codex bilan real loyihada ishlash: agentga to'g'ri kontekst berish, rejalashtirish, kod sifatini nazorat qilish va vazifani yakunigacha yetkazish.",
+      "modules": {
+        "foundations": "AI agent qanday ishlaydi: model, kontekst, token",
+        "claudecode": "Claude Code: o'rnatish va kundalik ish oqimi",
+        "context": "Loyiha konteksti: CLAUDE.md, AGENTS.md va Skills",
+        "codex": "Codex: CLI, IDE kengaytmasi va bulutli vazifalar",
+        "extend": "Kengaytirish: MCP serverlar, subagentlar va hooks",
+        "quality": "Kod sifati, testlar va xavfsizlik",
+        "project": "Yakuniy loyiha: real repozitoriyda vazifani yakunlash"
+      },
+      "outcomes": {
+        "workflow": "Explore → Plan → Code → Commit oqimida ishlash",
+        "context": "Loyihaga mos kontekst fayllarini yozish (CLAUDE.md / AGENTS.md)",
+        "review": "AI yozgan kodni tekshirish va xatosini topish",
+        "automate": "MCP va hooks bilan takroriy ishlarni avtomatlashtirish",
+        "ship": "Vazifani boshidan pull request'gacha yetkazish"
+      },
+      "audience": {
+        "dev": "Dasturchilar — ish tezligini bir necha barobar oshirmoqchilar",
+        "starter": "Dasturlashni o'rganayotganlar — to'g'ri odat bilan boshlash uchun",
+        "itpro": "IT mutaxassislari — skript va avtomatlashtirish yozadiganlar"
+      },
+      "requirements": {
+        "terminal": "Terminal va Git bilan boshlang'ich ishlash ko'nikmasi",
+        "english": "Texnik ingliz tilini o'qiy olish",
+        "laptop": "Shaxsiy noutbuk — hisoblarni birinchi darsda birga ochamiz"
+      },
+      "roles": {
+        "aiDeveloper": "AI bilan ishlovchi dasturchi",
+        "automationEngineer": "Avtomatlashtirish muhandisi",
+        "freelancer": "Frilanser / mustaqil loyihalar"
+      }
+    },
+    "aiops": {
+      "tagline": "Kundalik admin ishini AI bilan tezlashtirish: log tahlili, skript va konfiguratsiya, hujjatlashtirish hamda avtomatlashtirish.",
+      "modules": {
+        "basics": "AI vositalari va ularning chegaralari",
+        "prompt": "Admin ishi uchun prompt texnikasi",
+        "scripts": "Skript va konfiguratsiya yozish: Bash, Python, Ansible",
+        "logs": "Log va nosozliklarni tahlil qilish",
+        "docs": "Runbook, sxema va bilimlar bazasi",
+        "automation": "Avtomatlashtirish: n8n, API va MCP",
+        "security": "Maxfiylik, korporativ siyosat va lokal modellar"
+      },
+      "outcomes": {
+        "prompt": "Aniq natija beradigan so'rov (prompt) yozish",
+        "script": "Bash/Python/Ansible skriptlarini tez yozish va tekshirish",
+        "triage": "Log va xatolarni tahlil qilib, asl sababini topish",
+        "document": "Runbook va tarmoq hujjatlarini tez tayyorlash",
+        "automate": "Takroriy vazifalarni ssenariy va botlar bilan avtomatlashtirish"
+      },
+      "audience": {
+        "sysadmin": "Tizim administratorlari",
+        "netadmin": "Tarmoq muhandislari",
+        "support": "Texnik qo'llab-quvvatlash xodimlari"
+      },
+      "requirements": {
+        "itBasics": "IT sohasida ishlash tajribasi (admin yoki support)",
+        "terminal": "Terminal bilan ishlash ko'nikmasi"
+      },
+      "roles": {
+        "sysadminAi": "AI bilan ishlovchi tizim administratori",
+        "automationEngineer": "Avtomatlashtirish muhandisi",
+        "itLead": "IT bo'lim rahbari / DevOps yo'nalishiga o'tish"
+      }
+    },
+    "aibasics": {
+      "tagline": "ChatGPT va Claude bilan kundalik ishni tezlashtirish: to'g'ri prompt, matn, jadval, tasvir va xavfsiz foydalanish.",
+      "modules": {
+        "intro": "Sun'iy intellekt nima va u qanday ishlaydi",
+        "prompt": "Prompt yozish: rol, kontekst va namuna",
+        "text": "Matn bilan ishlash: xat, hujjat, qisqacha bayon",
+        "data": "Jadval va hisobot: Excel va CSV bilan ishlash",
+        "media": "Tasvir va taqdimot tayyorlash",
+        "work": "Kundalik ishda qo'llash: qidiruv, tarjima, rejalashtirish",
+        "safety": "Xavfsizlik: maxfiy ma'lumot va faktni tekshirish"
+      },
+      "outcomes": {
+        "tools": "Vazifaga mos vositani tanlash (ChatGPT, Claude, Gemini)",
+        "prompt": "Takrorlanadigan aniq natija beradigan prompt yozish",
+        "documents": "Xat, hujjat va taqdimotni bir necha daqiqada tayyorlash",
+        "data": "Jadvaldagi ma'lumotni tahlil qilib, hisobot chiqarish",
+        "safety": "Maxfiy ma'lumotni himoya qilish va javobni tekshirish"
+      },
+      "audience": {
+        "office": "Ofis xodimlari va menejerlar",
+        "entrepreneur": "Tadbirkorlar va kichik biznes egalari",
+        "teacher": "O'qituvchilar va talabalar"
+      },
+      "requirements": {
+        "pcBasics": "Kompyuterda ishlash ko'nikmasi",
+        "none": "Dasturlash bilish shart emas"
+      },
+      "roles": {
+        "officeWorker": "AI bilan ishlaydigan ofis xodimi",
+        "aiAssistant": "AI yordamchisi / kontent tayyorlovchi",
+        "entrepreneur": "Biznesda AI qo'llovchi tadbirkor"
       }
     }
   },

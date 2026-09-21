@@ -134,6 +134,66 @@ export const COURSE_DETAILS: Partial<Record<CourseId, CourseDetail>> = {
     roles: ['iotSpecialist', 'smartHomeIntegrator', 'maker'],
     tools: ['Arduino IDE', 'ESP32', 'Raspberry Pi', 'Home Assistant', 'MQTT', 'Node-RED'],
   },
+
+  /* ----------------------------- AI kurslari ----------------------------
+   * Dasturlar 2026-yil holatidagi vositalar bo'yicha: Claude Code
+   * (CLAUDE.md, Skills, subagentlar, hooks, MCP, plan mode) va Codex
+   * (CLI, IDE kengaytmasi, AGENTS.md, bulutli vazifalar). Vosita
+   * yangilanganda modullarni ham yangilang.
+   * -------------------------------------------------------------------- */
+  aicoding: {
+    slug: 'ai-bilan-dasturlash',
+    modules: [
+      { key: 'foundations', topics: ['LLM', 'Agent', 'Context', 'Token'] },
+      { key: 'claudecode', topics: ['CLI', 'Plan mode', 'Git', 'Diff'] },
+      { key: 'context', topics: ['CLAUDE.md', 'AGENTS.md', 'Skills', 'Commands'] },
+      { key: 'codex', topics: ['Codex CLI', 'VS Code', 'Cloud tasks', 'PR'] },
+      { key: 'extend', topics: ['MCP', 'Subagents', 'Hooks', 'Plugins'] },
+      { key: 'quality', topics: ['Code review', 'Tests', 'Secrets', 'Sandbox'] },
+      { key: 'project', topics: ['Real repo', 'CI/CD', 'Deploy'] },
+    ],
+    outcomes: ['workflow', 'context', 'review', 'automate', 'ship'],
+    audience: ['dev', 'starter', 'itpro'],
+    requirements: ['terminal', 'english', 'laptop'],
+    roles: ['aiDeveloper', 'automationEngineer', 'freelancer'],
+    tools: ['Claude Code', 'Codex CLI', 'VS Code', 'Git', 'GitHub', 'MCP'],
+  },
+
+  aiops: {
+    slug: 'it-mutaxassisi-uchun-ai',
+    modules: [
+      { key: 'basics', topics: ['LLM', 'Prompt', 'Limits', 'Privacy'] },
+      { key: 'prompt', topics: ['Context', 'Few-shot', 'Checklist'] },
+      { key: 'scripts', topics: ['Bash', 'Python', 'Ansible', 'RouterOS'] },
+      { key: 'logs', topics: ['Syslog', 'Zabbix', 'Wireshark', 'RCA'] },
+      { key: 'docs', topics: ['Runbook', 'Diagram', 'Markdown'] },
+      { key: 'automation', topics: ['n8n', 'MCP', 'API', 'Telegram bot'] },
+      { key: 'security', topics: ['Data privacy', 'Local LLM', 'Policy'] },
+    ],
+    outcomes: ['prompt', 'script', 'triage', 'document', 'automate'],
+    audience: ['sysadmin', 'netadmin', 'support'],
+    requirements: ['itBasics', 'terminal'],
+    roles: ['sysadminAi', 'automationEngineer', 'itLead'],
+    tools: ['Claude', 'ChatGPT', 'Bash', 'Ansible', 'Zabbix', 'n8n'],
+  },
+
+  aibasics: {
+    slug: 'suniy-intellekt-asoslari',
+    modules: [
+      { key: 'intro', topics: ['LLM', 'Chat', 'Model'] },
+      { key: 'prompt', topics: ['Prompt', 'Context', 'Examples'] },
+      { key: 'text', topics: ['Docs', 'Email', 'Summary'] },
+      { key: 'data', topics: ['Excel', 'CSV', 'Charts'] },
+      { key: 'media', topics: ['Image', 'Slides', 'Canva'] },
+      { key: 'work', topics: ['Search', 'Translate', 'Telegram'] },
+      { key: 'safety', topics: ['Privacy', 'Fact-check'] },
+    ],
+    outcomes: ['tools', 'prompt', 'documents', 'data', 'safety'],
+    audience: ['office', 'entrepreneur', 'teacher'],
+    requirements: ['pcBasics', 'none'],
+    roles: ['officeWorker', 'aiAssistant', 'entrepreneur'],
+    tools: ['ChatGPT', 'Claude', 'Gemini', 'MS Office', 'Canva'],
+  },
 };
 
 /**

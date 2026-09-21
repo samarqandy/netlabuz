@@ -75,21 +75,35 @@ export interface Course {
 }
 
 /* -------------------------------------------------------------------------
- * NARXLAR (priceFrom) — oylik, so'mda.
+ * NARXLAR (priceFrom)
  *
- * Manba: ilm.uz kurslar ro'yxati (2026-09-21 holatiga) — markaz rahbari
- * yuborgan skrinshotlar. Siyosat: ilm.uz narxidan **30% past**.
+ * Kasb dasturlarida (`kind: 'profession'`) — OYLIK narx, so'mda.
+ * Qisqa kurslarda (`kind: 'skill'`) — KURS UCHUN to'liq narx.
  *
- *   ilm.uz kursi                          ilm.uz      NETLAB (−30%)
- *   Cisco CCNA / Tarmoq admin             1 400 000   980 000    → cisco
- *   IP-telefoniya                         2 000 000   1 400 000  → iptelephony
- *   Videokuzatuv tizimlari                1 300 000   910 000    → security
- *   Linux Server / Tizim admin            1 500 000   1 050 000  → linux
+ * 1) Asos: ilm.uz ro'yxati (2026-09-21, markaz rahbari yuborgan) —
+ *    undan 30% past.
+ * 2) Tekshiruv: O'zbekiston bozori (2026-09). Kattalar uchun oflayn IT
+ *    kurslari oyiga ~790 000 – 2 190 000 so'm oralig'ida:
+ *      - kompyuter savodxonligi (Cyber Science, Toshkent) — 800 000
+ *      - Najot Ta'lim (Frontend/Backend, Samarqandda ham bor) — 1 400 000
+ *      - Arduino/IoT (oflayn) — 1 190 000, onlayn — 790 000
+ *      - ilm.uz (bizning yo'nalish, Toshkent) — 1 300 000 … 2 200 000
+ *    Manbalar: spot.uz IT-kurslar sharhi, darslinker.uz, kursi24.uz,
+ *    cyberscience.uz, ilm.uz.
  *
- * `computer` va `iot` da ilm.uz'da ekvivalent kurs yo'q — narx tasdiqlangunga
- * qadar bo'sh qoladi va kartada ko'rsatilmaydi.
- * Tayyorlanayotgan kurslarda (`status: 'soon'`) narx ataylab yo'q: guruh
- * ochilganda tasdiqlanadi.
+ *   Kurs                      ilm.uz     −30%        Yakuniy    Izoh
+ *   Cisco / MikroTik          1 400 000  980 000     980 000    bozor o'rtasi
+ *   Linux administratsiya     1 500 000  1 050 000   1 050 000  bozor o'rtasi
+ *   Xavfsizlik & CCTV         1 300 000  910 000     910 000    bozor o'rtasi
+ *   IP-telefoniya             2 000 000  1 400 000   1 250 000  1.4 mln bozor
+ *                                                               shiftida edi —
+ *                                                               Samarqand uchun
+ *                                                               tushirildi
+ *   Kompyuter savodxonligi    —          —           650 000    bozordan ~19% past
+ *   Aqlli uy & IoT            —          —           950 000    bozordan ~20% past
+ *
+ * Qisqa AI kurslari — soatiga ~50 000 so'm hisobida (bozordagi oylik
+ * narx/soat nisbati bilan bir xil), kurs uchun to'liq narx.
  * ------------------------------------------------------------------------- */
 export const COURSES: Course[] = [
   {
@@ -99,6 +113,7 @@ export const COURSES: Course[] = [
     months: 2,
     glow: 'cyan',
     topics: ['Windows', 'MS Office', 'Internet'],
+    priceFrom: 650_000,
   },
   {
     id: 'cisco',
@@ -116,7 +131,7 @@ export const COURSES: Course[] = [
     months: 2,
     glow: 'blue',
     topics: ['Asterisk', 'FreePBX', 'SIP'],
-    priceFrom: 1_400_000,
+    priceFrom: 1_250_000,
   },
   {
     id: 'security',
@@ -143,6 +158,7 @@ export const COURSES: Course[] = [
     months: 2,
     glow: 'cyan',
     topics: ['Arduino', 'Raspberry Pi', 'Smart Home'],
+    priceFrom: 950_000,
   },
 
   /* --------------------- Tayyorlanmoqda (tez orada) ---------------------
@@ -189,9 +205,11 @@ export const COURSES: Course[] = [
   },
 
   /* ------------------------ AI yo'nalishi (qisqa) -----------------------
-   * Bozorda eng tez o'sayotgan segment (Skillbox, OTUS, Slurm, Merion —
-   * hammasida bor). NETLAB uchun qisqa intensiv formatda: markaz asoschisi
-   * bu vositalar bilan kundalik ishlaydi.
+   * Bozorda eng tez o'sayotgan segment. Samarqandda IT STEP ham AI kursi
+   * ochgan, Najot Ta'lim va EdFix'da prompt-injiniring bor — lekin amaliy
+   * agent vositalari (Claude Code, Codex) bo'yicha kurs yo'q.
+   * NETLAB uchun qisqa intensiv formatda: markaz asoschisi bu vositalar
+   * bilan kundalik ishlaydi.
    * -------------------------------------------------------------------- */
   {
     id: 'aicoding',
@@ -202,7 +220,7 @@ export const COURSES: Course[] = [
     hours: 20,
     glow: 'blue',
     topics: ['Claude Code', 'Codex', 'MCP', 'Git'],
-    status: 'soon',
+    priceFrom: 1_100_000,
   },
   {
     id: 'aiops',
@@ -213,7 +231,7 @@ export const COURSES: Course[] = [
     hours: 16,
     glow: 'green',
     topics: ['Claude', 'Bash', 'Log analysis', 'Automation'],
-    status: 'soon',
+    priceFrom: 900_000,
   },
   {
     id: 'aibasics',
@@ -224,7 +242,7 @@ export const COURSES: Course[] = [
     hours: 12,
     glow: 'cyan',
     topics: ['ChatGPT', 'Claude', 'Prompt', 'Office AI'],
-    status: 'soon',
+    priceFrom: 600_000,
   },
 ];
 
