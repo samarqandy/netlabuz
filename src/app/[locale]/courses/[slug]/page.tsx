@@ -117,14 +117,20 @@ export default async function CoursePage({
     href: { pathname: '/courses/[slug]', params: { slug } },
   });
 
+  // Qisqa kurs soatlarda, kasb dasturi oylarda o'lchanadi
+  const isShort = course.hours !== undefined;
+  const duration = isShort
+    ? t('durationHours', { hours: course.hours })
+    : t('duration', { months: course.months });
+
   const META = [
-    { Icon: Clock, label: td('metaDuration'), value: t('duration', { months: course.months }) },
+    { Icon: Clock, label: td('metaDuration'), value: duration },
     // Narx faqat `priceFrom` kiritilgan kursda ko'rinadi
     ...(course.priceFrom !== undefined
       ? [
           {
             Icon: Wallet,
-            label: td('metaPrice'),
+            label: td(isShort ? 'metaPriceCourse' : 'metaPrice'),
             value: t('priceValue', { price: formatPrice(course.priceFrom) }),
           },
         ]
@@ -154,7 +160,7 @@ export default async function CoursePage({
       hasCourseInstance: {
         '@type': 'CourseInstance',
         courseMode: 'Onsite',
-        courseWorkload: `P${course.months}M`,
+        courseWorkload: isShort ? `PT${course.hours}H` : `P${course.months}M`,
         location: {
           '@type': 'Place',
           name: ORG.name,
@@ -172,15 +178,20 @@ export default async function CoursePage({
               url: `${ORG.url}${canonical}`,
               price: course.priceFrom,
               priceCurrency: PRICE_CURRENCY,
-              // Narx oylik — UN/CEFACT 'MON' birligi bilan aniqlashtiriladi
-              priceSpecification: {
-                '@type': 'UnitPriceSpecification',
-                price: course.priceFrom,
-                priceCurrency: PRICE_CURRENCY,
-                unitCode: 'MON',
-                billingDuration: 1,
-                billingIncrement: 1,
-              },
+              // Kasb dasturida narx oylik — UN/CEFACT 'MON' birligi bilan
+              // aniqlashtiriladi. Qisqa kursda narx kurs uchun to'liq.
+              ...(isShort
+                ? {}
+                : {
+                    priceSpecification: {
+                      '@type': 'UnitPriceSpecification',
+                      price: course.priceFrom,
+                      priceCurrency: PRICE_CURRENCY,
+                      unitCode: 'MON',
+                      billingDuration: 1,
+                      billingIncrement: 1,
+                    },
+                  }),
             },
           }
         : {}),
@@ -280,7 +291,14 @@ export default async function CoursePage({
 
           {/* Meta panel */}
           <Reveal variant="fadeIn" className="mt-12">
-            <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-3 lg:grid-cols-5">
+            {/* Narx qo'shilganda 6 ta katak bo'ladi — 5 ustunda oxirgi qator
+                bo'sh qolmasligi uchun ustunlar soni moslashadi */}
+            <dl
+              className={cn(
+                'grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-3',
+                META.length % 3 === 0 ? 'lg:grid-cols-3' : 'lg:grid-cols-5'
+              )}
+            >
               {META.map(({ Icon: MetaIcon, label, value }, i) => (
                 <div
                   key={label}

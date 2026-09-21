@@ -16,10 +16,10 @@ const COURSE_NAMES: Record<string, string> = {
   cybersecurity: '🔐 Kiberxavfsizlik (tez orada)',
   devops: '⚙️ DevOps va konteynerlar (tez orada)',
   windows: '🖥 Windows Server va Active Directory (tez orada)',
-  cabling: '🔌 SKS — tarmoq kabellari (tez orada)',
-  aicoding: '🤖 AI bilan dasturlash — Claude Code / Codex (tez orada)',
-  aiops: '🧠 IT mutaxassisi uchun AI (tez orada)',
-  aibasics: "✨ Sun'iy intellekt asoslari (tez orada)",
+  cabling: '🔌 SCS — strukturalashgan kabel tizimlari (tez orada)',
+  aicoding: '🤖 AI bilan dasturlash — Claude Code / Codex',
+  aiops: '🧠 IT mutaxassisi uchun AI',
+  aibasics: "✨ Sun'iy intellekt asoslari",
 };
 
 function corsHeaders() {
