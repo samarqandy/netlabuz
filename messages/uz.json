@@ -96,8 +96,8 @@
         "description": "Domen, foydalanuvchilar, GPO va korporativ xizmatlarni boshqarish."
       },
       "cabling": {
-        "name": "SKS — tarmoq kabellari",
-        "description": "Strukturali kabel tizimlari: loyihalash, montaj, krimplash va testlash."
+        "name": "SCS — strukturalashgan kabel tizimlari",
+        "description": "Bino kabel tizimini loyihalash, montaj, krimplash va test bilan topshirish — ISO/IEC 11801 va TIA-568 bo'yicha."
       },
       "aicoding": {
         "name": "AI bilan dasturlash: Claude Code va Codex",

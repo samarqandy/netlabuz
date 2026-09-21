@@ -200,7 +200,7 @@ export const COURSES: Course[] = [
     months: 1,
     hours: 24,
     glow: 'cyan',
-    topics: ['SKS', 'UTP', 'Patch panel', 'Tester'],
+    topics: ['SCS', 'UTP', 'Patch panel', 'Tester'],
     status: 'soon',
   },
 

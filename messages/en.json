@@ -96,8 +96,8 @@
         "description": "Domains, users, group policies and core enterprise services."
       },
       "cabling": {
-        "name": "Structured cabling (SCS)",
-        "description": "Structured cabling systems: design, installation, crimping and certification."
+        "name": "SCS — structured cabling systems",
+        "description": "Designing, installing, terminating and certifying a building's cabling system to ISO/IEC 11801 and TIA-568."
       },
       "aicoding": {
         "name": "Building with AI: Claude Code and Codex",

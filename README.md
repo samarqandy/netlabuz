@@ -132,7 +132,7 @@ Kurslar ikki guruhga bo'linadi (`courses.ts` dagi `kind`):
 | Guruh | `kind` | Davomiylik | Misol |
 |---|---|---|---|
 | Kasblar | `profession` (standart) | oylarda (`months`) | Cisco / MikroTik tarmoqlar |
-| Ko'nikmalar | `skill` | soatlarda (`hours`) | AI bilan dasturlash, SKS |
+| Ko'nikmalar | `skill` | soatlarda (`hours`) | AI bilan dasturlash, SCS |
 
 `hours` kiritilgan kursda kartada "20 soat", aks holda "3 oy" ko'rsatiladi. Daraja filtri ikkala guruhga ham ta'sir qiladi; bo'sh qolgan guruh sarlavhasi bilan birga yashiriladi.
 
