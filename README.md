@@ -125,6 +125,17 @@ Har kursning alohida sahifasi bor, URL tilga moslashgan (next-intl `pathnames`):
 
 Yangi kurs qo'shish: `courses.ts` ga yozuv → `course-details.ts` ga slug/modullar → uch tilda `CourseDetail.<id>` matnlari.
 
+### Katalog tuzilishi
+
+Kurslar ikki guruhga bo'linadi (`courses.ts` dagi `kind`):
+
+| Guruh | `kind` | Davomiylik | Misol |
+|---|---|---|---|
+| Kasblar | `profession` (standart) | oylarda (`months`) | Cisco / MikroTik tarmoqlar |
+| Ko'nikmalar | `skill` | soatlarda (`hours`) | AI bilan dasturlash, SKS |
+
+`hours` kiritilgan kursda kartada "20 soat", aks holda "3 oy" ko'rsatiladi. Daraja filtri ikkala guruhga ham ta'sir qiladi; bo'sh qolgan guruh sarlavhasi bilan birga yashiriladi.
+
 ### Tayyorlanayotgan kurslar
 
 `courses.ts` da `status: 'soon'` qo'yilgan kurs — katalogda ko'rinadi, lekin:

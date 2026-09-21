@@ -9,6 +9,9 @@ import {
   Container,
   Server,
   Cable,
+  Bot,
+  BrainCircuit,
+  Sparkles,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -27,15 +30,32 @@ export type CourseId =
   | 'cybersecurity'
   | 'devops'
   | 'windows'
-  | 'cabling';
+  | 'cabling'
+  | 'aicoding'
+  | 'aiops'
+  | 'aibasics';
+
+/**
+ * Katalog guruhi:
+ *  - 'profession' — oylar davom etadigan to'liq kasb dasturi;
+ *  - 'skill' — qisqa, bitta ko'nikmaga qaratilgan intensiv (soatlarda).
+ */
+export type CourseKind = 'profession' | 'skill';
 
 export interface Course {
   /** i18n kaliti (Courses.items.<id>) va form qiymati bilan mos */
   id: CourseId;
   level: CourseLevel;
   icon: LucideIcon;
+  /** Katalogdagi guruh (kiritilmasa — 'profession') */
+  kind?: CourseKind;
   /** Davomiyligi (oy) — PLACEHOLDER, real qiymat bilan almashtiring */
   months: number;
+  /**
+   * Qisqa kurslar uchun davomiylik (akademik soat). Kiritilsa kartada
+   * "oy" o'rniga "soat" ko'rsatiladi.
+   */
+  hours?: number;
   glow: GlowColor;
   /** Kartada ko'rsatiladigan asosiy mavzular (til-neytral texnologiya nomlari) */
   topics: string[];
@@ -160,12 +180,58 @@ export const COURSES: Course[] = [
     id: 'cabling',
     level: 'beginner',
     icon: Cable,
+    kind: 'skill',
     months: 1,
+    hours: 24,
     glow: 'cyan',
     topics: ['SKS', 'UTP', 'Patch panel', 'Tester'],
     status: 'soon',
   },
+
+  /* ------------------------ AI yo'nalishi (qisqa) -----------------------
+   * Bozorda eng tez o'sayotgan segment (Skillbox, OTUS, Slurm, Merion —
+   * hammasida bor). NETLAB uchun qisqa intensiv formatda: markaz asoschisi
+   * bu vositalar bilan kundalik ishlaydi.
+   * -------------------------------------------------------------------- */
+  {
+    id: 'aicoding',
+    level: 'intermediate',
+    icon: Bot,
+    kind: 'skill',
+    months: 1,
+    hours: 20,
+    glow: 'blue',
+    topics: ['Claude Code', 'Codex', 'MCP', 'Git'],
+    status: 'soon',
+  },
+  {
+    id: 'aiops',
+    level: 'intermediate',
+    icon: BrainCircuit,
+    kind: 'skill',
+    months: 1,
+    hours: 16,
+    glow: 'green',
+    topics: ['Claude', 'Bash', 'Log analysis', 'Automation'],
+    status: 'soon',
+  },
+  {
+    id: 'aibasics',
+    level: 'beginner',
+    icon: Sparkles,
+    kind: 'skill',
+    months: 1,
+    hours: 12,
+    glow: 'cyan',
+    topics: ['ChatGPT', 'Claude', 'Prompt', 'Office AI'],
+    status: 'soon',
+  },
 ];
+
+/** Katalog guruhi (kiritilmagan bo'lsa — to'liq kasb dasturi) */
+export function courseKind(course: Course): CourseKind {
+  return course.kind ?? 'profession';
+}
 
 /** Ishga tushgan kurslar — batafsil sahifasi va arizasi bor */
 export const ACTIVE_COURSES = COURSES.filter((c) => c.status !== 'soon');

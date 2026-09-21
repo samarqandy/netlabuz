@@ -48,8 +48,11 @@
     "intermediate": "O'rta",
     "advanced": "Yuqori",
     "duration": "{months} oy",
+    "durationHours": "{hours} soat",
     "certificate": "Sertifikat",
     "detailsCta": "Batafsil",
+    "groupProfessions": "Kasblar",
+    "groupSkills": "Ko'nikmalar",
     "priceFrom": "Oyiga {price} so'mdan",
     "priceValue": "{price} so'm",
     "soon": "Tez orada",
@@ -94,6 +97,18 @@
       "cabling": {
         "name": "SKS — tarmoq kabellari",
         "description": "Strukturali kabel tizimlari: loyihalash, montaj, krimplash va testlash."
+      },
+      "aicoding": {
+        "name": "AI bilan dasturlash: Claude Code va Codex",
+        "description": "AI agentlari bilan real loyihada ishlash: kontekst, MCP, Git oqimi va kod sifatini nazorat qilish."
+      },
+      "aiops": {
+        "name": "IT mutaxassisi uchun AI",
+        "description": "Log tahlili, skript va konfiguratsiya yozish, hujjatlashtirish — kundalik admin ishini AI bilan tezlashtirish."
+      },
+      "aibasics": {
+        "name": "Sun'iy intellekt asoslari",
+        "description": "ChatGPT va Claude bilan ishlash, to'g'ri prompt yozish, matn, jadval va tasvir bilan kundalik vazifalarni yechish."
       }
     }
   },

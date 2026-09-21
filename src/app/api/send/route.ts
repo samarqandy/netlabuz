@@ -17,6 +17,9 @@ const COURSE_NAMES: Record<string, string> = {
   devops: '⚙️ DevOps va konteynerlar (tez orada)',
   windows: '🖥 Windows Server va Active Directory (tez orada)',
   cabling: '🔌 SKS — tarmoq kabellari (tez orada)',
+  aicoding: '🤖 AI bilan dasturlash — Claude Code / Codex (tez orada)',
+  aiops: '🧠 IT mutaxassisi uchun AI (tez orada)',
+  aibasics: "✨ Sun'iy intellekt asoslari (tez orada)",
 };
 
 function corsHeaders() {

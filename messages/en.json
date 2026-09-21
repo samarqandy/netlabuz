@@ -48,8 +48,11 @@
     "intermediate": "Intermediate",
     "advanced": "Advanced",
     "duration": "{months} mo",
+    "durationHours": "{hours} h",
     "certificate": "Certificate",
     "detailsCta": "Learn more",
+    "groupProfessions": "Professions",
+    "groupSkills": "Skills",
     "priceFrom": "from {price} UZS / month",
     "priceValue": "{price} UZS",
     "soon": "Coming soon",
@@ -94,6 +97,18 @@
       "cabling": {
         "name": "Structured cabling (SCS)",
         "description": "Structured cabling systems: design, installation, crimping and certification."
+      },
+      "aicoding": {
+        "name": "Building with AI: Claude Code and Codex",
+        "description": "Working with AI agents on a real project: context, MCP, the Git flow and keeping code quality under control."
+      },
+      "aiops": {
+        "name": "AI for IT specialists",
+        "description": "Log analysis, writing scripts and configs, documentation — speeding up everyday admin work with AI."
+      },
+      "aibasics": {
+        "name": "AI fundamentals",
+        "description": "Working with ChatGPT and Claude, writing good prompts, and solving everyday tasks with text, spreadsheets and images."
       }
     }
   },
