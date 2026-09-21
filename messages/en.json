@@ -7,6 +7,7 @@
     "courses": "Courses",
     "quiz": "Quiz",
     "why": "Why us",
+    "mentors": "Mentors",
     "how": "Process",
     "faq": "FAQ",
     "contact": "Contact",
@@ -402,7 +403,10 @@
   "Mentors": {
     "eyebrow": "Mentors",
     "title": "A team of practitioner mentors",
-    "subtitle": "You learn from specialists working in the industry."
+    "subtitle": "You learn from specialists working in the industry.",
+    "experience": "{years}+ years of hands-on experience",
+    "credentialsTitle": "Certifications",
+    "siteLabel": "Personal website"
   },
   "WhyUs": {
     "eyebrow": "Why NETLAB",
@@ -611,7 +615,8 @@
     "contactTitle": "Contact",
     "address": "11 Dahbed street, Samarkand",
     "rights": "All rights reserved.",
-    "tagline": "IT education in Samarkand"
+    "tagline": "IT education in Samarkand",
+    "founder": "Founder"
   },
   "Theme": {
     "toggle": "Toggle theme",

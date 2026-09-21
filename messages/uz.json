@@ -7,6 +7,7 @@
     "courses": "Kurslar",
     "quiz": "Test",
     "why": "Nega biz",
+    "mentors": "Ustozlar",
     "how": "Jarayon",
     "faq": "Savol-javob",
     "contact": "Aloqa",
@@ -402,7 +403,10 @@
   "Mentors": {
     "eyebrow": "Ustozlar",
     "title": "Amaliyotchi ustozlar jamoasi",
-    "subtitle": "Sohada ishlayotgan mutaxassislardan o'rganasiz."
+    "subtitle": "Sohada ishlayotgan mutaxassislardan o'rganasiz.",
+    "experience": "{years}+ yil amaliy tajriba",
+    "credentialsTitle": "Sertifikatlar",
+    "siteLabel": "Shaxsiy sayt"
   },
   "WhyUs": {
     "eyebrow": "Nega NETLAB",
@@ -611,7 +615,8 @@
     "contactTitle": "Aloqa",
     "address": "Dahbed ko'chasi 11, Samarqand",
     "rights": "Barcha huquqlar himoyalangan.",
-    "tagline": "Samarqandda IT ta'lim"
+    "tagline": "Samarqandda IT ta'lim",
+    "founder": "Asoschi"
   },
   "Theme": {
     "toggle": "Mavzuni almashtirish",

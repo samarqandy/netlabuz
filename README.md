@@ -135,6 +135,10 @@ Yangi kurs qo'shish: `courses.ts` ga yozuv → `course-details.ts` ga slug/modul
 
 Ishga tushirilganda: `status` ni olib tashlang → `course-details.ts` ga dastur qo'shing → `CourseDetail.<id>` matnlari → `priceFrom`.
 
+### Ustozlar
+
+`src/lib/mentors.ts` — ro'yxat bo'sh bo'lsa seksiya ko'rinmaydi. `lead: true` bo'lgan ustoz keng kartada (tarjimai hol, sertifikatlar, shaxsiy sayt) chiqadi, qolganlari 3 ustunli to'rda. Sertifikatlar faqat shaxsiy — markazning vendor akademiyasi maqomi (Cisco NetAcad, MikroTik Academy) sifatida yozilmaydi. Asoschi ma'lumoti `ORG.founder` da ham bor: footer havolasi va `EducationalOrganization.founder` JSON-LD shu yerdan oladi.
+
 ### Narxlar
 
 Narx `courses.ts` dagi `priceFrom` maydonida — **oylik, so'mda**. Kiritilmagan kursda narx hech qayerda ko'rsatilmaydi (karta, kurs sahifasi, JSON-LD) — taxminiy raqam yozilmaydi.
@@ -156,7 +160,8 @@ Narx `courses.ts` dagi `priceFrom` maydonida — **oylik, so'mda**. Kiritilmagan
 - `messages/*.json` → **CourseDetail** — o'quv dasturlari sohaning joriy standartlari asosida yozilgan (CCNA 200-301, Linux/DevOps, Matter/Home Assistant). Markazning real dasturiga moslab tekshiring.
 - **Narxlar:** `cisco`, `iptelephony`, `security`, `linux` — ilm.uz'dan 30% past qilib qo'yildi. `computer` va `iot` da ilm.uz'da ekvivalent yo'q — narx berilmagan, kartada ko'rsatilmaydi. Narxlar oylik deb belgilangan; ilm.uz raqamlari oylik emas, kurs uchun to'liq bo'lsa, `Courses.priceFrom`/`priceValue` matnlarini o'zgartirish kerak.
 - Statistika raqamlari (50+ bitiruvchi, 5+ yil) — tasdiqlang.
-- `src/lib/mentors.ts` bo'sh — ustozlar ma'lumoti qo'shilsa, seksiya avtomatik paydo bo'ladi.
+- `src/lib/mentors.ts` — hozircha bitta yozuv: markaz asoschisi (ma'lumot o'z rezyumesidan, 2026-09). Boshqa ustozlar qo'shilganda seksiya avtomatik kengayadi; har biridan ma'lumot va rozilik olinishi shart.
+- Statistika: `Stats` dagi "50+ bitiruvchi" va "5+ yil" hali tasdiqlanmagan (`src/components/sections/stats.tsx`).
 
 ---
 

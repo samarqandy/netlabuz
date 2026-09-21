@@ -21,6 +21,7 @@ const NAV_ITEMS = [
   { href: '#path', key: 'path' },
   { href: '#quiz', key: 'quiz' },
   { href: '#why', key: 'why' },
+  { href: '#mentors', key: 'mentors' },
   { href: '#how', key: 'how' },
   { href: '#faq', key: 'faq' },
   { href: '#contact', key: 'contact' },
@@ -100,7 +101,7 @@ export function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <ul className="hidden items-center gap-1 lg:flex">
+        <ul className="hidden items-center gap-1 xl:flex">
           {NAV_ITEMS.map((item) => {
             const isActive = active === item.href.slice(1);
             return (
@@ -109,7 +110,7 @@ export function Navbar() {
                   href={hrefFor(item.href)}
                   aria-current={isActive ? 'true' : undefined}
                   className={cn(
-                    'relative rounded-md px-3 py-2 text-sm font-medium transition-colors duration-200',
+                    'relative whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium transition-colors duration-200',
                     isActive
                       ? 'text-foreground'
                       : 'text-muted-foreground hover:text-foreground'
@@ -147,7 +148,7 @@ export function Navbar() {
           <Button
             variant="ghost"
             size="icon"
-            className="lg:hidden"
+            className="xl:hidden"
             aria-label="Menu"
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
@@ -165,7 +166,7 @@ export function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: 'easeInOut' }}
-            className="overflow-hidden border-b border-border bg-background/95 backdrop-blur-md lg:hidden"
+            className="overflow-hidden border-b border-border bg-background/95 backdrop-blur-md xl:hidden"
           >
             <ul className="container flex flex-col gap-1 py-4">
               {NAV_ITEMS.map((item) => (

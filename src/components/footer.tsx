@@ -120,6 +120,17 @@ export function Footer() {
           <p>
             © {year} NETLAB. {t('rights')}
           </p>
+          <p className="text-center">
+            {t('founder')}:{' '}
+            <a
+              href={ORG.founder.site}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium transition-colors hover:text-foreground"
+            >
+              {ORG.founder.name}
+            </a>
+          </p>
           <p>{t('tagline')}</p>
         </div>
       </div>

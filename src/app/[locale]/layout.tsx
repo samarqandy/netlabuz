@@ -112,6 +112,13 @@ export default async function LocaleLayout({
     telephone: ORG.phone,
     address: ORG.address,
     sameAs: ORG.telegramChannels.map((ch) => ch.href),
+    // Asoschi — shaxsiy sayti orqali entity sifatida bog'lanadi
+    founder: {
+      '@type': 'Person',
+      name: ORG.founder.name,
+      url: ORG.founder.site,
+      sameAs: [ORG.founder.site],
+    },
   };
 
   return (
