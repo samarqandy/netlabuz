@@ -6,14 +6,16 @@ import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowRight, MessageCircle } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
+import { ACTIVE_COURSES } from '@/lib/courses';
 import { Terminal } from '@/components/ui/terminal';
 import { staggerContainer, staggerItem } from '@/lib/animations';
 import { track } from '@/lib/track';
 
+// Yo'nalishlar soni katalogdan olinadi — kurs qo'shilganda eskirmaydi
 const STATS = [
   { value: 50, suffix: '+', key: 'graduates' },
   { value: 100, suffix: '%', key: 'practice' },
-  { value: 6, suffix: '', key: 'directions' },
+  { value: ACTIVE_COURSES.length, suffix: '', key: 'directions' },
 ] as const;
 
 export function Hero() {
