@@ -3,16 +3,18 @@
 import { useTranslations } from 'next-intl';
 import { GraduationCap, CalendarClock, FlaskConical, LayoutGrid } from 'lucide-react';
 
+import { ACTIVE_COURSES } from '@/lib/courses';
 import { CountUp } from '@/components/ui/count-up';
 import { Reveal, StaggerGroup, StaggerItem } from '@/components/ui/reveal';
 import { SectionHeading } from '@/components/section-heading';
 
-// Qiymatlar — tasdiqlanishi kerak (placeholder marketing raqamlari)
+// ⚠️ graduates va experience — tasdiqlanmagan marketing raqamlari.
+// directions katalogdan olinadi, shuning uchun hech qachon eskirmaydi.
 const STATS = [
   { key: 'graduates', value: 50, suffix: '+', Icon: GraduationCap },
   { key: 'experience', value: 5, suffix: '+', Icon: CalendarClock },
   { key: 'practice', value: 100, suffix: '%', Icon: FlaskConical },
-  { key: 'directions', value: 6, suffix: '', Icon: LayoutGrid },
+  { key: 'directions', value: ACTIVE_COURSES.length, suffix: '', Icon: LayoutGrid },
 ] as const;
 
 export function Stats() {
