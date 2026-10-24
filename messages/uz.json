@@ -39,6 +39,14 @@
   "Marquee": {
     "label": "Biz o'rgatadigan texnologiyalar"
   },
+  "Topology": {
+    "eyebrow": "Laboratoriya xaritasi",
+    "title": "Har tugun — bitta kurs",
+    "subtitle": "Bu bezak emas, bizning laboratoriyamiz sxemasi. Qurilmani tanlang — u bilan ishlashni o'rgatadigan kurs ochiladi.",
+    "alt": "NETLAB tarmoq sxemasi: ishchi stansiya, kommutator, server, IP kamera, IP-telefoniya, IoT va AI tugunlari",
+    "emptyTitle": "Tugunni tanlang",
+    "emptyHint": "Sxemadagi qurilmaga bosing yoki ustiga olib boring — kurs nomi, narxi va havolasi shu yerda chiqadi."
+  },
   "Courses": {
     "eyebrow": "Kurslar",
     "title": "Nimani o'rganasiz?",

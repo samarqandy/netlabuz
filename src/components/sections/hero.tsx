@@ -8,6 +8,7 @@ import { ArrowRight, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ACTIVE_COURSES } from '@/lib/courses';
 import { Terminal } from '@/components/ui/terminal';
+import { KineticText } from '@/components/motion/kinetic-text';
 import { staggerContainer, staggerItem } from '@/lib/animations';
 import { track } from '@/lib/track';
 
@@ -69,9 +70,13 @@ export function Hero() {
             variants={staggerItem}
             className="max-w-3xl text-balance text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl md:text-6xl"
           >
-            {t('titleLine1')}{' '}
-            <span className="text-gradient-tech">{t('titleAccent')}</span>{' '}
-            {t('titleLine2')}
+            <KineticText
+              parts={[
+                { text: t('titleLine1') },
+                { text: t('titleAccent'), className: 'text-gradient-tech' },
+                { text: t('titleLine2') },
+              ]}
+            />
           </motion.h1>
 
           {/* Subtitle */}
