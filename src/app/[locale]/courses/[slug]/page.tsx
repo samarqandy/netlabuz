@@ -264,7 +264,9 @@ export default async function CoursePage({
             </ol>
           </nav>
 
-          <Reveal className="max-w-3xl">
+          {/* `view-transition-name` — kurs kartasidan shu blokka morf bo'ladi
+              (src/components/course/course-link.tsx) */}
+          <Reveal className="max-w-3xl" style={{ viewTransitionName: 'course-hero' }}>
             <div className="flex items-center gap-4">
               <span
                 className={cn(

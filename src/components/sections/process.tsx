@@ -31,11 +31,21 @@ export function Process() {
         </Reveal>
 
         <StaggerGroup className="relative mt-14 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {/* Bog'lovchi chiziq (faqat lg) */}
+          {/* Bog'lovchi chiziq va u bo'ylab yuguruvchi paket (faqat lg).
+              Paket scroll bilan harakatlanadi — `animation-timeline: view()`;
+              brauzer qo'llamasa, sekin takrorlanuvchi animatsiya qoladi. */}
           <div
             aria-hidden
             className="absolute left-0 right-0 top-7 hidden h-px bg-gradient-to-r from-transparent via-border to-transparent lg:block"
           />
+          <div
+            aria-hidden
+            className="absolute left-0 right-0 top-7 hidden overflow-hidden lg:block"
+          >
+            <div className="packet-dot relative h-px w-full">
+              <span className="absolute -top-[3px] right-0 size-[7px] rounded-full bg-accent shadow-[0_0_12px_hsl(var(--accent))]" />
+            </div>
+          </div>
 
           {STEPS.map(({ key, Icon }, i) => (
             <StaggerItem key={key} className="relative flex flex-col items-center text-center">

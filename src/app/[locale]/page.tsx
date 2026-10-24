@@ -1,7 +1,7 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 import { Hero } from '@/components/sections/hero';
-import { TechMarquee } from '@/components/sections/tech-marquee';
+import { Topology } from '@/components/sections/topology';
 import { Courses } from '@/components/sections/courses';
 import { Quiz } from '@/components/sections/quiz';
 import { Tracks } from '@/components/sections/tracks';
@@ -83,7 +83,7 @@ export default async function HomePage({
         dangerouslySetInnerHTML={{ __html: safeJsonLd(coursesJsonLd) }}
       />
       <Hero />
-      <TechMarquee />
+      <Topology />
       <Courses />
       <Tracks />
       <Quiz />

@@ -54,6 +54,9 @@ const config: Config = {
           green: '#00FF88',
           cyan: '#00D4FF',
           dark: '#0A0A0A',
+          // Iliq terrakota — topologiya ikonkalarining tinch holati
+          clay: '#D97757',
+          'clay-deep': '#B4512F',
         },
       },
       fontFamily: {

@@ -39,6 +39,14 @@
   "Marquee": {
     "label": "Technologies we teach"
   },
+  "Topology": {
+    "eyebrow": "Lab map",
+    "title": "Every node is a course",
+    "subtitle": "This isn't decoration — it's the diagram of our lab. Pick a device and the course that teaches it opens up.",
+    "alt": "NETLAB network diagram: workstation, switch, server, IP camera, IP telephony, IoT and AI nodes",
+    "emptyTitle": "Pick a node",
+    "emptyHint": "Tap or hover a device on the diagram — the course name, price and link appear here."
+  },
   "Courses": {
     "eyebrow": "Courses",
     "title": "What will you learn?",

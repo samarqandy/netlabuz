@@ -15,7 +15,7 @@ import {
 } from '@/lib/courses';
 import { COURSE_DETAILS } from '@/lib/course-details';
 import { formatPrice } from '@/lib/price';
-import { Link } from '@/i18n/navigation';
+import { CourseLink } from '@/components/course/course-link';
 import { cn } from '@/lib/utils';
 import { track } from '@/lib/track';
 import { Badge } from '@/components/ui/badge';
@@ -46,6 +46,7 @@ function CourseCard({ course }: { course: Course }) {
     <GlowCard
       glow={course.glow}
       lift={soon ? 0 : 6}
+      data-vt-card
       className="flex h-full flex-col overflow-hidden"
     >
       {/* Texnologiya "vodyanoy znak" — kartaga chuqurlik beradi */}
@@ -118,18 +119,19 @@ function CourseCard({ course }: { course: Course }) {
             size="sm"
             className="group/btn -mr-2 shrink-0 text-primary hover:text-primary"
           >
-            <Link
+            <CourseLink
               href={{
                 pathname: '/courses/[slug]',
                 params: { slug: detail.slug },
               }}
-              onClick={() =>
+              morphFrom="[data-vt-card]"
+              onNavigate={() =>
                 track('course_open', { course: course.id, source: 'card' })
               }
             >
               {t('detailsCta')}
               <ArrowRight className="size-4 transition-transform duration-200 group-hover/btn:translate-x-1" />
-            </Link>
+            </CourseLink>
           </Button>
         ) : (
           /* Tayyorlanayotgan kurs — qiziqish bildirish uchun forma kursni
