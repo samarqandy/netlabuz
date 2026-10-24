@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { ACTIVE_COURSES } from '@/lib/courses';
 import { Terminal } from '@/components/ui/terminal';
 import { KineticText } from '@/components/motion/kinetic-text';
+import { WireframeSphere } from '@/components/scene/wireframe-sphere';
 import { staggerContainer, staggerItem } from '@/lib/animations';
 import { track } from '@/lib/track';
 
@@ -35,14 +36,15 @@ export function Hero() {
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 bg-grid-tech [background-size:44px_44px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)] motion-safe:animate-grid-move"
       />
-      {/* Glow blobs */}
+      {/* Simli sfera — sekin aylanuvchi tarmoq globusi (GitLab uslubi).
+          O'ngda, qisman kadrdan chiqib turadi; kontent ustiga chiqmaydi. */}
+      <WireframeSphere className="pointer-events-none absolute -right-[40%] top-[6%] -z-10 size-[24rem] opacity-45 sm:-right-[20%] sm:top-1/2 sm:size-[36rem] sm:-translate-y-1/2 sm:opacity-80 lg:-right-[6%] lg:size-[46rem]" />
+
+      {/* Yorug'lik dog'lari — blur filtri emas, gradient (blur butun sahifani
+          sekinlashtiradi, qarang: globals.css dagi `.ambient-glow` izohi) */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -left-32 top-10 -z-10 size-[28rem] rounded-full bg-primary/10 blur-[120px]"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-24 bottom-0 -z-10 size-[24rem] rounded-full bg-accent/[0.07] blur-[120px]"
+        className="pointer-events-none absolute inset-0 -z-10 [background-image:radial-gradient(32rem_28rem_at_8%_18%,hsl(var(--primary)/0.12),transparent_70%),radial-gradient(26rem_24rem_at_92%_92%,hsl(var(--accent)/0.08),transparent_70%)]"
       />
 
       <motion.div

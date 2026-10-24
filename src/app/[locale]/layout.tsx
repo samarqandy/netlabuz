@@ -16,7 +16,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { MotionProvider } from '@/components/motion-provider';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
-import { Scene } from '@/components/scene/scene';
+import { Ambient } from '@/components/scene/ambient';
 import '../globals.css';
 
 const inter = Inter({
@@ -134,7 +134,7 @@ export default async function LocaleLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Scene />
+          <Ambient />
           <NextIntlClientProvider messages={messages}>
             <MotionProvider>
               <Navbar />
