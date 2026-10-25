@@ -104,6 +104,14 @@
         "name": "Windows Server & Active Directory",
         "description": "Domains, users, group policies and core enterprise services."
       },
+      "noc": {
+        "name": "Network monitoring and NOC",
+        "description": "Monitor devices with Zabbix, configure alerts and write incident reports."
+      },
+      "virtualization": {
+        "name": "Virtualisation and backups",
+        "description": "Virtual servers on Proxmox VE, TrueNAS, RAID and disaster recovery."
+      },
       "cabling": {
         "name": "SCS — structured cabling systems",
         "description": "Designing, installing, terminating and certifying a building's cabling system to ISO/IEC 11801 and TIA-568."
@@ -583,9 +591,17 @@
         "title": "Optics and structured cabling",
         "description": "Work with fibre and patch cords, and connect SFP modules and GPON equipment."
       },
+      "fiberTools": {
+        "title": "Optical test instruments",
+        "description": "Measure loss on a fibre line, splice fibre and locate a fault."
+      },
       "servers": {
         "title": "Servers",
-        "description": "Install Linux servers from scratch and bring services up."
+        "description": "Install Linux servers and bring up virtual machines and file services."
+      },
+      "monitoring": {
+        "title": "Monitoring and automation",
+        "description": "Put devices under monitoring, configure alerts and automate routine work."
       },
       "cctv": {
         "title": "Video surveillance",

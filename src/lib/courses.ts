@@ -9,6 +9,8 @@ import {
   Container,
   Server,
   Cable,
+  Activity,
+  Layers,
   Bot,
   BrainCircuit,
   Sparkles,
@@ -30,6 +32,8 @@ export type CourseId =
   | 'cybersecurity'
   | 'devops'
   | 'windows'
+  | 'noc'
+  | 'virtualization'
   | 'cabling'
   | 'aicoding'
   | 'aiops'
@@ -190,6 +194,24 @@ export const COURSES: Course[] = [
     months: 3,
     glow: 'blue',
     topics: ['Windows Server', 'Active Directory', 'GPO'],
+    status: 'soon',
+  },
+  {
+    id: 'noc',
+    level: 'intermediate',
+    icon: Activity,
+    months: 3,
+    glow: 'green',
+    topics: ['Zabbix', 'Monitoring', 'Diagnostika'],
+    status: 'soon',
+  },
+  {
+    id: 'virtualization',
+    level: 'intermediate',
+    icon: Layers,
+    months: 3,
+    glow: 'cyan',
+    topics: ['Proxmox VE', 'TrueNAS', 'Backup'],
     status: 'soon',
   },
   {

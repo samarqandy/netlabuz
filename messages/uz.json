@@ -104,6 +104,14 @@
         "name": "Windows Server va Active Directory",
         "description": "Domen, foydalanuvchilar, GPO va korporativ xizmatlarni boshqarish."
       },
+      "noc": {
+        "name": "Tarmoq monitoringi va NOC",
+        "description": "Zabbix bilan qurilmalarni kuzatuvga olish, ogohlantirish va avariya hisobotlari."
+      },
+      "virtualization": {
+        "name": "Virtualizatsiya va zaxira nusxalar",
+        "description": "Proxmox VE'da virtual serverlar, TrueNAS, RAID va avariyadan tiklash."
+      },
       "cabling": {
         "name": "SCS — strukturalashgan kabel tizimlari",
         "description": "Bino kabel tizimini loyihalash, montaj, krimplash va test bilan topshirish — ISO/IEC 11801 va TIA-568 bo'yicha."
@@ -583,9 +591,17 @@
         "title": "Optika va SKS",
         "description": "Optik tola va patch-kordlar bilan ishlab, SFP modul hamda GPON uskunalarini ulaysiz."
       },
+      "fiberTools": {
+        "title": "Optik o'lchov asboblari",
+        "description": "Optik liniyadagi yo'qotishni o'lchaysiz, tolani payvandlaysiz va nosozlik joyini aniqlaysiz."
+      },
       "servers": {
         "title": "Serverlar",
-        "description": "Linux serverlarni noldan o'rnatib, xizmatlarni ishga tushirasiz."
+        "description": "Linux serverlarni o'rnatib, virtual mashinalar va fayl xizmatlarini ishga tushirasiz."
+      },
+      "monitoring": {
+        "title": "Monitoring va avtomatlashtirish",
+        "description": "Qurilmalarni kuzatuvga olasiz, ogohlantirishlarni sozlaysiz va ishlarni avtomatlashtirasiz."
       },
       "cctv": {
         "title": "Video nazorat",

@@ -8,6 +8,8 @@ import {
   Cable,
   RadioTower,
   BrainCircuit,
+  Gauge,
+  Activity,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -51,10 +53,22 @@ export const LAB_CATEGORIES: LabCategory[] = [
     glow: 'green',
   },
   {
+    key: 'fiberTools',
+    icon: Gauge,
+    items: ['OTDR', 'Optical Power Meter', 'Payvandlash apparati', 'Kabel tester'],
+    glow: 'cyan',
+  },
+  {
     key: 'servers',
     icon: Server,
-    items: ['NAS', 'RAID', 'NTP', 'Ubuntu Server', 'Docker'],
-    glow: 'cyan',
+    items: ['Proxmox VE', 'TrueNAS', 'NAS', 'RAID', 'NTP', 'Ubuntu Server'],
+    glow: 'blue',
+  },
+  {
+    key: 'monitoring',
+    icon: Activity,
+    items: ['Zabbix', 'Wazuh', 'Ansible', 'Docker'],
+    glow: 'green',
   },
   {
     key: 'cctv',
