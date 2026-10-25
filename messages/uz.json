@@ -12,7 +12,8 @@
     "faq": "Savol-javob",
     "contact": "Aloqa",
     "cta": "Ro'yxatdan o'tish",
-    "path": "Yo'nalishlar"
+    "path": "Yo'nalishlar",
+    "projects": "Loyihalar"
   },
   "Hero": {
     "badge": "Samarqand IT o'quv markazi — yangi guruhlarga qabul ochiq",
@@ -103,9 +104,17 @@
         "name": "Windows Server va Active Directory",
         "description": "Domen, foydalanuvchilar, GPO va korporativ xizmatlarni boshqarish."
       },
+      "noc": {
+        "name": "Tarmoq monitoringi va NOC",
+        "description": "Zabbix bilan qurilmalarni kuzatuvga olish, ogohlantirish va avariya hisobotlari."
+      },
+      "virtualization": {
+        "name": "Virtualizatsiya va zaxira nusxalar",
+        "description": "Proxmox VE'da virtual serverlar, TrueNAS, RAID va avariyadan tiklash."
+      },
       "cabling": {
         "name": "SCS — strukturalashgan kabel tizimlari",
-        "description": "Bino kabel tizimini loyihalash, montaj, krimplash va test bilan topshirish — ISO/IEC 11801 va TIA-568 bo'yicha."
+        "description": "Bino kabel tizimi: mis va optika, krimplash, payvandlash, OTDR bilan o'lchash va hujjat bilan topshirish — ISO/IEC 11801 va TIA-568 bo'yicha."
       },
       "aicoding": {
         "name": "AI bilan dasturlash: Claude Code va Codex",
@@ -443,6 +452,109 @@
         "aiAssistant": "AI yordamchisi / kontent tayyorlovchi",
         "entrepreneur": "Biznesda AI qo'llovchi tadbirkor"
       }
+    },
+    "cabling": {
+      "tagline": "Bino kabel tizimini loyihalashdan topshirishgacha: mis va optika, krimplash, payvandlash, OTDR bilan o'lchash va hujjatlashtirish.",
+      "modules": {
+        "standards": "Standartlar va loyihalash: ISO/IEC 11801 va TIA-568",
+        "copper": "Mis kabel: kategoriyalar, UTP/FTP va T568A/B tartibi",
+        "termination": "Ulash: patch panel, keystone va kabel kanal montaji",
+        "testing": "Mis liniyani tester bilan sinash va sertifikatlash",
+        "fiber": "Optik tola: turlari, konnektorlar va patch-kordlar",
+        "splicing": "Tolani payvandlash: kesish, payvandlash va himoya qilish",
+        "measure": "Optik o'lchov: OTDR va Optical Power Meter, yo'qotish budjeti",
+        "gpon": "GPON liniyasi va obyektni hujjat bilan topshirish"
+      },
+      "outcomes": {
+        "design": "Bino uchun kabel tizimini standart bo'yicha loyihalash",
+        "install": "Trassa, lotok va kabel kanalni to'g'ri montaj qilish",
+        "terminate": "Mis kabelni krimplash va patch panelga ulash",
+        "test": "Liniyani sinab, natijani hujjatlashtirish",
+        "fiber": "Optik tolani payvandlash va OTDR bilan o'lchash",
+        "document": "Obyektni sxema va sinov natijalari bilan topshirish"
+      },
+      "audience": {
+        "installer": "Montajchilar va kabel ishchilari",
+        "electrician": "Elektrik va qurilish mutaxassislari",
+        "netAdmin": "Tarmoq administratorlari"
+      },
+      "requirements": {
+        "none": "Oldindan tayyorgarlik shart emas",
+        "hands": "Qo'l mehnatiga tayyorlik"
+      },
+      "roles": {
+        "cablingTech": "SKS montajchisi",
+        "fiberTech": "Optik tola mutaxassisi",
+        "installer": "Telekom montaj ustasi"
+      }
+    },
+    "noc": {
+      "tagline": "Tarmoqni kuzatuvga olish: Zabbix, SNMP va Syslog bilan nazorat, Wireshark bilan diagnostika, avariyani hujjatlashtirish.",
+      "modules": {
+        "basics": "Monitoring asoslari: nimani o'lchash kerak va SLA",
+        "snmp": "SNMP: v2c va v3, OID hamda MIB bilan ishlash",
+        "zabbix": "Zabbix: server, agent va shablonlar",
+        "alerts": "Ogohlantirish: trigger, eskalatsiya va Telegram xabarnomasi",
+        "syslog": "Syslog va jurnal tahlili, Wazuh bilan tanishuv",
+        "inventory": "NetBox: qurilmalar inventarizatsiyasi va IPAM",
+        "capture": "Wireshark: paketni ushlash va kechikishni tahlil qilish",
+        "incident": "Avariya boshqaruvi: hisobot va sabablarni tahlil qilish"
+      },
+      "outcomes": {
+        "monitor": "Tarmoq qurilmalarini kuzatuvga olib, panel yig'ish",
+        "alert": "Ortiqcha shovqinsiz ogohlantirish qoidalarini sozlash",
+        "diagnose": "Nosozlik sababini paket darajasida topish",
+        "document": "Tarmoqni NetBox'da hujjatlashtirish",
+        "report": "Avariya bo'yicha tushunarli hisobot tayyorlash"
+      },
+      "audience": {
+        "netAdmin": "Tarmoq administratorlari",
+        "support": "Texnik yordam xodimlari",
+        "sysadmin": "Tizim administratorlari"
+      },
+      "requirements": {
+        "networkBasics": "Tarmoq asoslari: IP va VLAN",
+        "linuxBasics": "Linux bilan boshlang'ich ishlash"
+      },
+      "roles": {
+        "nocEngineer": "NOC muhandisi",
+        "monitoringAdmin": "Monitoring administratori",
+        "support": "2-darajali texnik yordam"
+      }
+    },
+    "virtualization": {
+      "tagline": "Proxmox VE'da virtual serverlar, TrueNAS va RAID'da xotira, hamda tiklanishi tekshirilgan zaxira nusxa.",
+      "modules": {
+        "basics": "Virtualizatsiya asoslari: gipervizor, KVM va LXC",
+        "proxmox": "Proxmox VE: o'rnatish, virtual mashina va shablonlar",
+        "storage": "Xotira: RAID darajalari, ZFS va TrueNAS",
+        "network": "Virtual tarmoq: bridge, VLAN va firewall",
+        "backup": "Zaxira nusxa strategiyasi: 3-2-1, jadval va saqlash muddati",
+        "restore": "Tiklash: snapshot, to'liq tiklash va uni sinab ko'rish",
+        "cluster": "Klaster, migratsiya va uzluksizlik (HA)",
+        "operate": "Kundalik xizmat: monitoring, yangilash va hujjat"
+      },
+      "outcomes": {
+        "deploy": "Proxmox VE'ni o'rnatib, virtual serverlarni ishga tushirish",
+        "storage": "RAID va TrueNAS asosida ishonchli xotira qurish",
+        "backup": "Avtomatik zaxira nusxa jadvalini sozlash",
+        "restore": "Tiklashni sinab, uning ishlashiga ishonch hosil qilish",
+        "plan": "Avariyadan tiklash rejasini tuzish"
+      },
+      "audience": {
+        "sysadmin": "Tizim administratorlari",
+        "netAdmin": "Tarmoq administratorlari",
+        "itManager": "IT bo'lim rahbarlari"
+      },
+      "requirements": {
+        "linuxBasics": "Linux bilan boshlang'ich ishlash",
+        "networkBasics": "Tarmoq asoslari: IP va VLAN"
+      },
+      "roles": {
+        "sysadmin": "Tizim administratori",
+        "infraEngineer": "Infratuzilma muhandisi",
+        "backupAdmin": "Zaxira va tiklash bo'yicha mutaxassis"
+      }
     }
   },
   "Tracks": {
@@ -578,13 +690,29 @@
         "title": "Tarmoq uskunalari",
         "description": "Router va kommutatorlarni qo'lda ulab, sozlab, nosozligini topasiz."
       },
+      "optics": {
+        "title": "Optika va SKS",
+        "description": "Optik tola va patch-kordlar bilan ishlab, SFP modul hamda GPON uskunalarini ulaysiz."
+      },
+      "fiberTools": {
+        "title": "Optik o'lchov asboblari",
+        "description": "Optik liniyadagi yo'qotishni o'lchaysiz, tolani payvandlaysiz va nosozlik joyini aniqlaysiz."
+      },
       "servers": {
         "title": "Serverlar",
-        "description": "Linux serverlarni noldan o'rnatib, xizmatlarni ishga tushirasiz."
+        "description": "Linux serverlarni o'rnatib, virtual mashinalar va fayl xizmatlarini ishga tushirasiz."
+      },
+      "monitoring": {
+        "title": "Monitoring va avtomatlashtirish",
+        "description": "Qurilmalarni kuzatuvga olasiz, ogohlantirishlarni sozlaysiz va ishlarni avtomatlashtirasiz."
       },
       "cctv": {
         "title": "Video nazorat",
         "description": "IP kameralarni ulab, NVR va yozuv jadvalini sozlaysiz."
+      },
+      "wireless": {
+        "title": "Radio va Wi-Fi",
+        "description": "Wi-Fi nuqtalarini sozlaysiz va radio aloqa vositalari bilan ishlaysiz."
       },
       "telephony": {
         "title": "IP-telefoniya",
@@ -594,9 +722,78 @@
         "title": "IoT stendi",
         "description": "Sensor va relelarni ulab, aqlli uy ssenariylarini yig'asiz."
       },
+      "ai": {
+        "title": "AI asboblari",
+        "description": "Claude va ChatGPT bilan ishlaysiz: so'rov yozish, kod va hujjat tayyorlash."
+      },
       "workstations": {
         "title": "Ish stantsiyalari",
         "description": "Har bir o'quvchi uchun alohida kompyuter — o'z noutbukingiz shart emas."
+      }
+    }
+  },
+  "Projects": {
+    "eyebrow": "Amaliy loyihalar",
+    "title": "O'rganib nima quraysiz?",
+    "subtitle": "Har bir loyiha bir nechta kursni birlashtiradi va laboratoriyadagi haqiqiy uskunalarda bajariladi — bitiruv ishi sifatida.",
+    "tasksLabel": "Topshiriqlar",
+    "coursesLabel": "Tayanch kurslar",
+    "resultLabel": "Natija",
+    "items": {
+      "office": {
+        "title": "Korporativ ofis tarmog'i",
+        "description": "Kichik ofis tarmog'ini noldan yig'asiz: qurilmalarni ulashdan tortib telefoniya va internetgacha.",
+        "tasks": [
+          "Router va kommutatorni ulab, tarmoqni VLAN'larga bo'lish",
+          "Wi-Fi nuqtasini sozlash va mehmon tarmog'ini ajratish",
+          "Firewall qoidalari bilan segmentlar orasidagi kirishni cheklash",
+          "Ichki raqamlar bilan IP-telefoniyani ishga tushirish"
+        ],
+        "result": "Ishlaydigan ofis tarmog'i: internet, Wi-Fi, telefoniya va ajratilgan segmentlar"
+      },
+      "cctv": {
+        "title": "Video nazorat tizimi",
+        "description": "Obyektni video nazoratga olasiz: kameralarni joylashtirishdan masofaviy ko'rishgacha.",
+        "tasks": [
+          "Kameralarni PoE kommutator orqali ulash va joylashtirish",
+          "NVR'da yozuv jadvali va arxiv muddatini sozlash",
+          "Harakatga reaksiya va ogohlantirishlarni yoqish",
+          "Masofaviy ko'rishni xavfsiz sozlash"
+        ],
+        "result": "Arxivi saqlanadigan va telefondan ko'riladigan nazorat tizimi"
+      },
+      "datacenter": {
+        "title": "Server infratuzilmasi",
+        "description": "Tashkilot uchun server xizmatlarini qurasiz va ma'lumotlarni yo'qotishdan himoyalaysiz.",
+        "tasks": [
+          "Linux serverni o'rnatib, xizmatlarni ishga tushirish",
+          "DNS va DHCP'ni tarmoqqa sozlash",
+          "NAS va RAID asosida fayl serverini qurish",
+          "Zaxira nusxa olish va uni tiklab tekshirish"
+        ],
+        "result": "Fayl, DNS va DHCP xizmatlari hamda tiklanishi tekshirilgan zaxira nusxa"
+      },
+      "fiber": {
+        "title": "Optik liniya",
+        "description": "Optik trassani loyihalashdan o'lchangan va hujjatlashtirilgan liniyani topshirishgacha.",
+        "tasks": [
+          "Optik trassani loyihalash va tolani tortish",
+          "Tolani payvandlab, ulanish joyini himoyalash",
+          "OTDR va power meter bilan yo'qotishni o'lchash",
+          "GPON liniyasini ulab, hujjat bilan topshirish"
+        ],
+        "result": "O'lchangan, sinovdan o'tgan va hujjatlashtirilgan optik liniya"
+      },
+      "smarthome": {
+        "title": "Aqlli uy stendi",
+        "description": "Sensorlar orqali boshqariladigan aqlli uy ssenariylarini yig'asiz va ularni tarmoqqa ulaysiz.",
+        "tasks": [
+          "ESP32 va sensorlarni ulab, ma'lumot olish",
+          "Ma'lumotni serverga yuborish va saqlash",
+          "Ssenariy yozish: harorat, harakat va yoritish",
+          "Telefondan boshqarishni sozlash"
+        ],
+        "result": "Telefondan boshqariladigan, ma'lumotini serverga yozadigan aqlli uy stendi"
       }
     }
   },
@@ -666,6 +863,10 @@
       "format": {
         "q": "Darslar qanday formatda o'tadi?",
         "a": "Darslar Samarqanddagi markazimizda (Dahbed ko'chasi 11) jonli o'tadi. Har bir mavzu haqiqiy uskunalarda amaliy laboratoriya ishi bilan mustahkamlanadi."
+      },
+      "schedule": {
+        "q": "Darslar haftada necha marta bo'ladi?",
+        "a": "Haftada 3 marta, har biri 2 soatdan — oyiga 12 ta dars, ya'ni 24 soat. Kunduzgi va kechki guruhlar bor, aniq vaqtni guruh to'planishida kelishamiz."
       },
       "certificate": {
         "q": "Kurs yakunida sertifikat beriladimi?",

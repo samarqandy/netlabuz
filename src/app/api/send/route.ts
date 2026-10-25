@@ -16,6 +16,8 @@ const COURSE_NAMES: Record<string, string> = {
   cybersecurity: '🔐 Kiberxavfsizlik (tez orada)',
   devops: '⚙️ DevOps va konteynerlar (tez orada)',
   windows: '🖥 Windows Server va Active Directory (tez orada)',
+  noc: '📊 Tarmoq monitoringi va NOC (tez orada)',
+  virtualization: '🧱 Virtualizatsiya va zaxira nusxalar (tez orada)',
   cabling: '🔌 SCS — strukturalashgan kabel tizimlari (tez orada)',
   aicoding: '🤖 AI bilan dasturlash — Claude Code / Codex',
   aiops: '🧠 IT mutaxassisi uchun AI',

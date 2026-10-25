@@ -5,17 +5,27 @@ import {
   PhoneCall,
   CircuitBoard,
   MonitorSmartphone,
+  Cable,
+  RadioTower,
+  BrainCircuit,
+  Gauge,
+  Activity,
   type LucideIcon,
 } from 'lucide-react';
 
 /* =========================================================================
  * Laboratoriya — markazdagi uskunalar.
  *
- * ⚠️ MUHIM: bu yerda FAQAT kurslarda haqiqatan ishlatiladigan texnologiyalar
- * sanab o'tilgan. Aniq modellar va SONLAR ataylab yozilmagan — ularni
- * tasdiqlangan holda o'zingiz qo'shing (masalan 'Cisco 2911' yoki '8 ta
- * RouterBOARD'). Tasdiqlanmagan raqam yozmang: raqobatchilar aynan shu
- * tafsilot bilan ishonch qozonadi, noto'g'risi esa teskari ishlaydi.
+ * ⚠️ MUHIM: bu yerda FAQAT markazda haqiqatan bor uskunalar sanab o'tilgan.
+ * Ro'yxat egasi tomonidan tasdiqlangan (2026-10).
+ *
+ * Aniq MODELLAR va SONLAR ataylab yozilmagan — ularni tasdiqlangan holda
+ * o'zingiz qo'shing (masalan 'Cisco 2911' yoki '8 ta RouterBOARD'). Model
+ * qo'shilsa ishonch kuchayadi, noto'g'ri raqam esa teskari ishlaydi.
+ *
+ * Brend nomlari faqat "bizda shu uskuna bor" degan ma'noda. Vakillik,
+ * sheriklik yoki akademiya maqomi DA'VO QILINMAYDI — logotip qo'ymang va
+ * "rasmiy" so'zini yozmang.
  *
  * Matnlar: messages/{uz,ru,en}.json -> Lab
  * ========================================================================= */
@@ -33,31 +43,61 @@ export const LAB_CATEGORIES: LabCategory[] = [
   {
     key: 'network',
     icon: Router,
-    items: ['Cisco', 'MikroTik', 'Switch', 'Patch panel'],
+    items: ['Cisco', 'Huawei', 'MikroTik', 'Fortigate', 'NTP', 'Konsol (COM)'],
     glow: 'blue',
+  },
+  {
+    key: 'optics',
+    icon: Cable,
+    items: ['Optik tola', 'GPON', 'SFP modul', 'Patch-kord', 'Patch panel'],
+    glow: 'green',
+  },
+  {
+    key: 'fiberTools',
+    icon: Gauge,
+    items: ['OTDR', 'Optical Power Meter', 'Payvandlash apparati', 'Kabel tester'],
+    glow: 'cyan',
   },
   {
     key: 'servers',
     icon: Server,
-    items: ['Ubuntu Server', 'Docker', 'Nginx'],
+    items: ['Proxmox VE', 'KVM', 'TrueNAS', 'FreeIPA', 'NAS', 'RAID', 'Ubuntu Server'],
+    glow: 'blue',
+  },
+  {
+    key: 'monitoring',
+    icon: Activity,
+    items: ['Zabbix', 'SNMP', 'Syslog', 'NetBox', 'Wireshark', 'Wazuh', 'Ansible'],
     glow: 'green',
   },
   {
     key: 'cctv',
     icon: Cctv,
-    items: ['IP kamera', 'NVR', 'PoE switch'],
-    glow: 'cyan',
+    items: ['Hikvision', 'Dahua', 'IP kamera', 'NVR', 'PoE switch'],
+    glow: 'blue',
+  },
+  {
+    key: 'wireless',
+    icon: RadioTower,
+    items: ['Wi-Fi', 'Radio aloqa'],
+    glow: 'green',
   },
   {
     key: 'telephony',
     icon: PhoneCall,
     items: ['Asterisk', 'FreePBX', 'SIP'],
-    glow: 'blue',
+    glow: 'cyan',
   },
   {
     key: 'iot',
     icon: CircuitBoard,
     items: ['Arduino', 'ESP32', 'Raspberry Pi', 'Sensor'],
+    glow: 'blue',
+  },
+  {
+    key: 'ai',
+    icon: BrainCircuit,
+    items: ['Claude', 'ChatGPT'],
     glow: 'green',
   },
   {

@@ -12,7 +12,8 @@
     "faq": "FAQ",
     "contact": "Contact",
     "cta": "Enroll now",
-    "path": "Paths"
+    "path": "Paths",
+    "projects": "Projects"
   },
   "Hero": {
     "badge": "IT training center in Samarkand — enrollment open",
@@ -103,9 +104,17 @@
         "name": "Windows Server & Active Directory",
         "description": "Domains, users, group policies and core enterprise services."
       },
+      "noc": {
+        "name": "Network monitoring and NOC",
+        "description": "Monitor devices with Zabbix, configure alerts and write incident reports."
+      },
+      "virtualization": {
+        "name": "Virtualisation and backups",
+        "description": "Virtual servers on Proxmox VE, TrueNAS, RAID and disaster recovery."
+      },
       "cabling": {
         "name": "SCS — structured cabling systems",
-        "description": "Designing, installing, terminating and certifying a building's cabling system to ISO/IEC 11801 and TIA-568."
+        "description": "A building's cabling system: copper and fibre, crimping, splicing, OTDR measurement and a documented handover — to ISO/IEC 11801 and TIA-568."
       },
       "aicoding": {
         "name": "Building with AI: Claude Code and Codex",
@@ -443,6 +452,109 @@
         "aiAssistant": "AI assistant / content production",
         "entrepreneur": "Entrepreneur applying AI in business"
       }
+    },
+    "cabling": {
+      "tagline": "A building's cabling system from design to handover: copper and fibre, crimping, splicing, OTDR measurement and documentation.",
+      "modules": {
+        "standards": "Standards and design: ISO/IEC 11801 and TIA-568",
+        "copper": "Copper cable: categories, UTP/FTP and the T568A/B order",
+        "termination": "Termination: patch panel, keystone and trunking",
+        "testing": "Testing a copper link and certifying it",
+        "fiber": "Optical fibre: types, connectors and patch cords",
+        "splicing": "Fibre splicing: cleaving, fusion and protection",
+        "measure": "Optical measurement: OTDR, power meter and the loss budget",
+        "gpon": "A GPON line and handing the site over with documentation"
+      },
+      "outcomes": {
+        "design": "Design a building's cabling system to standard",
+        "install": "Install the route, tray and trunking correctly",
+        "terminate": "Crimp copper cable and land it on a patch panel",
+        "test": "Test a link and document the result",
+        "fiber": "Splice optical fibre and measure the line with an OTDR",
+        "document": "Hand a site over with drawings and test results"
+      },
+      "audience": {
+        "installer": "Installers and cabling technicians",
+        "electrician": "Electricians and construction specialists",
+        "netAdmin": "Network administrators"
+      },
+      "requirements": {
+        "none": "No prior preparation required",
+        "hands": "Readiness for hands-on work"
+      },
+      "roles": {
+        "cablingTech": "Structured cabling installer",
+        "fiberTech": "Fibre optic technician",
+        "installer": "Telecom installation specialist"
+      }
+    },
+    "noc": {
+      "tagline": "Put a network under watch: monitoring with Zabbix, SNMP and Syslog, diagnosis in Wireshark, and documented incidents.",
+      "modules": {
+        "basics": "Monitoring basics: what to measure, and what an SLA is",
+        "snmp": "SNMP: v2c and v3, working with OIDs and MIBs",
+        "zabbix": "Zabbix: server, agent and templates",
+        "alerts": "Alerting: triggers, escalation and Telegram notifications",
+        "syslog": "Syslog and log analysis, an introduction to Wazuh",
+        "inventory": "NetBox: device inventory and IPAM",
+        "capture": "Wireshark: capturing packets and analysing latency",
+        "incident": "Incident handling: the report and the root cause"
+      },
+      "outcomes": {
+        "monitor": "Put network devices under monitoring and build a dashboard",
+        "alert": "Configure alerting without the noise",
+        "diagnose": "Find the cause of a fault at the packet level",
+        "document": "Document the network in NetBox",
+        "report": "Write a readable incident report"
+      },
+      "audience": {
+        "netAdmin": "Network administrators",
+        "support": "Technical support staff",
+        "sysadmin": "System administrators"
+      },
+      "requirements": {
+        "networkBasics": "Networking basics: IP and VLAN",
+        "linuxBasics": "Entry-level Linux skills"
+      },
+      "roles": {
+        "nocEngineer": "NOC engineer",
+        "monitoringAdmin": "Monitoring administrator",
+        "support": "Second-line technical support"
+      }
+    },
+    "virtualization": {
+      "tagline": "Virtual servers on Proxmox VE, storage on TrueNAS and RAID, and backups whose restore has actually been tested.",
+      "modules": {
+        "basics": "Virtualisation basics: the hypervisor, KVM and LXC",
+        "proxmox": "Proxmox VE: installation, virtual machines and templates",
+        "storage": "Storage: RAID levels, ZFS and TrueNAS",
+        "network": "Virtual networking: bridges, VLANs and the firewall",
+        "backup": "Backup strategy: 3-2-1, schedules and retention",
+        "restore": "Restore: snapshots, full recovery and testing it",
+        "cluster": "Clustering, migration and high availability",
+        "operate": "Day-to-day operation: monitoring, updates and documentation"
+      },
+      "outcomes": {
+        "deploy": "Install Proxmox VE and bring virtual servers up",
+        "storage": "Build reliable storage on RAID and TrueNAS",
+        "backup": "Configure an automated backup schedule",
+        "restore": "Test the restore and prove that it works",
+        "plan": "Write a disaster recovery plan"
+      },
+      "audience": {
+        "sysadmin": "System administrators",
+        "netAdmin": "Network administrators",
+        "itManager": "IT department managers"
+      },
+      "requirements": {
+        "linuxBasics": "Entry-level Linux skills",
+        "networkBasics": "Networking basics: IP and VLAN"
+      },
+      "roles": {
+        "sysadmin": "System administrator",
+        "infraEngineer": "Infrastructure engineer",
+        "backupAdmin": "Backup and recovery specialist"
+      }
     }
   },
   "Tracks": {
@@ -578,13 +690,29 @@
         "title": "Network equipment",
         "description": "Wire, configure and troubleshoot routers and switches with your own hands."
       },
+      "optics": {
+        "title": "Optics and structured cabling",
+        "description": "Work with fibre and patch cords, and connect SFP modules and GPON equipment."
+      },
+      "fiberTools": {
+        "title": "Optical test instruments",
+        "description": "Measure loss on a fibre line, splice fibre and locate a fault."
+      },
       "servers": {
         "title": "Servers",
-        "description": "Install Linux servers from scratch and bring services up."
+        "description": "Install Linux servers and bring up virtual machines and file services."
+      },
+      "monitoring": {
+        "title": "Monitoring and automation",
+        "description": "Put devices under monitoring, configure alerts and automate routine work."
       },
       "cctv": {
         "title": "Video surveillance",
         "description": "Connect IP cameras and configure the NVR and recording schedules."
+      },
+      "wireless": {
+        "title": "Radio and Wi-Fi",
+        "description": "Configure Wi-Fi access points and work with radio links."
       },
       "telephony": {
         "title": "IP telephony",
@@ -594,9 +722,78 @@
         "title": "IoT bench",
         "description": "Wire sensors and relays, and assemble smart home scenarios."
       },
+      "ai": {
+        "title": "AI tools",
+        "description": "Work with Claude and ChatGPT: prompting, code and documentation."
+      },
       "workstations": {
         "title": "Workstations",
         "description": "A separate computer for every student — your own laptop is optional."
+      }
+    }
+  },
+  "Projects": {
+    "eyebrow": "Hands-on projects",
+    "title": "What will you build?",
+    "subtitle": "Each project combines several courses and is built on the lab's real equipment — as a capstone.",
+    "tasksLabel": "Tasks",
+    "coursesLabel": "Courses it builds on",
+    "resultLabel": "Outcome",
+    "items": {
+      "office": {
+        "title": "Corporate office network",
+        "description": "Build a small office network from scratch: from wiring the devices to telephony and internet.",
+        "tasks": [
+          "Wire the router and switch, and split the network into VLANs",
+          "Configure the Wi-Fi access point and separate a guest network",
+          "Restrict access between segments with firewall rules",
+          "Bring up IP telephony with internal extensions"
+        ],
+        "result": "A working office network: internet, Wi-Fi, telephony and separated segments"
+      },
+      "cctv": {
+        "title": "Video surveillance system",
+        "description": "Put a site under video surveillance: from camera placement to remote viewing.",
+        "tasks": [
+          "Connect and place cameras through a PoE switch",
+          "Set the recording schedule and archive retention on the NVR",
+          "Enable motion detection and alerts",
+          "Configure remote viewing securely"
+        ],
+        "result": "A surveillance system with a stored archive, viewable from a phone"
+      },
+      "datacenter": {
+        "title": "Server infrastructure",
+        "description": "Build the server services an organisation runs on, and protect its data from loss.",
+        "tasks": [
+          "Install a Linux server and bring services up",
+          "Configure DNS and DHCP on the network",
+          "Build a file server on NAS and RAID",
+          "Take a backup and verify the restore"
+        ],
+        "result": "File, DNS and DHCP services plus a backup with a verified restore"
+      },
+      "fiber": {
+        "title": "Fibre optic line",
+        "description": "From designing the fibre route to handing over a measured, documented line.",
+        "tasks": [
+          "Design the fibre route and pull the cable",
+          "Splice the fibre and protect the joint",
+          "Measure loss with an OTDR and a power meter",
+          "Connect the GPON line and hand it over with documentation"
+        ],
+        "result": "A measured, tested and documented fibre line"
+      },
+      "smarthome": {
+        "title": "Smart home bench",
+        "description": "Assemble smart home scenarios driven by sensors and connect them to the network.",
+        "tasks": [
+          "Wire ESP32 and sensors, and read their data",
+          "Send and store the data on a server",
+          "Write scenarios: temperature, motion and lighting",
+          "Set up control from a phone"
+        ],
+        "result": "A working smart home bench controlled from a phone, logging data to a server"
       }
     }
   },
@@ -666,6 +863,10 @@
       "format": {
         "q": "What format are the classes in?",
         "a": "Classes are held in person at our center in Samarkand (11 Dahbed street). Every topic is reinforced with hands-on lab work on real equipment."
+      },
+      "schedule": {
+        "q": "How often are the classes?",
+        "a": "Three times a week, two hours each — 12 lessons a month, 24 hours in total. There are daytime and evening groups; the exact time is agreed when the group is formed."
       },
       "certificate": {
         "q": "Do I get a certificate at the end?",

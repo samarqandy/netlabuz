@@ -3,6 +3,7 @@
 export const FAQ_KEYS = [
   'experience',
   'format',
+  'schedule',
   'certificate',
   'price',
   'job',

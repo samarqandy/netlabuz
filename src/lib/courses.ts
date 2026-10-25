@@ -9,6 +9,8 @@ import {
   Container,
   Server,
   Cable,
+  Activity,
+  Layers,
   Bot,
   BrainCircuit,
   Sparkles,
@@ -30,6 +32,8 @@ export type CourseId =
   | 'cybersecurity'
   | 'devops'
   | 'windows'
+  | 'noc'
+  | 'virtualization'
   | 'cabling'
   | 'aicoding'
   | 'aiops'
@@ -193,6 +197,24 @@ export const COURSES: Course[] = [
     status: 'soon',
   },
   {
+    id: 'noc',
+    level: 'intermediate',
+    icon: Activity,
+    months: 3,
+    glow: 'green',
+    topics: ['Zabbix', 'SNMP', 'Wireshark', 'NetBox'],
+    priceFrom: 1_100_000,
+  },
+  {
+    id: 'virtualization',
+    level: 'intermediate',
+    icon: Layers,
+    months: 3,
+    glow: 'cyan',
+    topics: ['Proxmox VE', 'KVM', 'TrueNAS', 'Backup'],
+    priceFrom: 1_100_000,
+  },
+  {
     id: 'cabling',
     level: 'beginner',
     icon: Cable,
@@ -200,8 +222,8 @@ export const COURSES: Course[] = [
     months: 1,
     hours: 24,
     glow: 'cyan',
-    topics: ['SCS', 'UTP', 'Patch panel', 'Tester'],
-    status: 'soon',
+    topics: ['SCS', 'Optik tola', 'OTDR', 'GPON'],
+    priceFrom: 1_200_000,
   },
 
   /* ------------------------ AI yo'nalishi (qisqa) -----------------------
