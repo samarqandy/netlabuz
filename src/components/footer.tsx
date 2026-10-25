@@ -36,7 +36,9 @@ export function Footer() {
             <p className="mt-4 max-w-xs text-sm text-muted-foreground">
               {t('about')}
             </p>
-            <div className="mt-5 flex gap-2">
+            {/* Ikki kanal bir xil ikonka bilan yonma-yon turganda farqi
+                ko'rinmaydi — shuning uchun har birida @handle yoziladi. */}
+            <div className="mt-5 flex flex-wrap gap-2">
               {TELEGRAM_CHANNELS.map((ch) => (
                 <a
                   key={ch.href}
@@ -44,9 +46,10 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Telegram ${ch.label}`}
-                  className="grid size-10 place-items-center rounded-lg border border-border text-muted-foreground transition-colors hover:border-primary/50 hover:text-foreground"
+                  className="inline-flex h-10 items-center gap-2 rounded-lg border border-border px-3 font-mono text-xs text-muted-foreground transition-colors hover:border-primary/50 hover:text-foreground"
                 >
-                  <Send className="size-5" />
+                  <Send className="size-4 shrink-0" />
+                  {ch.label}
                 </a>
               ))}
             </div>
