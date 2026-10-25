@@ -19,6 +19,8 @@ const COURSE_NAMES: Record<string, string> = {
   noc: '📊 Tarmoq monitoringi va NOC (tez orada)',
   virtualization: '🧱 Virtualizatsiya va zaxira nusxalar (tez orada)',
   cabling: '🔌 SCS — strukturalashgan kabel tizimlari (tez orada)',
+  vision: '👁 Computer Vision va AI videoanalitika (tez orada)',
+  aiauto: '🔗 AI avtomatlashtirish — n8n (tez orada)',
   aicoding: '🤖 AI bilan dasturlash — Claude Code / Codex',
   aiops: '🧠 IT mutaxassisi uchun AI',
   aibasics: "✨ Sun'iy intellekt asoslari",

@@ -116,6 +116,14 @@
         "name": "SCS — strukturalashgan kabel tizimlari",
         "description": "Bino kabel tizimi: mis va optika, krimplash, payvandlash, OTDR bilan o'lchash va hujjat bilan topshirish — ISO/IEC 11801 va TIA-568 bo'yicha."
       },
+      "vision": {
+        "name": "Computer Vision va AI videoanalitika",
+        "description": "Kamera oqimida obyektni aniqlash: OpenCV va YOLO bilan video nazoratga AI qo'shish."
+      },
+      "aiauto": {
+        "name": "AI avtomatlashtirish (n8n)",
+        "description": "n8n va API orqali biznes jarayonlarini avtomatlashtirish: bot, CRM va hisobotlar."
+      },
       "aicoding": {
         "name": "AI bilan dasturlash: Claude Code va Codex",
         "description": "AI agentlari bilan real loyihada ishlash: kontekst, MCP, Git oqimi va kod sifatini nazorat qilish."

@@ -37,6 +37,19 @@ export interface LabCategory {
   /** Uskuna/texnologiya nomlari (til-neytral). Model qo'shsangiz shu yerga. */
   items: string[];
   glow: 'blue' | 'green' | 'cyan';
+  /**
+   * Karta tepasidagi surat — ixtiyoriy. Kiritilmasa karta avvalgidek,
+   * suratsiz chiqadi.
+   *
+   * ⚠️ FAQAT markazning O'Z laboratoriyasida olingan haqiqiy surat.
+   * Bo'limning sarlavhasi "Simulyatorda emas — haqiqiy uskunalarda":
+   * boshqa joydan olingan yoki sun'iy intellekt chizgan rasm aynan shu
+   * da'voni yo'qqa chiqaradi.
+   *
+   * Suratni `public/lab/` ga qo'ying va yo'lini yozing: '/lab/network.jpg'.
+   * Tavsiya etilgan nisbat 16:9, eni kamida 960px.
+   */
+  photo?: string;
 }
 
 export const LAB_CATEGORIES: LabCategory[] = [
@@ -79,13 +92,13 @@ export const LAB_CATEGORIES: LabCategory[] = [
   {
     key: 'wireless',
     icon: RadioTower,
-    items: ['Wi-Fi', 'Radio aloqa'],
+    items: ['Ubiquiti', 'Wi-Fi', 'Radio aloqa'],
     glow: 'green',
   },
   {
     key: 'telephony',
     icon: PhoneCall,
-    items: ['Asterisk', 'FreePBX', 'SIP'],
+    items: ['Yeastar', 'Asterisk', 'FreePBX', 'SIP'],
     glow: 'cyan',
   },
   {

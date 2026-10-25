@@ -72,33 +72,54 @@ export function Lab() {
 
         {/* Uskuna guruhlari */}
         <StaggerGroup className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {LAB_CATEGORIES.map(({ key, icon: Icon, items, glow }) => (
+          {LAB_CATEGORIES.map(({ key, icon: Icon, items, glow, photo }) => (
             <StaggerItem key={key} className="h-full">
-              <GlowCard glow={glow} className="flex h-full flex-col">
-                <div
-                  className={cn(
-                    'grid size-12 place-items-center rounded-xl border border-border bg-secondary/40',
-                    GLOW_TEXT[glow]
-                  )}
-                >
-                  <Icon className="size-6" strokeWidth={1.75} />
+              <GlowCard
+                glow={glow}
+                className={cn(
+                  'flex h-full flex-col',
+                  // Surat kartaning chetigacha boradi, shuning uchun ichki
+                  // bo'shliq pastdagi blokka ko'chadi
+                  photo && 'overflow-hidden p-0'
+                )}
+              >
+                {photo && (
+                  <div className="relative aspect-[16/9] w-full border-b border-border/60">
+                    <Image
+                      src={photo}
+                      alt={t(`categories.${key}.title`)}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                      className="object-cover"
+                    />
+                  </div>
+                )}
+                <div className={cn('flex flex-1 flex-col', photo && 'p-6')}>
+                  <div
+                    className={cn(
+                      'grid size-12 place-items-center rounded-xl border border-border bg-secondary/40',
+                      GLOW_TEXT[glow]
+                    )}
+                  >
+                    <Icon className="size-6" strokeWidth={1.75} />
+                  </div>
+                  <h3 className="mt-4 text-lg font-bold tracking-tight">
+                    {t(`categories.${key}.title`)}
+                  </h3>
+                  <p className="mt-2 flex-1 text-sm text-muted-foreground">
+                    {t(`categories.${key}.description`)}
+                  </p>
+                  <ul className="mt-4 flex flex-wrap gap-1.5">
+                    {items.map((item) => (
+                      <li
+                        key={item}
+                        className="rounded-md border border-border/60 bg-secondary/40 px-2 py-0.5 font-mono text-xs text-muted-foreground"
+                      >
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h3 className="mt-4 text-lg font-bold tracking-tight">
-                  {t(`categories.${key}.title`)}
-                </h3>
-                <p className="mt-2 flex-1 text-sm text-muted-foreground">
-                  {t(`categories.${key}.description`)}
-                </p>
-                <ul className="mt-4 flex flex-wrap gap-1.5">
-                  {items.map((item) => (
-                    <li
-                      key={item}
-                      className="rounded-md border border-border/60 bg-secondary/40 px-2 py-0.5 font-mono text-xs text-muted-foreground"
-                    >
-                      {item}
-                    </li>
-                  ))}
-                </ul>
               </GlowCard>
             </StaggerItem>
           ))}

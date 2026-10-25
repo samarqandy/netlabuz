@@ -11,6 +11,8 @@ import {
   Cable,
   Activity,
   Layers,
+  ScanEye,
+  Workflow,
   Bot,
   BrainCircuit,
   Sparkles,
@@ -35,6 +37,8 @@ export type CourseId =
   | 'noc'
   | 'virtualization'
   | 'cabling'
+  | 'vision'
+  | 'aiauto'
   | 'aicoding'
   | 'aiops'
   | 'aibasics';
@@ -224,6 +228,26 @@ export const COURSES: Course[] = [
     glow: 'cyan',
     topics: ['SCS', 'Optik tola', 'OTDR', 'GPON'],
     priceFrom: 1_200_000,
+  },
+
+  {
+    id: 'vision',
+    level: 'advanced',
+    icon: ScanEye,
+    months: 3,
+    glow: 'cyan',
+    topics: ['OpenCV', 'YOLO', 'AI CCTV', 'Edge AI'],
+    status: 'soon',
+  },
+  {
+    id: 'aiauto',
+    level: 'intermediate',
+    icon: Workflow,
+    kind: 'skill',
+    months: 1,
+    glow: 'green',
+    topics: ['n8n', 'API', 'Telegram bot', 'CRM'],
+    status: 'soon',
   },
 
   /* ------------------------ AI yo'nalishi (qisqa) -----------------------
