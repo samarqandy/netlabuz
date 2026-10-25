@@ -29,7 +29,7 @@
       "linux administrator",
       "voip mutaxassisi",
       "cctv mutaxassisi",
-      "iot ishqibozi"
+      "iot mutaxassisi"
     ],
     "stats": {
       "graduates": "Bitiruvchi",
@@ -81,7 +81,7 @@
         "description": "VoIP, Asterisk, FreePBX, SIP protokoli va korporativ telefon tizimlarini sozlash."
       },
       "security": {
-        "name": "Xavfsizlik & video nazorat",
+        "name": "Xavfsizlik va video nazorat",
         "description": "CCTV o'rnatish va sozlash. IP kameralar, DVR/NVR va monitoring tizimlari."
       },
       "linux": {
@@ -89,7 +89,7 @@
         "description": "Server boshqaruvi, shell scripting, Docker va DevOps amaliyotlari."
       },
       "iot": {
-        "name": "Aqlli uy & IoT",
+        "name": "Aqlli uy va IoT",
         "description": "Smart home, Arduino, Raspberry Pi, sensorlar va avtomatlashtirish."
       },
       "cybersecurity": {
@@ -336,7 +336,7 @@
         "arduino": "Arduino va ESP32 dasturlash",
         "raspberry": "Raspberry Pi — uy serveri",
         "protocols": "IoT protokollari: MQTT, Zigbee, Matter",
-        "homeassistant": "Home Assistant va avtomatizatsiya",
+        "homeassistant": "Home Assistant va avtomatlashtirish",
         "project": "Yakuniy loyiha: aqlli uy tizimi"
       },
       "outcomes": {
@@ -735,14 +735,14 @@
         "description": "Claude va ChatGPT bilan ishlaysiz: so'rov yozish, kod va hujjat tayyorlash."
       },
       "workstations": {
-        "title": "Ish stantsiyalari",
+        "title": "Ish stansiyalari",
         "description": "Har bir o'quvchi uchun alohida kompyuter — o'z noutbukingiz shart emas."
       }
     }
   },
   "Projects": {
     "eyebrow": "Amaliy loyihalar",
-    "title": "O'rganib nima quraysiz?",
+    "title": "O'rganib nima qurasiz?",
     "subtitle": "Har bir loyiha bir nechta kursni birlashtiradi va laboratoriyadagi haqiqiy uskunalarda bajariladi — bitiruv ishi sifatida.",
     "tasksLabel": "Topshiriqlar",
     "coursesLabel": "Tayanch kurslar",
@@ -808,7 +808,7 @@
   "Stats": {
     "eyebrow": "Natijalar",
     "title": "Raqamlarda NETLAB",
-    "subtitle": "Yillar davomidagi natijalarimiz va ishonchimiz.",
+    "subtitle": "Bugungi holat: bitiruvchilar, yo'nalishlar va amaliyot ulushi.",
     "graduates": "Bitiruvchilar",
     "experience": "Yillik tajriba",
     "practice": "Amaliy mashg'ulot",
@@ -920,7 +920,7 @@
     "again": "Yana yuborish",
     "errorText": "Xatolik yuz berdi. Iltimos, qaytadan urinib ko'ring yoki qo'ng'iroq qiling.",
     "nameError": "Ismni kiriting (kamida 2 harf).",
-    "phoneError": "To'g'ri telefon kiriting: +998XXXXXXXXX",
+    "phoneError": "To'g'ri telefon raqamini kiriting: +998XXXXXXXXX",
     "courseError": "Kursni tanlang.",
     "infoPhone": "Telefon",
     "infoAddress": "Manzil",

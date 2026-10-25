@@ -29,7 +29,7 @@
       "linux administrator",
       "voip specialist",
       "cctv specialist",
-      "iot enthusiast"
+      "iot specialist"
     ],
     "stats": {
       "graduates": "Graduates",
@@ -94,7 +94,7 @@
       },
       "cybersecurity": {
         "name": "Cybersecurity",
-        "description": "Network defence: firewalls, VPN, IDS/IPS and the fundamentals of penetration testing."
+        "description": "Network defense: firewalls, VPN, IDS/IPS and the fundamentals of penetration testing."
       },
       "devops": {
         "name": "DevOps & Containers",
@@ -105,23 +105,23 @@
         "description": "Domains, users, group policies and core enterprise services."
       },
       "noc": {
-        "name": "Network monitoring and NOC",
+        "name": "Network Monitoring and NOC",
         "description": "Monitor devices with Zabbix, configure alerts and write incident reports."
       },
       "virtualization": {
-        "name": "Virtualisation and backups",
+        "name": "Virtualization and Backups",
         "description": "Virtual servers on Proxmox VE, TrueNAS, RAID and disaster recovery."
       },
       "cabling": {
-        "name": "SCS — structured cabling systems",
-        "description": "A building's cabling system: copper and fibre, crimping, splicing, OTDR measurement and a documented handover — to ISO/IEC 11801 and TIA-568."
+        "name": "SCS — Structured Cabling Systems",
+        "description": "A building's cabling system: copper and fiber, crimping, splicing, OTDR measurement and a documented handover — to ISO/IEC 11801 and TIA-568."
       },
       "vision": {
-        "name": "Computer vision and AI video analytics",
+        "name": "Computer Vision and AI Video Analytics",
         "description": "Detecting objects in a camera stream: adding AI to video surveillance with OpenCV and YOLO."
       },
       "aiauto": {
-        "name": "AI automation (n8n)",
+        "name": "AI Automation (n8n)",
         "description": "Automating business processes with n8n and APIs: bots, CRM and reports."
       },
       "aicoding": {
@@ -129,11 +129,11 @@
         "description": "Working with AI agents on a real project: context, MCP, the Git flow and keeping code quality under control."
       },
       "aiops": {
-        "name": "AI for IT specialists",
+        "name": "AI for IT Specialists",
         "description": "Log analysis, writing scripts and configs, documentation — speeding up everyday admin work with AI."
       },
       "aibasics": {
-        "name": "AI fundamentals",
+        "name": "AI Fundamentals",
         "description": "Working with ChatGPT and Claude, writing good prompts, and solving everyday tasks with text, spreadsheets and images."
       }
     }
@@ -462,14 +462,14 @@
       }
     },
     "cabling": {
-      "tagline": "A building's cabling system from design to handover: copper and fibre, crimping, splicing, OTDR measurement and documentation.",
+      "tagline": "A building's cabling system from design to handover: copper and fiber, crimping, splicing, OTDR measurement and documentation.",
       "modules": {
         "standards": "Standards and design: ISO/IEC 11801 and TIA-568",
         "copper": "Copper cable: categories, UTP/FTP and the T568A/B order",
         "termination": "Termination: patch panel, keystone and trunking",
         "testing": "Testing a copper link and certifying it",
-        "fiber": "Optical fibre: types, connectors and patch cords",
-        "splicing": "Fibre splicing: cleaving, fusion and protection",
+        "fiber": "Optical fiber: types, connectors and patch cords",
+        "splicing": "Fiber splicing: cleaving, fusion and protection",
         "measure": "Optical measurement: OTDR, power meter and the loss budget",
         "gpon": "A GPON line and handing the site over with documentation"
       },
@@ -478,7 +478,7 @@
         "install": "Install the route, tray and trunking correctly",
         "terminate": "Crimp copper cable and land it on a patch panel",
         "test": "Test a link and document the result",
-        "fiber": "Splice optical fibre and measure the line with an OTDR",
+        "fiber": "Splice optical fiber and measure the line with an OTDR",
         "document": "Hand a site over with drawings and test results"
       },
       "audience": {
@@ -492,7 +492,7 @@
       },
       "roles": {
         "cablingTech": "Structured cabling installer",
-        "fiberTech": "Fibre optic technician",
+        "fiberTech": "Fiber optic technician",
         "installer": "Telecom installation specialist"
       }
     },
@@ -533,7 +533,7 @@
     "virtualization": {
       "tagline": "Virtual servers on Proxmox VE, storage on TrueNAS and RAID, and backups whose restore has actually been tested.",
       "modules": {
-        "basics": "Virtualisation basics: the hypervisor, KVM and LXC",
+        "basics": "Virtualization basics: the hypervisor, KVM and LXC",
         "proxmox": "Proxmox VE: installation, virtual machines and templates",
         "storage": "Storage: RAID levels, ZFS and TrueNAS",
         "network": "Virtual networking: bridges, VLANs and the firewall",
@@ -700,11 +700,11 @@
       },
       "optics": {
         "title": "Optics and structured cabling",
-        "description": "Work with fibre and patch cords, and connect SFP modules and GPON equipment."
+        "description": "Work with fiber and patch cords, and connect SFP modules and GPON equipment."
       },
       "fiberTools": {
         "title": "Optical test instruments",
-        "description": "Measure loss on a fibre line, splice fibre and locate a fault."
+        "description": "Measure loss on a fiber line, splice fiber and locate a fault."
       },
       "servers": {
         "title": "Servers",
@@ -772,7 +772,7 @@
       },
       "datacenter": {
         "title": "Server infrastructure",
-        "description": "Build the server services an organisation runs on, and protect its data from loss.",
+        "description": "Build the server services an organization runs on, and protect its data from loss.",
         "tasks": [
           "Install a Linux server and bring services up",
           "Configure DNS and DHCP on the network",
@@ -782,15 +782,15 @@
         "result": "File, DNS and DHCP services plus a backup with a verified restore"
       },
       "fiber": {
-        "title": "Fibre optic line",
-        "description": "From designing the fibre route to handing over a measured, documented line.",
+        "title": "Fiber optic line",
+        "description": "From designing the fiber route to handing over a measured, documented line.",
         "tasks": [
-          "Design the fibre route and pull the cable",
-          "Splice the fibre and protect the joint",
+          "Design the fiber route and pull the cable",
+          "Splice the fiber and protect the joint",
           "Measure loss with an OTDR and a power meter",
           "Connect the GPON line and hand it over with documentation"
         ],
-        "result": "A measured, tested and documented fibre line"
+        "result": "A measured, tested and documented fiber line"
       },
       "smarthome": {
         "title": "Smart home bench",
@@ -808,7 +808,7 @@
   "Stats": {
     "eyebrow": "Results",
     "title": "NETLAB in numbers",
-    "subtitle": "Results and trust built over the years.",
+    "subtitle": "Where we stand today: graduates, tracks and the share of hands-on work.",
     "graduates": "Graduates",
     "experience": "Years of experience",
     "practice": "Hands-on classes",
@@ -870,7 +870,7 @@
       },
       "format": {
         "q": "What format are the classes in?",
-        "a": "Classes are held in person at our center in Samarkand (11 Dahbed street). Every topic is reinforced with hands-on lab work on real equipment."
+        "a": "Classes are held in person at our center in Samarkand (11 Dahbed Street). Every topic is reinforced with hands-on lab work on real equipment."
       },
       "schedule": {
         "q": "How often are the classes?",
@@ -924,7 +924,7 @@
     "courseError": "Select a course.",
     "infoPhone": "Phone",
     "infoAddress": "Address",
-    "address": "11 Dahbed street, Samarkand",
+    "address": "11 Dahbed Street, Samarkand",
     "mapCta": "Open in maps"
   },
   "Floating": {
@@ -947,7 +947,7 @@
     "navTitle": "Pages",
     "coursesTitle": "Courses",
     "contactTitle": "Contact",
-    "address": "11 Dahbed street, Samarkand",
+    "address": "11 Dahbed Street, Samarkand",
     "rights": "All rights reserved.",
     "tagline": "IT education in Samarkand",
     "founder": "Founder"
