@@ -1,0 +1,422 @@
+<Rive version="1" kind="fragment">
+    <!-- AVTOMATIK YARATILGAN — qo'lda tahrirlamang.
+         Manba: scripts/gen-rive-mark.mjs (geometriya logo.tsx bilan bir xil). -->
+    <Artboard defaultStateMachineId="0:7" styleId="0:5" width="963.9" height="585.05" name="netlab-mark" id="0:2">
+        <LayoutComponentStyle name="Artboard Style" id="0:5"/>
+        <!-- Fon yo'q: belgi shaffof fonda turadi -->
+
+        <Node x="481.95" y="11.55" name="row-1" id="0:40">
+            <Shape x="-470.4" y="0" name="dot">
+                <Ellipse width="23.1" height="23.1" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="-352.8" y="0" name="dot">
+                <Ellipse width="23.1" height="23.1" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="-235.2" y="0" name="dot">
+                <Ellipse width="23.1" height="23.1" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="-117.6" y="0" name="dot">
+                <Ellipse width="23.1" height="23.1" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="0" y="0" name="dot">
+                <Ellipse width="23.1" height="23.1" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="117.6" y="0" name="dot">
+                <Ellipse width="23.1" height="23.1" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="235.2" y="0" name="dot">
+                <Ellipse width="23.1" height="23.1" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="352.8" y="0" name="dot">
+                <Ellipse width="23.1" height="23.1" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="470.4" y="0" name="dot">
+                <Ellipse width="23.1" height="23.1" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+        </Node>
+        <Node x="481.95" y="39.25" name="row-2" id="0:41">
+            <Shape x="-411.6" y="0" name="dot">
+                <Ellipse width="25.8" height="25.8" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="-294" y="0" name="dot">
+                <Ellipse width="25.8" height="25.8" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="-176.4" y="0" name="dot">
+                <Ellipse width="25.8" height="25.8" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="-58.8" y="0" name="dot">
+                <Ellipse width="25.8" height="25.8" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="58.8" y="0" name="dot">
+                <Ellipse width="25.8" height="25.8" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="176.4" y="0" name="dot">
+                <Ellipse width="25.8" height="25.8" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="294" y="0" name="dot">
+                <Ellipse width="25.8" height="25.8" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="411.6" y="0" name="dot">
+                <Ellipse width="25.8" height="25.8" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+        </Node>
+        <Node x="481.95" y="72.55" name="row-3" id="0:42">
+            <Shape x="-352.8" y="0" name="dot">
+                <Ellipse width="32" height="32" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="-235.2" y="0" name="dot">
+                <Ellipse width="32" height="32" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="-117.6" y="0" name="dot">
+                <Ellipse width="32" height="32" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="0" y="0" name="dot">
+                <Ellipse width="32" height="32" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="117.6" y="0" name="dot">
+                <Ellipse width="32" height="32" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="235.2" y="0" name="dot">
+                <Ellipse width="32" height="32" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="352.8" y="0" name="dot">
+                <Ellipse width="32" height="32" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+        </Node>
+        <Node x="481.95" y="116.65" name="row-4" id="0:43">
+            <Shape x="-294" y="0" name="dot">
+                <Ellipse width="43.5" height="43.5" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="-176.4" y="0" name="dot">
+                <Ellipse width="43.5" height="43.5" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="-58.8" y="0" name="dot">
+                <Ellipse width="43.5" height="43.5" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="58.8" y="0" name="dot">
+                <Ellipse width="43.5" height="43.5" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="176.4" y="0" name="dot">
+                <Ellipse width="43.5" height="43.5" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="294" y="0" name="dot">
+                <Ellipse width="43.5" height="43.5" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+        </Node>
+        <Node x="481.95" y="170.75" name="row-5" id="0:44">
+            <Shape x="-235.2" y="0" name="dot">
+                <Ellipse width="52.8" height="52.8" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="-117.6" y="0" name="dot">
+                <Ellipse width="52.8" height="52.8" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="0" y="0" name="dot">
+                <Ellipse width="52.8" height="52.8" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="117.6" y="0" name="dot">
+                <Ellipse width="52.8" height="52.8" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="235.2" y="0" name="dot">
+                <Ellipse width="52.8" height="52.8" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+        </Node>
+        <Node x="481.95" y="234.85" name="row-6" id="0:45">
+            <Shape x="-176.4" y="0" name="dot">
+                <Ellipse width="62.5" height="62.5" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="-58.8" y="0" name="dot">
+                <Ellipse width="62.5" height="62.5" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="58.8" y="0" name="dot">
+                <Ellipse width="62.5" height="62.5" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="176.4" y="0" name="dot">
+                <Ellipse width="62.5" height="62.5" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+        </Node>
+        <Node x="481.95" y="313.65" name="row-7" id="0:46">
+            <Shape x="-117.6" y="0" name="dot">
+                <Ellipse width="77" height="77" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="0" y="0" name="dot">
+                <Ellipse width="77" height="77" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="117.6" y="0" name="dot">
+                <Ellipse width="77" height="77" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+        </Node>
+        <Node x="481.95" y="413.45" name="row-8" id="0:47">
+            <Shape x="-58.8" y="0" name="dot">
+                <Ellipse width="91.5" height="91.5" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+            <Shape x="58.8" y="0" name="dot">
+                <Ellipse width="91.5" height="91.5" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+        </Node>
+        <Node x="481.95" y="529.55" name="row-9" id="0:48">
+            <Shape x="0" y="0" name="dot">
+                <Ellipse width="111" height="111" name="Path"/>
+                <Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="Color"/></Fill>
+            </Shape>
+        </Node>
+
+        <CubicEaseInterpolator x1="0.16" y1="1" x2="0.3" y2="1" id="0:30"/>
+
+        <StateMachine name="mark" id="0:7">
+            <StateMachineLayer name="Layer 1" id="0:8">
+                <AnyState x="520" y="-120"/>
+                <ExitState x="720" y="-120"/>
+                <EntryState>
+                    <StateTransition stateToId="0:12"/>
+                </EntryState>
+                <AnimationState x="160" animationId="0:20" id="0:12">
+                    <!-- enableExitTime: shartsiz o'tish darhol ishga tushadi,
+                         shuning uchun intro tugashini kutish aniq aytiladi -->
+                    <StateTransition stateToId="0:13" enableExitTime="true" exitTime="800" duration="240"/>
+                </AnimationState>
+                <AnimationState x="340" animationId="0:21" id="0:13"/>
+            </StateMachineLayer>
+        </StateMachine>
+
+        <LinearAnimation fps="60" duration="48" name="intro" id="0:20">
+            <KeyedObject objectId="0:40">
+                <KeyedProperty propertyKey="18">
+                    <KeyFrameDouble frame="0" value="0" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="10" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+                <KeyedProperty propertyKey="16">
+                    <KeyFrameDouble frame="0" value="0.35" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="10" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17">
+                    <KeyFrameDouble frame="0" value="0.35" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="10" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:41">
+                <KeyedProperty propertyKey="18">
+                    <KeyFrameDouble frame="3" value="0" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="13" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+                <KeyedProperty propertyKey="16">
+                    <KeyFrameDouble frame="3" value="0.35" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="13" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17">
+                    <KeyFrameDouble frame="3" value="0.35" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="13" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:42">
+                <KeyedProperty propertyKey="18">
+                    <KeyFrameDouble frame="6" value="0" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="16" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+                <KeyedProperty propertyKey="16">
+                    <KeyFrameDouble frame="6" value="0.35" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="16" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17">
+                    <KeyFrameDouble frame="6" value="0.35" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="16" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:43">
+                <KeyedProperty propertyKey="18">
+                    <KeyFrameDouble frame="9" value="0" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="19" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+                <KeyedProperty propertyKey="16">
+                    <KeyFrameDouble frame="9" value="0.35" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="19" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17">
+                    <KeyFrameDouble frame="9" value="0.35" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="19" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:44">
+                <KeyedProperty propertyKey="18">
+                    <KeyFrameDouble frame="12" value="0" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="22" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+                <KeyedProperty propertyKey="16">
+                    <KeyFrameDouble frame="12" value="0.35" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="22" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17">
+                    <KeyFrameDouble frame="12" value="0.35" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="22" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:45">
+                <KeyedProperty propertyKey="18">
+                    <KeyFrameDouble frame="15" value="0" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="25" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+                <KeyedProperty propertyKey="16">
+                    <KeyFrameDouble frame="15" value="0.35" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="25" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17">
+                    <KeyFrameDouble frame="15" value="0.35" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="25" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:46">
+                <KeyedProperty propertyKey="18">
+                    <KeyFrameDouble frame="18" value="0" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="28" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+                <KeyedProperty propertyKey="16">
+                    <KeyFrameDouble frame="18" value="0.35" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="28" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17">
+                    <KeyFrameDouble frame="18" value="0.35" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="28" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:47">
+                <KeyedProperty propertyKey="18">
+                    <KeyFrameDouble frame="21" value="0" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="31" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+                <KeyedProperty propertyKey="16">
+                    <KeyFrameDouble frame="21" value="0.35" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="31" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17">
+                    <KeyFrameDouble frame="21" value="0.35" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="31" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:48">
+                <KeyedProperty propertyKey="18">
+                    <KeyFrameDouble frame="24" value="0" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="34" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+                <KeyedProperty propertyKey="16">
+                    <KeyFrameDouble frame="24" value="0.35" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="34" value="1.12" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="44" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+                <KeyedProperty propertyKey="17">
+                    <KeyFrameDouble frame="24" value="0.35" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="34" value="1.12" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="44" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+
+        <LinearAnimation fps="60" duration="36" loopValue="loop" name="hover" id="0:21">
+            <KeyedObject objectId="0:40">
+                <KeyedProperty propertyKey="18">
+                    <KeyFrameDouble frame="0" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="8" value="0.45" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="16" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:41">
+                <KeyedProperty propertyKey="18">
+                    <KeyFrameDouble frame="2" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="10" value="0.45" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="18" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:42">
+                <KeyedProperty propertyKey="18">
+                    <KeyFrameDouble frame="4" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="12" value="0.45" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="20" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:43">
+                <KeyedProperty propertyKey="18">
+                    <KeyFrameDouble frame="6" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="14" value="0.45" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="22" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:44">
+                <KeyedProperty propertyKey="18">
+                    <KeyFrameDouble frame="8" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="16" value="0.45" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="24" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:45">
+                <KeyedProperty propertyKey="18">
+                    <KeyFrameDouble frame="10" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="18" value="0.45" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="26" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:46">
+                <KeyedProperty propertyKey="18">
+                    <KeyFrameDouble frame="12" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="20" value="0.45" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="28" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:47">
+                <KeyedProperty propertyKey="18">
+                    <KeyFrameDouble frame="14" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="22" value="0.45" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="30" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+            </KeyedObject>
+            <KeyedObject objectId="0:48">
+                <KeyedProperty propertyKey="18">
+                    <KeyFrameDouble frame="16" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="24" value="0.45" interpolationType="cubic" interpolatorId="0:30"/>
+                    <KeyFrameDouble frame="32" value="1" interpolationType="cubic" interpolatorId="0:30"/>
+                </KeyedProperty>
+            </KeyedObject>
+        </LinearAnimation>
+    </Artboard>
+</Rive>

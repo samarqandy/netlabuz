@@ -92,12 +92,10 @@ export function Navbar() {
     >
       <nav className="container flex h-16 items-center justify-between gap-4">
         {/* Logo */}
-        <Link
-          href="/"
-          aria-label="NETLAB"
-          className="transition-opacity duration-200 hover:opacity-80"
-        >
-          <Logo />
+        {/* hover'da butun logotipni xiralashtirmaymiz — bu yerda
+            qatorlar bo'ylab yuguradigan to'lqin javob beradi */}
+        <Link href="/" aria-label="NETLAB">
+          <Logo animated />
         </Link>
 
         {/* Desktop nav */}
