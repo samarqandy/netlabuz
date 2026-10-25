@@ -221,3 +221,82 @@
     .packet-dot { transform: translateX(-50%); }
   }
 }
+
+@layer utilities {
+  /* =======================================================================
+   * NETLAB belgisi — qatorlar ketma-ket chiqadi, hover'da yorug'lik to'lqini.
+   *
+   * Xuddi shu animatsiya Rive'da ham yasalgan (`rive/netlab-mark/`), lekin
+   * u ishlashi uchun ~345 KB (brotli) runtime yuklanishi kerak edi — saytning
+   * butun JS'i 87 KB. Harakat esa qator bo'yicha opacity va scale'dan iborat,
+   * ya'ni CSS buni o'zi qiladi: 0 KB.
+   *
+   * `transform-box: fill-box` emas, `view-box`: transform-origin logotip
+   * koordinatalarida (qator markazi) beriladi, shunda qator markazdan
+   * kengayadi, o'z qutisining burchagidan emas.
+   * ======================================================================= */
+  .logo-animated .logo-row {
+    transform-box: view-box;
+    animation: logo-rise 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: calc(var(--i) * 55ms);
+  }
+
+  /* Pastki yagona nuqta — "yetib keldi" zarbasi */
+  .logo-animated .logo-row-last {
+    animation:
+      logo-rise 0.5s cubic-bezier(0.16, 1, 0.3, 1) both,
+      logo-impact 0.34s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: calc(var(--i) * 55ms), calc(var(--i) * 55ms + 0.34s);
+  }
+
+  /* Hover: yuqoridan pastga bitta to'lqin */
+  a:hover .logo-animated .logo-row,
+  a:focus-visible .logo-animated .logo-row {
+    animation: logo-wave 0.62s ease-in-out both;
+    animation-delay: calc(var(--i) * 34ms);
+  }
+
+  @keyframes logo-rise {
+    from {
+      opacity: 0;
+      transform: scale(0.35);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes logo-impact {
+    0% {
+      transform: scale(1);
+    }
+    45% {
+      transform: scale(1.14);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes logo-wave {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.45;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .logo-animated .logo-row,
+    .logo-animated .logo-row-last,
+    a:hover .logo-animated .logo-row,
+    a:focus-visible .logo-animated .logo-row {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+  }
+}

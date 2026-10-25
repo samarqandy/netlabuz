@@ -24,7 +24,11 @@ export function CountUp({
   const reduce = useReducedMotion();
   const ref = React.useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, amount: 0.5 });
-  const [display, setDisplay] = React.useState(reduce ? value : 0);
+  // Boshlang'ich qiymat har doim 0: `useReducedMotion()` serverda hamisha
+  // false qaytaradi, shuning uchun uni bu yerda ishlatish SSR va brauzer
+  // natijasini ajratib yuborardi (hydration xatosi). Yakuniy qiymat
+  // quyidagi effektda darhol qo'yiladi.
+  const [display, setDisplay] = React.useState(0);
 
   React.useEffect(() => {
     if (reduce) {

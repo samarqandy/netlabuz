@@ -24,11 +24,17 @@ const HOLD_MS = 1800;
 
 function useTypewriter(words: string[], enabled: boolean) {
   const [index, setIndex] = React.useState(0);
-  const [text, setText] = React.useState(enabled ? '' : words[0] ?? '');
+  // Serverda `enabled` har doim true bo'ladi (`useReducedMotion()` SSR'da
+  // false qaytaradi), shuning uchun boshlang'ich matn shartsiz bo'sh —
+  // aks holda reduced-motion'li brauzerda hydration mos kelmasdi.
+  const [text, setText] = React.useState('');
   const [erasing, setErasing] = React.useState(false);
 
   React.useEffect(() => {
-    if (!enabled) return;
+    if (!enabled) {
+      setText(words[0] ?? '');
+      return;
+    }
     const word = words[index % words.length] ?? '';
 
     let timer: ReturnType<typeof setTimeout>;
