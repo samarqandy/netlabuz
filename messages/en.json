@@ -578,6 +578,10 @@
         "title": "Network equipment",
         "description": "Wire, configure and troubleshoot routers and switches with your own hands."
       },
+      "optics": {
+        "title": "Optics and structured cabling",
+        "description": "Work with fibre and patch cords, and connect SFP modules and GPON equipment."
+      },
       "servers": {
         "title": "Servers",
         "description": "Install Linux servers from scratch and bring services up."
@@ -586,6 +590,10 @@
         "title": "Video surveillance",
         "description": "Connect IP cameras and configure the NVR and recording schedules."
       },
+      "wireless": {
+        "title": "Radio and Wi-Fi",
+        "description": "Configure Wi-Fi access points and work with radio links."
+      },
       "telephony": {
         "title": "IP telephony",
         "description": "Build a company PBX and work with extensions and IVR."
@@ -593,6 +601,10 @@
       "iot": {
         "title": "IoT bench",
         "description": "Wire sensors and relays, and assemble smart home scenarios."
+      },
+      "ai": {
+        "title": "AI tools",
+        "description": "Work with Claude and ChatGPT: prompting, code and documentation."
       },
       "workstations": {
         "title": "Workstations",

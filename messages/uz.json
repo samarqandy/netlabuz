@@ -578,6 +578,10 @@
         "title": "Tarmoq uskunalari",
         "description": "Router va kommutatorlarni qo'lda ulab, sozlab, nosozligini topasiz."
       },
+      "optics": {
+        "title": "Optika va SKS",
+        "description": "Optik tola va patch-kordlar bilan ishlab, SFP modul hamda GPON uskunalarini ulaysiz."
+      },
       "servers": {
         "title": "Serverlar",
         "description": "Linux serverlarni noldan o'rnatib, xizmatlarni ishga tushirasiz."
@@ -586,6 +590,10 @@
         "title": "Video nazorat",
         "description": "IP kameralarni ulab, NVR va yozuv jadvalini sozlaysiz."
       },
+      "wireless": {
+        "title": "Radio va Wi-Fi",
+        "description": "Wi-Fi nuqtalarini sozlaysiz va radio aloqa vositalari bilan ishlaysiz."
+      },
       "telephony": {
         "title": "IP-telefoniya",
         "description": "Korporativ ATS qurib, ichki raqamlar va IVR bilan ishlaysiz."
@@ -593,6 +601,10 @@
       "iot": {
         "title": "IoT stendi",
         "description": "Sensor va relelarni ulab, aqlli uy ssenariylarini yig'asiz."
+      },
+      "ai": {
+        "title": "AI asboblari",
+        "description": "Claude va ChatGPT bilan ishlaysiz: so'rov yozish, kod va hujjat tayyorlash."
       },
       "workstations": {
         "title": "Ish stantsiyalari",
