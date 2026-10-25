@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/button';
 import { ACTIVE_COURSES } from '@/lib/courses';
 import { Terminal } from '@/components/ui/terminal';
 import { KineticText } from '@/components/motion/kinetic-text';
-import { WireframeSphere } from '@/components/scene/wireframe-sphere';
+import { CyberGlobe } from '@/components/scene/cyber-globe';
 import { staggerContainer, staggerItem } from '@/lib/animations';
 import { track } from '@/lib/track';
 
@@ -36,9 +36,12 @@ export function Hero() {
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 bg-grid-tech [background-size:44px_44px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)] motion-safe:animate-grid-move"
       />
-      {/* Simli sfera — sekin aylanuvchi tarmoq globusi (GitLab uslubi).
-          O'ngda, qisman kadrdan chiqib turadi; kontent ustiga chiqmaydi. */}
-      <WireframeSphere className="pointer-events-none absolute -right-[40%] top-[6%] -z-10 size-[24rem] opacity-45 sm:-right-[20%] sm:top-1/2 sm:size-[36rem] sm:-translate-y-1/2 sm:opacity-80 lg:-right-[6%] lg:size-[46rem]" />
+      {/* Kiber-globus — nuqtalardan yasalgan yer shari; hujum yoylari
+          Samarqandga keladi.
+          Joylashuv muhim: globusning markazi (Samarqand va pulslar) terminal
+          kartasi ostida qolmasligi kerak, shuning uchun lg'da yuqoriga
+          suriladi — markaz terminaldan yuqorida, matn ustunidan o'ngda. */}
+      <CyberGlobe className="pointer-events-none absolute -right-[32%] -top-[6%] -z-10 size-[21rem] opacity-40 sm:-right-[14%] sm:top-1/2 sm:size-[32rem] sm:-translate-y-1/2 sm:opacity-80 lg:-right-[10%] lg:top-[1%] lg:size-[40rem] lg:translate-y-0 lg:opacity-100" />
 
       {/* Yorug'lik dog'lari — blur filtri emas, gradient (blur butun sahifani
           sekinlashtiradi, qarang: globals.css dagi `.ambient-glow` izohi) */}
@@ -150,7 +153,8 @@ function CountUp({
   suffix: string;
   reduce: boolean;
 }) {
-  const [display, setDisplay] = React.useState(reduce ? value : 0);
+  // 0 dan boshlanadi — qarang: count-up.tsx dagi izoh (SSR/hydration)
+  const [display, setDisplay] = React.useState(0);
 
   React.useEffect(() => {
     if (reduce) {
