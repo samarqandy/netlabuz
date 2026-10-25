@@ -864,6 +864,10 @@
         "q": "What format are the classes in?",
         "a": "Classes are held in person at our center in Samarkand (11 Dahbed street). Every topic is reinforced with hands-on lab work on real equipment."
       },
+      "schedule": {
+        "q": "How often are the classes?",
+        "a": "Three times a week, two hours each — 12 lessons a month, 24 hours in total. There are daytime and evening groups; the exact time is agreed when the group is formed."
+      },
       "certificate": {
         "q": "Do I get a certificate at the end?",
         "a": "Yes. Every student who successfully completes a course receives a NETLAB certificate."

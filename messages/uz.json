@@ -864,6 +864,10 @@
         "q": "Darslar qanday formatda o'tadi?",
         "a": "Darslar Samarqanddagi markazimizda (Dahbed ko'chasi 11) jonli o'tadi. Har bir mavzu haqiqiy uskunalarda amaliy laboratoriya ishi bilan mustahkamlanadi."
       },
+      "schedule": {
+        "q": "Darslar haftada necha marta bo'ladi?",
+        "a": "Haftada 3 marta, har biri 2 soatdan — oyiga 12 ta dars, ya'ni 24 soat. Kunduzgi va kechki guruhlar bor, aniq vaqtni guruh to'planishida kelishamiz."
+      },
       "certificate": {
         "q": "Kurs yakunida sertifikat beriladimi?",
         "a": "Ha. Kursni muvaffaqiyatli tugatgan har bir o'quvchiga NETLAB sertifikati topshiriladi."
