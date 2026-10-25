@@ -43,7 +43,7 @@ export const LAB_CATEGORIES: LabCategory[] = [
   {
     key: 'network',
     icon: Router,
-    items: ['Cisco', 'Huawei', 'MikroTik', 'Fortigate', 'Konsol (COM)'],
+    items: ['Cisco', 'Huawei', 'MikroTik', 'Fortigate', 'NTP', 'Konsol (COM)'],
     glow: 'blue',
   },
   {
@@ -61,13 +61,13 @@ export const LAB_CATEGORIES: LabCategory[] = [
   {
     key: 'servers',
     icon: Server,
-    items: ['Proxmox VE', 'TrueNAS', 'NAS', 'RAID', 'NTP', 'Ubuntu Server'],
+    items: ['Proxmox VE', 'KVM', 'TrueNAS', 'FreeIPA', 'NAS', 'RAID', 'Ubuntu Server'],
     glow: 'blue',
   },
   {
     key: 'monitoring',
     icon: Activity,
-    items: ['Zabbix', 'Wazuh', 'Ansible', 'Docker'],
+    items: ['Zabbix', 'SNMP', 'Syslog', 'NetBox', 'Wireshark', 'Wazuh', 'Ansible'],
     glow: 'green',
   },
   {
