@@ -202,8 +202,8 @@ export const COURSES: Course[] = [
     icon: Activity,
     months: 3,
     glow: 'green',
-    topics: ['Zabbix', 'Monitoring', 'Diagnostika'],
-    status: 'soon',
+    topics: ['Zabbix', 'SNMP', 'Wireshark', 'NetBox'],
+    priceFrom: 1_100_000,
   },
   {
     id: 'virtualization',
@@ -211,8 +211,8 @@ export const COURSES: Course[] = [
     icon: Layers,
     months: 3,
     glow: 'cyan',
-    topics: ['Proxmox VE', 'TrueNAS', 'Backup'],
-    status: 'soon',
+    topics: ['Proxmox VE', 'KVM', 'TrueNAS', 'Backup'],
+    priceFrom: 1_100_000,
   },
   {
     id: 'cabling',
@@ -222,8 +222,8 @@ export const COURSES: Course[] = [
     months: 1,
     hours: 24,
     glow: 'cyan',
-    topics: ['SCS', 'UTP', 'Patch panel', 'Tester'],
-    status: 'soon',
+    topics: ['SCS', 'Optik tola', 'OTDR', 'GPON'],
+    priceFrom: 1_200_000,
   },
 
   /* ------------------------ AI yo'nalishi (qisqa) -----------------------

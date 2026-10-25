@@ -114,7 +114,7 @@
       },
       "cabling": {
         "name": "SCS — strukturalashgan kabel tizimlari",
-        "description": "Bino kabel tizimini loyihalash, montaj, krimplash va test bilan topshirish — ISO/IEC 11801 va TIA-568 bo'yicha."
+        "description": "Bino kabel tizimi: mis va optika, krimplash, payvandlash, OTDR bilan o'lchash va hujjat bilan topshirish — ISO/IEC 11801 va TIA-568 bo'yicha."
       },
       "aicoding": {
         "name": "AI bilan dasturlash: Claude Code va Codex",
@@ -452,6 +452,109 @@
         "aiAssistant": "AI yordamchisi / kontent tayyorlovchi",
         "entrepreneur": "Biznesda AI qo'llovchi tadbirkor"
       }
+    },
+    "cabling": {
+      "tagline": "Bino kabel tizimini loyihalashdan topshirishgacha: mis va optika, krimplash, payvandlash, OTDR bilan o'lchash va hujjatlashtirish.",
+      "modules": {
+        "standards": "Standartlar va loyihalash: ISO/IEC 11801 va TIA-568",
+        "copper": "Mis kabel: kategoriyalar, UTP/FTP va T568A/B tartibi",
+        "termination": "Ulash: patch panel, keystone va kabel kanal montaji",
+        "testing": "Mis liniyani tester bilan sinash va sertifikatlash",
+        "fiber": "Optik tola: turlari, konnektorlar va patch-kordlar",
+        "splicing": "Tolani payvandlash: kesish, payvandlash va himoya qilish",
+        "measure": "Optik o'lchov: OTDR va Optical Power Meter, yo'qotish budjeti",
+        "gpon": "GPON liniyasi va obyektni hujjat bilan topshirish"
+      },
+      "outcomes": {
+        "design": "Bino uchun kabel tizimini standart bo'yicha loyihalash",
+        "install": "Trassa, lotok va kabel kanalni to'g'ri montaj qilish",
+        "terminate": "Mis kabelni krimplash va patch panelga ulash",
+        "test": "Liniyani sinab, natijani hujjatlashtirish",
+        "fiber": "Optik tolani payvandlash va OTDR bilan o'lchash",
+        "document": "Obyektni sxema va sinov natijalari bilan topshirish"
+      },
+      "audience": {
+        "installer": "Montajchilar va kabel ishchilari",
+        "electrician": "Elektrik va qurilish mutaxassislari",
+        "netAdmin": "Tarmoq administratorlari"
+      },
+      "requirements": {
+        "none": "Oldindan tayyorgarlik shart emas",
+        "hands": "Qo'l mehnatiga tayyorlik"
+      },
+      "roles": {
+        "cablingTech": "SKS montajchisi",
+        "fiberTech": "Optik tola mutaxassisi",
+        "installer": "Telekom montaj ustasi"
+      }
+    },
+    "noc": {
+      "tagline": "Tarmoqni kuzatuvga olish: Zabbix, SNMP va Syslog bilan nazorat, Wireshark bilan diagnostika, avariyani hujjatlashtirish.",
+      "modules": {
+        "basics": "Monitoring asoslari: nimani o'lchash kerak va SLA",
+        "snmp": "SNMP: v2c va v3, OID hamda MIB bilan ishlash",
+        "zabbix": "Zabbix: server, agent va shablonlar",
+        "alerts": "Ogohlantirish: trigger, eskalatsiya va Telegram xabarnomasi",
+        "syslog": "Syslog va jurnal tahlili, Wazuh bilan tanishuv",
+        "inventory": "NetBox: qurilmalar inventarizatsiyasi va IPAM",
+        "capture": "Wireshark: paketni ushlash va kechikishni tahlil qilish",
+        "incident": "Avariya boshqaruvi: hisobot va sabablarni tahlil qilish"
+      },
+      "outcomes": {
+        "monitor": "Tarmoq qurilmalarini kuzatuvga olib, panel yig'ish",
+        "alert": "Ortiqcha shovqinsiz ogohlantirish qoidalarini sozlash",
+        "diagnose": "Nosozlik sababini paket darajasida topish",
+        "document": "Tarmoqni NetBox'da hujjatlashtirish",
+        "report": "Avariya bo'yicha tushunarli hisobot tayyorlash"
+      },
+      "audience": {
+        "netAdmin": "Tarmoq administratorlari",
+        "support": "Texnik yordam xodimlari",
+        "sysadmin": "Tizim administratorlari"
+      },
+      "requirements": {
+        "networkBasics": "Tarmoq asoslari: IP va VLAN",
+        "linuxBasics": "Linux bilan boshlang'ich ishlash"
+      },
+      "roles": {
+        "nocEngineer": "NOC muhandisi",
+        "monitoringAdmin": "Monitoring administratori",
+        "support": "2-darajali texnik yordam"
+      }
+    },
+    "virtualization": {
+      "tagline": "Proxmox VE'da virtual serverlar, TrueNAS va RAID'da xotira, hamda tiklanishi tekshirilgan zaxira nusxa.",
+      "modules": {
+        "basics": "Virtualizatsiya asoslari: gipervizor, KVM va LXC",
+        "proxmox": "Proxmox VE: o'rnatish, virtual mashina va shablonlar",
+        "storage": "Xotira: RAID darajalari, ZFS va TrueNAS",
+        "network": "Virtual tarmoq: bridge, VLAN va firewall",
+        "backup": "Zaxira nusxa strategiyasi: 3-2-1, jadval va saqlash muddati",
+        "restore": "Tiklash: snapshot, to'liq tiklash va uni sinab ko'rish",
+        "cluster": "Klaster, migratsiya va uzluksizlik (HA)",
+        "operate": "Kundalik xizmat: monitoring, yangilash va hujjat"
+      },
+      "outcomes": {
+        "deploy": "Proxmox VE'ni o'rnatib, virtual serverlarni ishga tushirish",
+        "storage": "RAID va TrueNAS asosida ishonchli xotira qurish",
+        "backup": "Avtomatik zaxira nusxa jadvalini sozlash",
+        "restore": "Tiklashni sinab, uning ishlashiga ishonch hosil qilish",
+        "plan": "Avariyadan tiklash rejasini tuzish"
+      },
+      "audience": {
+        "sysadmin": "Tizim administratorlari",
+        "netAdmin": "Tarmoq administratorlari",
+        "itManager": "IT bo'lim rahbarlari"
+      },
+      "requirements": {
+        "linuxBasics": "Linux bilan boshlang'ich ishlash",
+        "networkBasics": "Tarmoq asoslari: IP va VLAN"
+      },
+      "roles": {
+        "sysadmin": "Tizim administratori",
+        "infraEngineer": "Infratuzilma muhandisi",
+        "backupAdmin": "Zaxira va tiklash bo'yicha mutaxassis"
+      }
     }
   },
   "Tracks": {
@@ -669,6 +772,17 @@
           "Zaxira nusxa olish va uni tiklab tekshirish"
         ],
         "result": "Fayl, DNS va DHCP xizmatlari hamda tiklanishi tekshirilgan zaxira nusxa"
+      },
+      "fiber": {
+        "title": "Optik liniya",
+        "description": "Optik trassani loyihalashdan o'lchangan va hujjatlashtirilgan liniyani topshirishgacha.",
+        "tasks": [
+          "Optik trassani loyihalash va tolani tortish",
+          "Tolani payvandlab, ulanish joyini himoyalash",
+          "OTDR va power meter bilan yo'qotishni o'lchash",
+          "GPON liniyasini ulab, hujjat bilan topshirish"
+        ],
+        "result": "O'lchangan, sinovdan o'tgan va hujjatlashtirilgan optik liniya"
       },
       "smarthome": {
         "title": "Aqlli uy stendi",

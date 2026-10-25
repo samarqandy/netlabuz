@@ -1,4 +1,4 @@
-import { Network, Cctv, Server, House, type LucideIcon } from 'lucide-react';
+import { Network, Cctv, Server, House, Cable, type LucideIcon } from 'lucide-react';
 
 import type { CourseId } from './courses';
 
@@ -49,6 +49,13 @@ export const LAB_PROJECTS: LabProject[] = [
     tech: ['Ubuntu Server', 'NAS', 'RAID', 'DNS', 'DHCP', 'Backup'],
     courses: ['linux', 'cisco'],
     glow: 'green',
+  },
+  {
+    id: 'fiber',
+    icon: Cable,
+    tech: ['Optik tola', 'OTDR', 'Optical Power Meter', 'Payvandlash', 'GPON'],
+    courses: ['cabling', 'cisco'],
+    glow: 'cyan',
   },
   {
     id: 'smarthome',

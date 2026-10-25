@@ -114,7 +114,7 @@
       },
       "cabling": {
         "name": "SCS — structured cabling systems",
-        "description": "Designing, installing, terminating and certifying a building's cabling system to ISO/IEC 11801 and TIA-568."
+        "description": "A building's cabling system: copper and fibre, crimping, splicing, OTDR measurement and a documented handover — to ISO/IEC 11801 and TIA-568."
       },
       "aicoding": {
         "name": "Building with AI: Claude Code and Codex",
@@ -452,6 +452,109 @@
         "aiAssistant": "AI assistant / content production",
         "entrepreneur": "Entrepreneur applying AI in business"
       }
+    },
+    "cabling": {
+      "tagline": "A building's cabling system from design to handover: copper and fibre, crimping, splicing, OTDR measurement and documentation.",
+      "modules": {
+        "standards": "Standards and design: ISO/IEC 11801 and TIA-568",
+        "copper": "Copper cable: categories, UTP/FTP and the T568A/B order",
+        "termination": "Termination: patch panel, keystone and trunking",
+        "testing": "Testing a copper link and certifying it",
+        "fiber": "Optical fibre: types, connectors and patch cords",
+        "splicing": "Fibre splicing: cleaving, fusion and protection",
+        "measure": "Optical measurement: OTDR, power meter and the loss budget",
+        "gpon": "A GPON line and handing the site over with documentation"
+      },
+      "outcomes": {
+        "design": "Design a building's cabling system to standard",
+        "install": "Install the route, tray and trunking correctly",
+        "terminate": "Crimp copper cable and land it on a patch panel",
+        "test": "Test a link and document the result",
+        "fiber": "Splice optical fibre and measure the line with an OTDR",
+        "document": "Hand a site over with drawings and test results"
+      },
+      "audience": {
+        "installer": "Installers and cabling technicians",
+        "electrician": "Electricians and construction specialists",
+        "netAdmin": "Network administrators"
+      },
+      "requirements": {
+        "none": "No prior preparation required",
+        "hands": "Readiness for hands-on work"
+      },
+      "roles": {
+        "cablingTech": "Structured cabling installer",
+        "fiberTech": "Fibre optic technician",
+        "installer": "Telecom installation specialist"
+      }
+    },
+    "noc": {
+      "tagline": "Put a network under watch: monitoring with Zabbix, SNMP and Syslog, diagnosis in Wireshark, and documented incidents.",
+      "modules": {
+        "basics": "Monitoring basics: what to measure, and what an SLA is",
+        "snmp": "SNMP: v2c and v3, working with OIDs and MIBs",
+        "zabbix": "Zabbix: server, agent and templates",
+        "alerts": "Alerting: triggers, escalation and Telegram notifications",
+        "syslog": "Syslog and log analysis, an introduction to Wazuh",
+        "inventory": "NetBox: device inventory and IPAM",
+        "capture": "Wireshark: capturing packets and analysing latency",
+        "incident": "Incident handling: the report and the root cause"
+      },
+      "outcomes": {
+        "monitor": "Put network devices under monitoring and build a dashboard",
+        "alert": "Configure alerting without the noise",
+        "diagnose": "Find the cause of a fault at the packet level",
+        "document": "Document the network in NetBox",
+        "report": "Write a readable incident report"
+      },
+      "audience": {
+        "netAdmin": "Network administrators",
+        "support": "Technical support staff",
+        "sysadmin": "System administrators"
+      },
+      "requirements": {
+        "networkBasics": "Networking basics: IP and VLAN",
+        "linuxBasics": "Entry-level Linux skills"
+      },
+      "roles": {
+        "nocEngineer": "NOC engineer",
+        "monitoringAdmin": "Monitoring administrator",
+        "support": "Second-line technical support"
+      }
+    },
+    "virtualization": {
+      "tagline": "Virtual servers on Proxmox VE, storage on TrueNAS and RAID, and backups whose restore has actually been tested.",
+      "modules": {
+        "basics": "Virtualisation basics: the hypervisor, KVM and LXC",
+        "proxmox": "Proxmox VE: installation, virtual machines and templates",
+        "storage": "Storage: RAID levels, ZFS and TrueNAS",
+        "network": "Virtual networking: bridges, VLANs and the firewall",
+        "backup": "Backup strategy: 3-2-1, schedules and retention",
+        "restore": "Restore: snapshots, full recovery and testing it",
+        "cluster": "Clustering, migration and high availability",
+        "operate": "Day-to-day operation: monitoring, updates and documentation"
+      },
+      "outcomes": {
+        "deploy": "Install Proxmox VE and bring virtual servers up",
+        "storage": "Build reliable storage on RAID and TrueNAS",
+        "backup": "Configure an automated backup schedule",
+        "restore": "Test the restore and prove that it works",
+        "plan": "Write a disaster recovery plan"
+      },
+      "audience": {
+        "sysadmin": "System administrators",
+        "netAdmin": "Network administrators",
+        "itManager": "IT department managers"
+      },
+      "requirements": {
+        "linuxBasics": "Entry-level Linux skills",
+        "networkBasics": "Networking basics: IP and VLAN"
+      },
+      "roles": {
+        "sysadmin": "System administrator",
+        "infraEngineer": "Infrastructure engineer",
+        "backupAdmin": "Backup and recovery specialist"
+      }
     }
   },
   "Tracks": {
@@ -669,6 +772,17 @@
           "Take a backup and verify the restore"
         ],
         "result": "File, DNS and DHCP services plus a backup with a verified restore"
+      },
+      "fiber": {
+        "title": "Fibre optic line",
+        "description": "From designing the fibre route to handing over a measured, documented line.",
+        "tasks": [
+          "Design the fibre route and pull the cable",
+          "Splice the fibre and protect the joint",
+          "Measure loss with an OTDR and a power meter",
+          "Connect the GPON line and hand it over with documentation"
+        ],
+        "result": "A measured, tested and documented fibre line"
       },
       "smarthome": {
         "title": "Smart home bench",
