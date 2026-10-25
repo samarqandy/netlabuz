@@ -116,6 +116,14 @@
         "name": "SCS — structured cabling systems",
         "description": "A building's cabling system: copper and fibre, crimping, splicing, OTDR measurement and a documented handover — to ISO/IEC 11801 and TIA-568."
       },
+      "vision": {
+        "name": "Computer vision and AI video analytics",
+        "description": "Detecting objects in a camera stream: adding AI to video surveillance with OpenCV and YOLO."
+      },
+      "aiauto": {
+        "name": "AI automation (n8n)",
+        "description": "Automating business processes with n8n and APIs: bots, CRM and reports."
+      },
       "aicoding": {
         "name": "Building with AI: Claude Code and Codex",
         "description": "Working with AI agents on a real project: context, MCP, the Git flow and keeping code quality under control."
