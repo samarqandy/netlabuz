@@ -684,6 +684,44 @@
       }
     }
   },
+  "PacketJourney": {
+    "eyebrow": "Packet journey",
+    "title": "What happens when you open a website?",
+    "subtitle": "A single request passes through five devices — and you work with every one of them in our lab. Scroll down.",
+    "alt": "Packet journey diagram: computer, switch, router, internet, firewall and server",
+    "office": "OFFICE",
+    "datacenter": "DATA CENTER",
+    "internet": "INTERNET",
+    "scrollHint": "Scroll",
+    "learnLabel": "Where you learn it",
+    "moduleN": "module {n}",
+    "steps": {
+      "request": {
+        "title": "The request sets off",
+        "text": "The browser uses DNS to turn netlab.uz into an IP address, wraps the request in a packet and sends it onto the network."
+      },
+      "lan": {
+        "title": "Local network",
+        "text": "The switch forwards the Ethernet frame to the right port by MAC address. VLANs split the office network into isolated segments."
+      },
+      "route": {
+        "title": "Network to network",
+        "text": "The router forwards the packet to the next network by IP address, picking the path from its routing table. NAT takes the internal network out to the internet."
+      },
+      "inspect": {
+        "title": "Inspection",
+        "text": "The firewall checks every packet against its rules: HTTPS on port 443 gets through, anything not allowed is dropped."
+      },
+      "response": {
+        "title": "The response",
+        "text": "A web server on Linux builds the page and sends the response back the same way. All of this takes milliseconds."
+      },
+      "monitor": {
+        "title": "The whole chain is monitored",
+        "text": "A NOC engineer watches it in Zabbix: if any link fails, an alert comes in."
+      }
+    }
+  },
   "Lab": {
     "eyebrow": "Lab",
     "title": "Not a simulator — real equipment",

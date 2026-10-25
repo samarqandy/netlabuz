@@ -684,6 +684,44 @@
       }
     }
   },
+  "PacketJourney": {
+    "eyebrow": "Paket yo'li",
+    "title": "Saytni ochganingizda nima sodir bo'ladi?",
+    "subtitle": "Bitta so'rov beshta qurilmadan o'tadi — ularning har biri bilan laboratoriyada ishlaysiz. Pastga aylantiring.",
+    "alt": "Paket yo'li sxemasi: kompyuter, kommutator, router, internet, firewall va server",
+    "office": "OFIS TARMOG'I",
+    "datacenter": "DATA-MARKAZ",
+    "internet": "INTERNET",
+    "scrollHint": "Aylantiring",
+    "learnLabel": "Qayerda o'rganasiz",
+    "moduleN": "{n}-modul",
+    "steps": {
+      "request": {
+        "title": "So'rov yo'lga chiqadi",
+        "text": "Brauzer DNS orqali netlab.uz nomini IP manzilga aylantiradi, so'rovni paketga joylaydi va tarmoqqa yuboradi."
+      },
+      "lan": {
+        "title": "Lokal tarmoq",
+        "text": "Kommutator Ethernet kadrini MAC manzil bo'yicha kerakli portga uzatadi. VLAN'lar ofis tarmog'ini alohida segmentlarga ajratadi."
+      },
+      "route": {
+        "title": "Tarmoqdan tarmoqqa",
+        "text": "Router paketni IP manzil bo'yicha keyingi tarmoqqa uzatadi va marshrut jadvalidan yo'lni tanlaydi. NAT ichki tarmoqni internetga chiqaradi."
+      },
+      "inspect": {
+        "title": "Tekshiruv",
+        "text": "Firewall har bir paketni qoidalar bilan solishtiradi: HTTPS (443-port) o'tadi, ruxsat etilmagan trafik to'xtatiladi."
+      },
+      "response": {
+        "title": "Javob",
+        "text": "Linux serverdagi veb-server sahifani tayyorlaydi va javobni xuddi shu yo'l bilan qaytaradi. Bularning hammasi millisekundlarda sodir bo'ladi."
+      },
+      "monitor": {
+        "title": "Butun zanjir kuzatuvda",
+        "text": "NOC muhandisi bu yo'lni Zabbix'da kuzatadi: biror bo'g'in ishdan chiqsa, ogohlantirish keladi."
+      }
+    }
+  },
   "Lab": {
     "eyebrow": "Laboratoriya",
     "title": "Simulyatorda emas — haqiqiy uskunalarda",

@@ -7,6 +7,7 @@ import { Quiz } from '@/components/sections/quiz';
 import { Tracks } from '@/components/sections/tracks';
 import { Mentors } from '@/components/sections/mentors';
 import { WhyUs } from '@/components/sections/why-us';
+import { PacketJourney } from '@/components/sections/packet-journey';
 import { Lab } from '@/components/sections/lab';
 import { Projects } from '@/components/sections/projects';
 import { Stats } from '@/components/sections/stats';
@@ -89,6 +90,7 @@ export default async function HomePage({
       <Tracks />
       <Quiz />
       <WhyUs />
+      <PacketJourney />
       <Lab />
       <Projects />
       <Stats />
