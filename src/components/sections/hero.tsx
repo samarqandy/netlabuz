@@ -13,9 +13,10 @@ import { CyberGlobe } from '@/components/scene/cyber-globe';
 import { staggerContainer, staggerItem } from '@/lib/animations';
 import { track } from '@/lib/track';
 
-// Yo'nalishlar soni katalogdan olinadi — kurs qo'shilganda eskirmaydi
+// Bitiruvchilar soni — egasi tasdiqlagan (2026-10), `stats.tsx` bilan
+// bir xil bo'lishi shart. Yo'nalishlar soni katalogdan olinadi.
 const STATS = [
-  { value: 50, suffix: '+', key: 'graduates' },
+  { value: 20, suffix: '+', key: 'graduates' },
   { value: 100, suffix: '%', key: 'practice' },
   { value: ACTIVE_COURSES.length, suffix: '', key: 'directions' },
 ] as const;
