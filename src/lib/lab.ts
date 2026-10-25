@@ -92,13 +92,13 @@ export const LAB_CATEGORIES: LabCategory[] = [
   {
     key: 'wireless',
     icon: RadioTower,
-    items: ['Wi-Fi', 'Radio aloqa'],
+    items: ['Ubiquiti', 'Wi-Fi', 'Radio aloqa'],
     glow: 'green',
   },
   {
     key: 'telephony',
     icon: PhoneCall,
-    items: ['Asterisk', 'FreePBX', 'SIP'],
+    items: ['Yeastar', 'Asterisk', 'FreePBX', 'SIP'],
     glow: 'cyan',
   },
   {
