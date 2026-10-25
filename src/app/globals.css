@@ -169,6 +169,16 @@
     animation-play-state: running;
   }
 
+  /* --- Ambient fon: juda sekin siljiydigan gradient dog'lar --- */
+  /* Yumshoq fon yorug'ligi. Blur filtri EMAS: `blur-[150px]` qo'yilgan katta
+     doira animatsiyasiz ham sahifani 21 → 7 FPS ga tushirardi (o'lchangan).
+     `radial-gradient` xuddi shunday ko'rinadi va kompozitorga tekin tushadi. */
+  .ambient-glow {
+    background-image:
+      radial-gradient(46rem 42rem at 10% 12%, hsl(var(--primary) / 0.1), transparent 70%),
+      radial-gradient(38rem 36rem at 90% 54%, hsl(var(--accent) / 0.07), transparent 70%);
+  }
+
   /* --- Kinetik sarlavha: so'zlar ketma-ket chiqadi va qalinlashadi --- */
   .kinetic-word {
     display: inline-block;
