@@ -12,6 +12,7 @@ import {
 
 import { routing, type Locale } from '@/i18n/routing';
 import { ORG, safeJsonLd } from '@/lib/org';
+import { ACTIVE_COURSES } from '@/lib/courses';
 import { ThemeProvider } from '@/components/theme-provider';
 import { MotionProvider } from '@/components/motion-provider';
 import { Navbar } from '@/components/navbar';
@@ -99,18 +100,35 @@ export default async function LocaleLayout({
   const messages = await getMessages();
   const tMeta = await getTranslations({ locale, namespace: 'Meta' });
 
-  // Structured Data — qidiruv tizimlari uchun (EducationalOrganization)
+  // Kurslar narx oralig'i — katalogdan, ya'ni narx o'zgarsa o'zi yangilanadi
+  const prices = ACTIVE_COURSES.map((c) => c.priceFrom).filter(
+    (p): p is number => p !== undefined
+  );
+
+  // Structured Data — qidiruv tizimlari uchun.
+  //
+  // Ikkita tur birga: EducationalOrganization (nima o'rgatishimiz) va
+  // LocalBusiness (jismoniy manzili bor mahalliy biznes). Ikkinchisi
+  // Google uchun muhim — "Samarqandda IT kurslari" kabi joyga bog'liq
+  // so'rovlarda markaz shu tur orqali taniladi.
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'EducationalOrganization',
+    '@type': ['EducationalOrganization', 'LocalBusiness'],
     '@id': `${ORG.url}/#organization`,
     name: ORG.name,
     alternateName: 'NETLAB Samarqand',
     url: `${ORG.url}/${locale}`,
     logo: `${ORG.url}/uz/opengraph-image`,
+    image: `${ORG.url}/uz/opengraph-image`,
     description: tMeta('description'),
     telephone: ORG.phone,
     address: ORG.address,
+    areaServed: { '@type': 'City', name: 'Samarqand' },
+    ...(prices.length
+      ? {
+          priceRange: `${Math.min(...prices).toLocaleString('en-US').replace(/,/g, ' ')}–${Math.max(...prices).toLocaleString('en-US').replace(/,/g, ' ')} UZS`,
+        }
+      : {}),
     sameAs: ORG.telegramChannels.map((ch) => ch.href),
     // Asoschi — shaxsiy sayti orqali entity sifatida bog'lanadi
     founder: {
