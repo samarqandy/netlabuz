@@ -12,7 +12,8 @@
     "faq": "Savol-javob",
     "contact": "Aloqa",
     "cta": "Ro'yxatdan o'tish",
-    "path": "Yo'nalishlar"
+    "path": "Yo'nalishlar",
+    "projects": "Loyihalar"
   },
   "Hero": {
     "badge": "Samarqand IT o'quv markazi — yangi guruhlarga qabul ochiq",
@@ -609,6 +610,60 @@
       "workstations": {
         "title": "Ish stantsiyalari",
         "description": "Har bir o'quvchi uchun alohida kompyuter — o'z noutbukingiz shart emas."
+      }
+    }
+  },
+  "Projects": {
+    "eyebrow": "Amaliy loyihalar",
+    "title": "O'rganib nima quraysiz?",
+    "subtitle": "Har bir loyiha bir nechta kursni birlashtiradi va laboratoriyadagi haqiqiy uskunalarda bajariladi — bitiruv ishi sifatida.",
+    "tasksLabel": "Topshiriqlar",
+    "coursesLabel": "Tayanch kurslar",
+    "resultLabel": "Natija",
+    "items": {
+      "office": {
+        "title": "Korporativ ofis tarmog'i",
+        "description": "Kichik ofis tarmog'ini noldan yig'asiz: qurilmalarni ulashdan tortib telefoniya va internetgacha.",
+        "tasks": [
+          "Router va kommutatorni ulab, tarmoqni VLAN'larga bo'lish",
+          "Wi-Fi nuqtasini sozlash va mehmon tarmog'ini ajratish",
+          "Firewall qoidalari bilan segmentlar orasidagi kirishni cheklash",
+          "Ichki raqamlar bilan IP-telefoniyani ishga tushirish"
+        ],
+        "result": "Ishlaydigan ofis tarmog'i: internet, Wi-Fi, telefoniya va ajratilgan segmentlar"
+      },
+      "cctv": {
+        "title": "Video nazorat tizimi",
+        "description": "Obyektni video nazoratga olasiz: kameralarni joylashtirishdan masofaviy ko'rishgacha.",
+        "tasks": [
+          "Kameralarni PoE kommutator orqali ulash va joylashtirish",
+          "NVR'da yozuv jadvali va arxiv muddatini sozlash",
+          "Harakatga reaksiya va ogohlantirishlarni yoqish",
+          "Masofaviy ko'rishni xavfsiz sozlash"
+        ],
+        "result": "Arxivi saqlanadigan va telefondan ko'riladigan nazorat tizimi"
+      },
+      "datacenter": {
+        "title": "Server infratuzilmasi",
+        "description": "Tashkilot uchun server xizmatlarini qurasiz va ma'lumotlarni yo'qotishdan himoyalaysiz.",
+        "tasks": [
+          "Linux serverni o'rnatib, xizmatlarni ishga tushirish",
+          "DNS va DHCP'ni tarmoqqa sozlash",
+          "NAS va RAID asosida fayl serverini qurish",
+          "Zaxira nusxa olish va uni tiklab tekshirish"
+        ],
+        "result": "Fayl, DNS va DHCP xizmatlari hamda tiklanishi tekshirilgan zaxira nusxa"
+      },
+      "smarthome": {
+        "title": "Aqlli uy stendi",
+        "description": "Sensorlar orqali boshqariladigan aqlli uy ssenariylarini yig'asiz va ularni tarmoqqa ulaysiz.",
+        "tasks": [
+          "ESP32 va sensorlarni ulab, ma'lumot olish",
+          "Ma'lumotni serverga yuborish va saqlash",
+          "Ssenariy yozish: harorat, harakat va yoritish",
+          "Telefondan boshqarishni sozlash"
+        ],
+        "result": "Telefondan boshqariladigan, ma'lumotini serverga yozadigan aqlli uy stendi"
       }
     }
   },

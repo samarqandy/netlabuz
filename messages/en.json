@@ -12,7 +12,8 @@
     "faq": "FAQ",
     "contact": "Contact",
     "cta": "Enroll now",
-    "path": "Paths"
+    "path": "Paths",
+    "projects": "Projects"
   },
   "Hero": {
     "badge": "IT training center in Samarkand — enrollment open",
@@ -609,6 +610,60 @@
       "workstations": {
         "title": "Workstations",
         "description": "A separate computer for every student — your own laptop is optional."
+      }
+    }
+  },
+  "Projects": {
+    "eyebrow": "Hands-on projects",
+    "title": "What will you build?",
+    "subtitle": "Each project combines several courses and is built on the lab's real equipment — as a capstone.",
+    "tasksLabel": "Tasks",
+    "coursesLabel": "Courses it builds on",
+    "resultLabel": "Outcome",
+    "items": {
+      "office": {
+        "title": "Corporate office network",
+        "description": "Build a small office network from scratch: from wiring the devices to telephony and internet.",
+        "tasks": [
+          "Wire the router and switch, and split the network into VLANs",
+          "Configure the Wi-Fi access point and separate a guest network",
+          "Restrict access between segments with firewall rules",
+          "Bring up IP telephony with internal extensions"
+        ],
+        "result": "A working office network: internet, Wi-Fi, telephony and separated segments"
+      },
+      "cctv": {
+        "title": "Video surveillance system",
+        "description": "Put a site under video surveillance: from camera placement to remote viewing.",
+        "tasks": [
+          "Connect and place cameras through a PoE switch",
+          "Set the recording schedule and archive retention on the NVR",
+          "Enable motion detection and alerts",
+          "Configure remote viewing securely"
+        ],
+        "result": "A surveillance system with a stored archive, viewable from a phone"
+      },
+      "datacenter": {
+        "title": "Server infrastructure",
+        "description": "Build the server services an organisation runs on, and protect its data from loss.",
+        "tasks": [
+          "Install a Linux server and bring services up",
+          "Configure DNS and DHCP on the network",
+          "Build a file server on NAS and RAID",
+          "Take a backup and verify the restore"
+        ],
+        "result": "File, DNS and DHCP services plus a backup with a verified restore"
+      },
+      "smarthome": {
+        "title": "Smart home bench",
+        "description": "Assemble smart home scenarios driven by sensors and connect them to the network.",
+        "tasks": [
+          "Wire ESP32 and sensors, and read their data",
+          "Send and store the data on a server",
+          "Write scenarios: temperature, motion and lighting",
+          "Set up control from a phone"
+        ],
+        "result": "A working smart home bench controlled from a phone, logging data to a server"
       }
     }
   },
