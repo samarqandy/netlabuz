@@ -8,11 +8,11 @@ import { CountUp } from '@/components/ui/count-up';
 import { Reveal, StaggerGroup, StaggerItem } from '@/components/ui/reveal';
 import { SectionHeading } from '@/components/section-heading';
 
-// ⚠️ graduates va experience — tasdiqlanmagan marketing raqamlari.
-// directions katalogdan olinadi, shuning uchun hech qachon eskirmaydi.
+// graduates va experience — markaz egasi tasdiqlagan haqiqiy raqamlar
+// (2026-10). directions katalogdan olinadi, ya'ni hech qachon eskirmaydi.
 const STATS = [
-  { key: 'graduates', value: 50, suffix: '+', Icon: GraduationCap },
-  { key: 'experience', value: 5, suffix: '+', Icon: CalendarClock },
+  { key: 'graduates', value: 20, suffix: '+', Icon: GraduationCap },
+  { key: 'experience', value: 2, suffix: '+', Icon: CalendarClock },
   { key: 'practice', value: 100, suffix: '%', Icon: FlaskConical },
   { key: 'directions', value: ACTIVE_COURSES.length, suffix: '', Icon: LayoutGrid },
 ] as const;
