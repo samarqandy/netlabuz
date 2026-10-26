@@ -155,7 +155,7 @@ export const pageTransition: Variants = {
 
 // Scroll-reveal uchun standart viewport sozlamasi:
 // <motion.div variants={fadeInUp} initial="initial" whileInView="animate" viewport={defaultViewport} />
-export const defaultViewport = { once: true, amount: 0.2 } as const;
+export const defaultViewport = { once: true, amount: 'some', margin: '0px 0px -40px 0px' } as const;
 
 /**
  * Stagger orasidagi kechikishni moslab beradi.

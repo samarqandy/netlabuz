@@ -24,12 +24,21 @@ const VARIANTS: Record<string, Variants> = {
 
 type RevealVariant = keyof typeof VARIANTS;
 
+// Element ekranning pastki chetidan 40px yuqoriga chiqqanda ochiladi —
+// chetida "yarim yashirin" holda qolib ketmaydi.
+const REVEAL_MARGIN = '0px 0px -40px 0px';
+
 interface RevealProps extends React.ComponentPropsWithoutRef<typeof motion.div> {
   variant?: RevealVariant;
   /** Faqat bir marta animatsiya (default: true) */
   once?: boolean;
-  /** Ko'rinish ulushi (0-1) */
-  amount?: number;
+  /**
+   * Qancha qismi ko'ringanda ochilsin. Sukut bo'yicha — "some": element
+   * ekranga kira boshlashi bilan. Ulush (0-1) bermang uzun bloklarga:
+   * telefonda bir ustunli kartalar guruhi ekrandan 5 marta uzun bo'ladi,
+   * 0.2 ulush hech qachon ko'rinmaydi va blok bo'sh qoladi.
+   */
+  amount?: number | 'some' | 'all';
   delay?: number;
 }
 
@@ -40,7 +49,7 @@ interface RevealProps extends React.ComponentPropsWithoutRef<typeof motion.div> 
 export function Reveal({
   variant = 'fadeInUp',
   once = true,
-  amount = 0.2,
+  amount = 'some',
   delay,
   children,
   ...props
@@ -50,7 +59,7 @@ export function Reveal({
       variants={VARIANTS[variant]}
       initial="initial"
       whileInView="animate"
-      viewport={{ once, amount }}
+      viewport={{ once, amount, margin: REVEAL_MARGIN }}
       transition={delay ? { delay } : undefined}
       {...props}
     >
@@ -65,7 +74,7 @@ export function Reveal({
  */
 export function StaggerGroup({
   once = true,
-  amount = 0.2,
+  amount = 'some',
   children,
   ...props
 }: Omit<RevealProps, 'variant' | 'delay'>) {
@@ -74,7 +83,7 @@ export function StaggerGroup({
       variants={staggerContainer}
       initial="initial"
       whileInView="animate"
-      viewport={{ once, amount }}
+      viewport={{ once, amount, margin: REVEAL_MARGIN }}
       {...props}
     >
       {children}
