@@ -18,6 +18,8 @@ import { MotionProvider } from '@/components/motion-provider';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { Ambient } from '@/components/scene/ambient';
+import { SiteAnalytics } from '@/components/site-analytics';
+import { YANDEX_VERIFICATION } from '@/lib/analytics-ids';
 import '../globals.css';
 
 const inter = Inter({
@@ -79,6 +81,7 @@ export async function generateMetadata({
       title: t('title'),
       description: t('description'),
     },
+    verification: { yandex: YANDEX_VERIFICATION },
   };
 }
 
@@ -163,6 +166,7 @@ export default async function LocaleLayout({
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />
+        <SiteAnalytics />
       </body>
     </html>
   );
